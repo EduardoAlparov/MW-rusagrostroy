@@ -1,0 +1,126 @@
+.range-slider {
+    padding-top: 0.7rem;
+}
+
+.range-slider__label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 125%;
+    color: rgba(#2e466e, 0.6);
+    margin-bottom: 1rem;
+}
+
+.range-slider__input {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 125%;
+    height: 2.2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        height: 1.8rem;
+    }
+}
+
+.range-slider__element {
+    box-shadow: none;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0;
+
+    .noUi-connects {
+        border-radius: 4px;
+    }
+
+    .noUi-connect {
+        background: var(--primary-color);
+    }
+
+    &.noUi-horizontal .noUi-origin {
+        height: 100%;
+    }
+
+    // &.noUi-horizontal {
+    //     height: 100%;
+    // }
+
+    &.noUi-horizontal .noUi-handle {
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+        top: 100%;
+        right: 0;
+        margin-top: -6px;
+        margin-right: -5px;
+        box-shadow: none;
+
+        border: none;
+        background-color: var(--primary-color);
+        box-shadow: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: var(--primary-color) !important;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block !important;
+            border-radius: 50%;
+        }
+    }
+
+    .noUi-handle:after,
+    .noUi-handle:before,
+    .noUi-handle:after,
+    .noUi-handle:before {
+        display: none;
+    }
+
+    .noUi-handle {
+        outline: none;
+    }
+    .noUi-handle:focus {
+        outline: none;
+    }
+}
+
+.range-slider__inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 2rem;
+
+   
+
+    .range-slider__input-wrapper {
+        .range-slider__input {
+            margin: 0;
+            width: 8ch;
+        }
+
+        &--small {
+            .range-slider__input {
+                margin: 0;
+                width: 3ch;
+            }
+        }
+    }
+}
+
+.range-slider__inputs-divider {
+    flex-shrink: 0;
+    width: 1.2rem;
+    height: 1px;
+    background-color: rgba(#397bf3, 0.2);
+}

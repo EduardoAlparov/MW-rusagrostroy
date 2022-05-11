@@ -1,0 +1,184 @@
+.credit-calculator {
+    margin-bottom: 10rem;
+    padding: 7rem 0;
+    background: #f8f8f8;
+    border-radius: 2rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        margin-bottom: 5rem;
+    }
+}
+
+.credit-calculator__top-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.15fr);
+    grid-gap: 6rem;
+    margin-bottom: 4.4rem;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        grid-gap: 1rem;
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 3rem;
+    }
+}
+
+.credit-calculator__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 135%;
+    margin-bottom: -1rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        br {
+            display: none;
+        }
+    }
+
+    em {
+        font-style: normal;
+        color: var(--primary-color);
+    }
+}
+
+.credit-calculator__bottom-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.15fr);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4rem;
+    }
+}
+
+.credit-calculator__form-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        margin-bottom: 2rem;
+
+    }
+}
+
+.credit-calculator__form-field {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 0 1.5rem;
+}
+
+.credit-calculator__results {
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-calculator__results-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 2rem;
+}
+
+.credit-calculator__results-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 3.5rem;
+    padding-top: 2.4rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    grid-gap: 6rem;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.credit-calculator__results-card-payment-amount {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.credit-calculator__results-card-payment-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 117%;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}
+
+.credit-calculator__results-card-bank-logo {
+    width: 16rem;
+    margin-bottom: 3rem;
+    margin-top: 1.2rem;
+
+    @include breakpoint(mobile) {
+        width: 12rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.credit-calculator__results-card-bank-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 135%;
+    color: rgba(black, 0.6);
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}
+
+.credit-calculator__results-remark {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 125%;
+    color: #c0cada;
+    margin: 2rem 0;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin: 1.5rem 0;
+    }
+}
+
+.credit-calculator__results-show-all {
+    width: 100%;
+    margin-top: auto;
+}
+
+.credit-calculator__form-submit {
+    width: 100%;
+}

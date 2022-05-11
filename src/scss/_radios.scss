@@ -1,0 +1,55 @@
+.radios {
+    padding-top: .7rem;
+    padding-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 1.5rem;
+    }
+}
+
+.radios__label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 125%;
+    color: rgba(#2e466e, 0.6);
+    margin-bottom: 1rem;
+}
+
+.radios__items {
+    display: flex;
+    gap: 4rem;
+
+    @include breakpoint(mobile) {
+        gap: 2.5rem;
+    }
+}
+
+.radios__item {
+    flex-shrink: 0;
+}
+
+.radios__item-input {
+    display: none;
+}
+
+.radios__item-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 125%;
+    transition: color 0.2s;
+    cursor: pointer;
+    user-select: none;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+       
+        line-height: 1.2;
+    }
+}
+
+
+.radios__item-input:checked ~ .radios__item-text {
+    color: var(--primary-color);
+}

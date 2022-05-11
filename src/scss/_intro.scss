@@ -1,0 +1,116 @@
+.intro {
+    position: relative;
+    z-index: 1;
+    color: white;
+    overflow: hidden;
+    
+}
+
+.intro__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(231.92deg, rgba(57, 123, 243, 0.54) 6.88%, rgba(57, 123, 243, 0.3) 72.8%, #AEC7EF 105.94%);
+    
+}
+
+.intro__home-image {
+    position: absolute;
+    left: 0;
+    bottom: -30rem;
+    width: 111rem;
+    height: auto;
+    max-width: none;
+    @include breakpoint(mobile) {
+        width: 40rem;
+        bottom: -5rem;
+        left: -15rem;
+        
+    }
+}
+.intro__content {
+    padding-top: 12.6rem;
+    padding-bottom: 7rem;
+    min-height: min(calc(100vh + 3rem), 100rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.15fr);
+    grid-gap: 6rem;
+    align-items: flex-start;
+
+    
+
+    @include breakpoint(mobile) {
+        padding-top: 15rem;
+        padding-bottom: 5rem;
+        min-height: 100vh;
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.intro__content-inner {
+  
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / 3;
+    }
+}
+
+.intro__home-card {
+    border: 1px solid rgba(#ffffff, 0.5);
+    border-radius: 2rem;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 27rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        border-radius: 1rem;
+        
+    }
+}
+
+.intro__home-card-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 9rem;
+    margin-bottom: 13rem;
+    position: relative;
+    z-index: 50;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.intro__home-card-features-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 125%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}
+
+.intro__home-card-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7rem;
+    line-height: 107%;
+    position: relative;
+    z-index: 50;
+
+    @include breakpoint(mobile) {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+}

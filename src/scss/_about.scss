@@ -1,0 +1,298 @@
+.about {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.about__card {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: 2rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    color: white;
+
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+        grid-template-columns: minmax(0, 1fr);
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 48%;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.about__card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+        @include breakpoint(mobile) {
+            background: rgba(black, .4);
+        }
+    }
+}
+
+.about__card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include breakpoint(mobile) {
+        object-position: 20% 50%;
+    }
+}
+
+.about__card-content {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem;
+    z-index: 5;
+    padding-top: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: var(--content-padding);
+    }
+}
+
+.about__card-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 117%;
+    text-transform: uppercase;
+    color: rgba(white, 0.6);
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        display: none;
+    }
+   
+}
+
+.about__card-row {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.35fr);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        flex-grow: 0;
+    }
+}
+
+.about__card-logo {
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 13rem;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        display: none;
+    }
+}
+
+.about__card-info {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 27rem);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 0;
+    }
+}
+
+.about__card-inner-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.about__card-text {
+    max-width: 55rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 135%;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.about__card-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+    row-gap: 3rem;
+    margin-top: auto;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        order: 10;
+        margin-top: 3rem;
+    }
+}
+
+.about__card-video-btn {
+    display: inline-flex;
+    align-items: center;
+}
+
+.about__card-video-btn-preview {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 2.7rem;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1.4rem;
+    }
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: white;
+        margin-left: 0rem;
+        z-index: 7;
+        margin-left: 0.2rem;
+
+        @include breakpoint(mobile) {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+}
+
+.about__card-video-btn-preview-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__card-video-btn-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
+
+.about__card-numbers-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 5rem;
+    align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
+        align-self: stretch;
+    }
+}
+
+.about__card-numbers-card-amount {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8.7rem;
+    line-height: 95%;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 4.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.3rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.about__card-numbers-card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 135%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
+
+
+.about__card-text-content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
