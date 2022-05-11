@@ -25,10 +25,16 @@ html {
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
 
-   
+    
 
     @media screen and (max-width: 1679px) {
         font-size: clamp(4.2px, 0.595vw, 10px);
+    }
+    @media screen and (min-width: 2560px) {
+        font-size: 12px;
+    }
+    @media screen and (min-width: 4096px) {
+        font-size: 20px;
     }
 
     @include breakpoint(mobile) {
