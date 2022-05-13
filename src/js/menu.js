@@ -2,7 +2,8 @@ import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 
 export default function menu() {
     const burger = document.querySelector('.page-header__burger');
-    const menu = document.querySelector('.page-header__burger-menu');
+    const menu = document.querySelector('.page-header__menu');
+    const closeBtn = document.querySelector('.page-header__menu-close')
 
     window.menuOpen = false;
 
@@ -34,4 +35,17 @@ export default function menu() {
             closeMenu();
         }
     });
+
+    menu.addEventListener('click', event => {
+        if (event.target === menu) {
+            closeMenu();
+        }
+    })
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', event => {
+            event.preventDefault();
+            closeMenu();
+        })
+    }
 }
