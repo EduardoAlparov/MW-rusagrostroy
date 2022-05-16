@@ -215,14 +215,14 @@
     }
     .news__list-item:not(:nth-child(3n + 1)) & {
         grid-row: span 1;
-        border: 1px solid rgba(#397bf3, 0.2);
+        border: 1px solid rgba(#374cf9, 0.2);
         padding: 2rem;
         display: flex;
         align-items: flex-start;
         transition: color 0.2s, border-color 0.2s;
 
         &:hover {
-            border-color: #397bf3;
+            border-color: #374cf9;
         }
 
         .news__card-image-container {
@@ -279,12 +279,12 @@
             font-style: normal;
             font-weight: 500;
             font-size: 1.4rem;
-            border: 1px solid #397bf3;
+            border: 1px solid #374CF9;
             border-radius: 0.7rem;
             line-height: 125%;
             white-space: nowrap;
             user-select: none;
-            color: #397bf3;
+            color: #374CF9;
 
             @include breakpoint(mobile) {
                 font-size: 1.2rem;

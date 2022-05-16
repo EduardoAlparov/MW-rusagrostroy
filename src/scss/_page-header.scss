@@ -7,10 +7,22 @@
     padding: 2rem 0;
     color: white;
 
-    .mobile-menu-open &,
-    .modal-open & {
-        padding-right: var(--sb-width, 0);
+    &--relative {
+        position: relative;
+       
+        & > .container {
+            display: contents;
+        }
     }
+
+    &:not(.page-header--relative) {
+        .mobile-menu-open &,
+        .modal-open & {
+            padding-right: var(--sb-width, 0);
+        }
+    }
+
+   
 
     @include breakpoint(mobile) {
         padding: 1rem 0;
@@ -59,7 +71,7 @@
         visibility: inherit;
         transition: opacity 0.4s, visibility 0.4s, transform 0.8s;
        
-        right: var(--sb-width);
+        // right: var(--sb-width);
     }
 }
 
