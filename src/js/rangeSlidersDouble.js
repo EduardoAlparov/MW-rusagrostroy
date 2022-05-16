@@ -49,7 +49,14 @@ export default function rangeSlidersDouble() {
             form.addEventListener('reset', () => {
                 console.log('Parent form has been reset')
 
-                customRangeSliderElement.noUiSlider.reset()
+                rangeSliderElement.noUiSlider.reset();
+                setTimeout(() => {
+                    const newValue = rangeSliderElement.noUiSlider.get();
+                    inputs[0].value = newValue[0];
+                    inputs[1].value = newValue[1];
+                }, 10)
+            
+                // rangeSliderElement.noUiSlider.set([minValue, maxValue]);
             })
         }
     });
