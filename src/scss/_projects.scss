@@ -1,58 +1,28 @@
 .projects {
-    padding: 10rem 0;
+    padding-top: 6.8rem;
+    padding-bottom: 10rem;
 
     @include breakpoint(mobile) {
-        padding: 5rem 0;
+        padding: 3rem 0;
     }
 }
 
-.projects__row {
+.projects__blocks {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2.15fr);
-    grid-gap: 6rem;
-    align-items: flex-start;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 10rem;
 
     @include breakpoint(mobile) {
-        grid-template-columns: minmax(0, 1fr);
-        grid-gap: 3rem;
+        grid-gap: 5rem;
     }
 }
 
-.projects__heading {
-    margin-bottom: 5rem;
+.projects__block-heading {
+    
+    margin-bottom: 4rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 1rem;
-    }
-}
-
-.projects__text {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 135%;
-
-    @include breakpoint(mobile) {
-        font-size: 1.6rem;
-        line-height: 1.2;
-        br {
-            display: none;
-        }
-    }
-
-    a {
-        color: var(--primary-color);
-        text-decoration: underline;
-        text-decoration-color: transparent;
-        transition: all .2s;
-        &:link,
-        &:visited {
-            color: var(--primary-color);
-        }
-
-        &:hover {
-            text-decoration-color: var(--primary-color);
-        }
+        margin-bottom: 2rem;
     }
 }
 
@@ -62,29 +32,28 @@
     grid-gap: 6rem;
 
     @include breakpoint(mobile) {
-        // grid-template-columns: minmax(0, 1fr);
-        grid-gap: 1rem;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
     }
+}
+
+.projects__list-item {
+    display: flex;
+    flex-direction: column;
 }
 
 .projects__card {
     display: flex;
     flex-direction: column;
-
-    .no-touch &:hover {
-        .projects__card-image {
-            transform: scale(1.03);
-        }
-    }
 }
 
 .projects__card-image-container {
     position: relative;
     border-radius: 2rem;
     overflow: hidden;
-    margin-bottom: 2.5rem;
     backface-visibility: hidden;
     transform: translateZ(0);
+    margin-bottom: 2.5rem;
 
     @include breakpoint(mobile) {
         border-radius: 1rem;
@@ -93,29 +62,18 @@
     &::before {
         content: '';
         display: block;
-        padding-bottom: 100%;
+        padding-bottom: 42%;
+        display: block;
     }
 }
 
-.projects__card-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .5s;
-}
-
 .projects__card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    position: absolute;
     left: 2rem;
     top: 2rem;
-    right: 2rem;
-    position: absolute;
-    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
     @include breakpoint(mobile) {
         left: 1rem;
@@ -124,122 +82,97 @@
 }
 
 .projects__card-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    background: rgba(4, 27, 68, 0.64);
-    border-radius: 0.7rem;
-    color: white;
-    flex-shrink: 0;
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
+    white-space: nowrap;
     line-height: 125%;
+    padding: 0.5rem 1rem;
+    background: rgba(4, 27, 68, 0.64);
+    border-radius: .7rem;
+    color: white;
+
     @include breakpoint(mobile) {
-        font-size: 1rem;
-        line-height: 1.2;
-        padding: .3rem .6rem;
-        border-radius: .4rem;
+        font-size: 1.2rem;
+        padding: .4rem .6rem;
+        border-radius: .5rem;
     }
+}
+
+
+.projects__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .projects__card-top-row {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     gap: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     @include breakpoint(mobile) {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: .8rem;
-        margin-bottom: 1rem;
+       
     }
 }
 
 .projects__card-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 117%;
+    font-size: 3.2rem;
+    color: #37393e;
+    line-height: 120%;
 
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         line-height: 1.2;
+
     }
 }
 
-.projects__card-distance {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 125%;
+.projects__card-price {
     text-align: right;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 117%;
+    flex-shrink: 0;
+    white-space: nowrap;
 
     @include breakpoint(mobile) {
-        text-align: left;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         line-height: 1.2;
     }
 }
 
-.projects__card-bottom-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    @include breakpoint(mobile) {
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: .5rem;
-    }
-}
-
-.projects__card-location {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
+.projects__card-address {
     font-style: normal;
     font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 125%;
-    color: rgba(#2e466e, 0.6);
+    font-size: 1.8rem;
+    line-height: 117%;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
-        gap: .5rem;
-        align-items: flex-start;
+        line-height: 1.2;
     }
 
     svg {
-        width: 1.4rem;
-        height: 1.4rem;
         flex-shrink: 0;
+        width: 1.6rem;
+        height: 1.6rem;
         fill: var(--primary-color);
 
         @include breakpoint(mobile) {
-            width: 1.2rem;
-            height: 1.2rem;
-            margin-top: 0.2rem;
+            width: 1.3rem;
+            height: 1.3rem;
         }
-    }
-}
-
-.projects__card-more {
-    text-align: right;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    color: var(--primary-color);
-
-    @include breakpoint(mobile) {
-        display: none;
     }
 }

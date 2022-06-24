@@ -15,6 +15,9 @@ import customSelects from './customSelects';
 import rangeSlidersDouble from './rangeSlidersDouble';
 import autosizingInputs from './autosizingInputs';
 import introPromo from './introPromo';
+import showAll from './showAll';
+import planDropdowns from './planDropdowns';
+import projectNewsSlider from './projectNewsSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
     customSelects();
     rangeSlidersDouble();
     introPromo();
+    showAll();
+    planDropdowns();
+    projectNewsSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

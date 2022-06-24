@@ -3,14 +3,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { debounce } from 'lodash';
 import { convertRemToPixels } from './utils';
 
+import { Swiper, Navigation, Pagination, EffectFade } from 'swiper';
 gsap.registerPlugin(ScrollTrigger);
+
+Swiper.use([Navigation, EffectFade, Pagination]);
 
 export default function introPromo() {
     const intro = document.querySelector('.intro');
 
     const checkIntroHeight = () => {
-        const introNotFullscreen = intro.offsetHeight >= Math.floor(convertRemToPixels(100));
-
+        const introNotFullscreen = intro.offsetHeight - convertRemToPixels(3.2) > document.documentElement.clientHeight;
 
         if (introNotFullscreen) {
             document.body.classList.add('intro-not-fullscreen');
@@ -20,8 +22,8 @@ export default function introPromo() {
 
         console.log(introNotFullscreen, {
             introHeight: intro.offsetHeight,
-            limit: Math.floor(convertRemToPixels(100))
-        })
+            limit: document.documentElement.clientHeight
+        });
 
         return introNotFullscreen;
     };
@@ -30,43 +32,71 @@ export default function introPromo() {
         checkIntroHeight();
         window.addEventListener('resize', debounce(checkIntroHeight), 300);
     }
-   
+
     const elements = Array.from(document.querySelectorAll('.js-intro-promo'));
 
     // return;
 
     elements.forEach(element => {
+        const slider = element.querySelector('.intro__promo-slider');
+        const container = element.querySelector('.swiper');
+        const navLinks = Array.from(element.querySelectorAll('.intro__promo-nav-link'));
+
+        const instance = new Swiper(container, {
+            effect: 'fade',
+            speed: 500,
+            pagination: {
+                el: element.querySelector('.intro__promo-slider-progress'),
+                type: 'progressbar'
+            },
+            fadeEffect: {
+                crossFade: true
+            },
+            init: false,
+            on: {
+                init: swiper => {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[swiper.activeIndex].classList.add('active');
+                },
+                slideChange: swiper => {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[swiper.activeIndex].classList.add('active');
+                }
+            }
+        });
+
+        instance.init();
+
+        navLinks.forEach((link, linkIndex) => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                instance.slideTo(linkIndex);
+            })
+            
+        })
         ScrollTrigger.matchMedia({
             '(min-width: 641px)': function() {
                 if (!intro || checkIntroHeight()) return;
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: element,
-                        start: () => `bottom-=${convertRemToPixels(3)} bottom`,
-                        end: () => convertRemToPixels(20),
+                        trigger: '.intro',
+                        start: () => `top top`,
+                        end: () => element.offsetHeight,
                         scrub: true,
                         pin: '.intro',
-                        pinSpacing: true
+                        pinSpacing: true,
+                        toggleClass: 'expanded'
                     }
                 });
 
                 tl.to(element, {
-                    height: () => convertRemToPixels(26),
+                    y: () => slider.offsetHeight * -1,
                     duration: 0.5
                 })
                     .to(
-                        '.intro__promo-heading',
-                        {
-                            scale: 1,
-                            duration: 0.5
-                        },
-                        0
-                    )
-                    .to(
-                        '.intro__promo-hidden',
+                        '.intro__promo-slider',
                         {
                             autoAlpha: 1,
-                            y: 0,
                             duration: 0.5
                         },
                         0

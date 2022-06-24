@@ -11,13 +11,15 @@ export default function tabs() {
         const btns = Array.from(element.querySelectorAll('.js-tabs-btn'));
         const items = Array.from(element.querySelectorAll('.js-tabs-item'));
 
-        const setActiveTab = index => {
+        const setActiveTab = (index, noAnimation = false) => {
             const state = Flip.getState(items[0].parentElement);
             btns.forEach(btn => btn.classList.remove('active'));
             items.forEach(item => item.classList.remove('active'));
 
             btns[index].classList.add('active');
             items[index].classList.add('active');
+
+            if (noAnimation) return;
 
             Flip.from(state, {
                 ease: 'power1.inOut',
@@ -29,7 +31,7 @@ export default function tabs() {
         };
 
         if (items.length) {
-            setActiveTab(0);
+            setActiveTab(0, true);
         }
 
         btns.forEach((btn, btnIndex) => {

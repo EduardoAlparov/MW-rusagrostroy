@@ -105,10 +105,10 @@
 .page-footer__social-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2.5rem;
 
     @include breakpoint(mobile) {
-        gap: 1rem;
+        gap: 1.5rem;
     }
 }
 
@@ -117,13 +117,13 @@
 }
 
 .page-footer__social-link {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     display: block;
 
     @include breakpoint(mobile) {
-        width: 2.6rem;
-        height: 2.6rem;
+        width: 3.6rem;
+        height: 3.6rem;
     }
 
     svg {
@@ -140,6 +140,13 @@
             fill: rgba(white, 0.7);
         }
     }
+}
+
+.page-footer__social-link-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .page-footer__contacts {
@@ -205,6 +212,12 @@
     @include breakpoint(mobile) {
         width: 100%;
         display: flex;
+
+        border-radius: 1rem;
+        border: 1px solid var(--primary-color);
+        font-size: 1.6rem;
+        line-height: 1.2;
+        padding: 1.8rem 2.4rem;
     }
     &:link,
     &:visited {
@@ -233,7 +246,7 @@
 
     @include breakpoint(mobile) {
         order: 10;
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
 }
 
@@ -242,7 +255,7 @@
     height: auto;
     margin-left: 1.3rem;
     position: relative;
-    bottom: -.3rem;
+    bottom: -0.3rem;
 
     @include breakpoint(mobile) {
         width: 8rem;
@@ -261,12 +274,11 @@
 
     @include breakpoint(mobile) {
         display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-gap: 2rem;
         grid-row-gap: 1.5rem;
         margin: 0;
     }
-
 }
 
 .page-footer__copyright,
@@ -274,13 +286,13 @@
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
-    line-height: 117%;
+    line-height: 120%;
 }
 
 .page-footer__bottom-link {
     text-decoration: underline;
     text-decoration-color: transparent;
-    transition: color .2s, text-decoration-color .2s;
+    transition: color 0.2s, text-decoration-color 0.2s;
 
     .no-touch &:hover,
     .touch &:active {
