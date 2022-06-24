@@ -32,6 +32,9 @@
         background-color: var(--primary-color-hover);
     }
 
+
+
+
     &--contour-blue {
         background: transparent;
 
@@ -60,6 +63,11 @@
             background-color: white;
             color: var(--primary-color);
         }
+    }
+
+
+    &--white-filled {
+        background-color: #fff;
     }
 
    

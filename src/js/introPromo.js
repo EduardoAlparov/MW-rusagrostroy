@@ -12,7 +12,7 @@ export default function introPromo() {
     const intro = document.querySelector('.intro');
 
     const checkIntroHeight = () => {
-        const introNotFullscreen = intro.offsetHeight - convertRemToPixels(3.2) > document.documentElement.clientHeight;
+        const introNotFullscreen = intro.offsetHeight < document.documentElement.clientHeight;
 
         if (introNotFullscreen) {
             document.body.classList.add('intro-not-fullscreen');
@@ -76,14 +76,14 @@ export default function introPromo() {
         })
         ScrollTrigger.matchMedia({
             '(min-width: 641px)': function() {
-                if (!intro || checkIntroHeight()) return;
+                if (!intro) return;
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: '.intro',
                         start: () => `top top`,
                         end: () => element.offsetHeight,
                         scrub: true,
-                        pin: '.intro',
+                        pin: checkIntroHeight() ? false : true,
                         pinSpacing: true,
                         toggleClass: 'expanded'
                     }

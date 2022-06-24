@@ -346,7 +346,7 @@
                 </div>
                 <ul class="credit-calculator__results-list">
                     <li class="credit-calculator__results-list-item">
-                        <div class="credit-calculator__results-card">
+                        <a href="#" class="credit-calculator__results-card">
                             <div class="credit-calculator__results-card-bank">
                                 <img src="img/banks/1.webp" alt="" class="credit-calculator__results-card-bank-logo">
                                 <div class="credit-calculator__results-card-bank-name">
@@ -365,10 +365,10 @@
                             <div class="credit-calculator__results-card-value" data-text="Платеж в месяц">
                                 14 000 ₽/мес
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="credit-calculator__results-list-item">
-                        <div class="credit-calculator__results-card">
+                        <a href="#" class="credit-calculator__results-card">
                             <div class="credit-calculator__results-card-bank">
                                 <img src="img/banks/2.webp" alt="" class="credit-calculator__results-card-bank-logo">
                                 <div class="credit-calculator__results-card-bank-name">
@@ -387,10 +387,10 @@
                             <div class="credit-calculator__results-card-value" data-text="Платеж в месяц">
                                 14 000 ₽/мес
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="credit-calculator__results-list-item">
-                        <div class="credit-calculator__results-card">
+                        <a href="#" class="credit-calculator__results-card">
                             <div class="credit-calculator__results-card-bank">
                                 <img src="img/banks/3.webp" alt="" class="credit-calculator__results-card-bank-logo">
                                 <div class="credit-calculator__results-card-bank-name">
@@ -409,10 +409,10 @@
                             <div class="credit-calculator__results-card-value" data-text="Платеж в месяц">
                                 14 000 ₽/мес
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="credit-calculator__results-list-item">
-                        <div class="credit-calculator__results-card">
+                        <a href="#" class="credit-calculator__results-card">
                             <div class="credit-calculator__results-card-bank">
                                 <img src="img/banks/4.webp" alt="" class="credit-calculator__results-card-bank-logo">
                                 <div class="credit-calculator__results-card-bank-name">
@@ -431,10 +431,10 @@
                             <div class="credit-calculator__results-card-value" data-text="Платеж в месяц">
                                 14 000 ₽/мес
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="credit-calculator__results-list-item">
-                        <div class="credit-calculator__results-card">
+                        <a href="#" class="credit-calculator__results-card">
                             <div class="credit-calculator__results-card-bank">
                                 <img src="img/banks/5.webp" alt="" class="credit-calculator__results-card-bank-logo">
                                 <div class="credit-calculator__results-card-bank-name">
@@ -453,7 +453,7 @@
                             <div class="credit-calculator__results-card-value" data-text="Платеж в месяц">
                                 14 000 ₽/мес
                             </div>
-                        </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -629,5 +629,90 @@
 </section>
 
 
+
+<section class="contacts">
+    <script>
+
+        var mapData = [
+            {
+                coords: [56.639204, 47.819532],
+                title: 'Офис продаж',
+                address: `Йошкар-Ола, ул. Чернякова, д. 1, офис 5`,
+                phone: `+7 (8362) 65-55-50 `
+            }
+        ];
+
+        var mapZoom = 12;
+
+        var mapCenter = [56.633669, 47.822463];
+    </script>
+    <div class="contacts__map">
+        <div class="contacts__map-element js-contacts-map">
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="contacts__content">
+            <div class="contacts__our-contacts">
+                <h3 class="contacts__our-contacts-heading">
+                    Наши контакты
+                </h3>
+                <ul class="contacts__our-contacts-list">
+                    <li class="contacts__our-contacts-list-item">
+                        <div class="contacts__our-contacts-card">
+                            <h4 class="contacts__our-contacts-card-title">
+                                Офис продаж
+                            </h4>
+                            <div class="contacts__our-contacts-card-address">
+                                Йошкар-Ола, ул. Чернякова, д. 1, офис 5
+                            </div>
+                            <a href="tel:+78362655550 " class="contacts__our-contacts-card-link">
+                                +7 (8362) 65-55-50
+                            </a>
+                        </div>
+
+                    </li>
+                    <li class="contacts__our-contacts-list-item">
+                        <div class="contacts__our-contacts-card">
+                            <h4 class="contacts__our-contacts-card-title">
+                                Офис продаж
+                            </h4>
+                            <div class="contacts__our-contacts-card-address">
+                                Йошкар-Ола, ул. Чернякова, д. 1, офис 5
+                            </div>
+                            <a href="tel:+78362655550 " class="contacts__our-contacts-card-link">
+                                +7 (8362) 65-55-50
+                            </a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts__contact-us">
+                <h3 class="contacts__contact-us-heading">
+                    Свяжитесь с нами
+                </h3>
+                <div class="contacts__contact-us-text">
+                    <p>
+                        Заполните форму наши менеджеры перезвонят вам в течении 10 минут
+                    </p>
+                </div>
+                <form action="/" class="contacts__contact-us-form" data-need-validation="">
+                    <div class="contacts__contact-us-form-fields">
+                        <div class="contacts__contact-us-form-field">
+                            <input type="text" class="contacts__contact-us-form-input" placeholder="Ваше имя"
+                                required="" name="name">
+                        </div>
+                        <div class="contacts__contact-us-form-field">
+                            <input type="tel" class="contacts__contact-us-form-input js-phone-input"
+                                placeholder="Ваш номер телефона" required="" name="phone" data-parsley-phone="">
+                        </div>
+                    </div>
+                    <button class=" contacts__contact-us-form-submit">Записаться на встречу</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 {{/content}}
 {{/extend}}

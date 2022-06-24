@@ -38,11 +38,16 @@
     // padding-top: 12.6rem;
     padding-bottom: 7rem;
     min-height: min(calc(100vh + 3rem), 125rem);
+
+   
     display: flex;
     flex-direction: column;
 
     @media screen and (max-width: 1360px) {
         min-height: min(calc(100vh + 3rem), 100rem);
+
+
+       
     }
     @include breakpoint(mobile) {
         min-height: 100vh;

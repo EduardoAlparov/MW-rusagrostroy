@@ -5,6 +5,8 @@
     padding-bottom: 2rem;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
+    position: relative;
+    z-index: 15;
 
     @include breakpoint(mobile) {
         padding-top: 3rem;
@@ -71,6 +73,11 @@
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 117%;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: rgba(white, 0.7);
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
