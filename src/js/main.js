@@ -20,6 +20,7 @@ import planDropdowns from './planDropdowns';
 import projectNewsSlider from './projectNewsSlider';
 import contactsMap from './contactsMap';
 import featuresSlider from './featuresSlider';
+import projectMap from './projectMap';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     projectNewsSlider();
     contactsMap();
     featuresSlider();
+    projectMap();
 });
 
 document.addEventListener('lazyloaded', () => {
