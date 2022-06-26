@@ -1,6 +1,8 @@
 .project-about {
     padding-top: 10rem;
     margin-bottom: 10rem;
+    position: relative;
+    z-index: 80;
 
     @include breakpoint(mobile) {
         padding-top: 5rem;
@@ -191,6 +193,10 @@
     font-size: 2rem;
     line-height: 125%;
     color: var(--primary-color);
+
+    .all-shown & {
+        display: none;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
@@ -385,7 +391,6 @@
     }
 
     @include breakpointMF(small-tablet) {
-
         &:hover {
             z-index: 10;
             .project-about__plan-item-number {
@@ -414,7 +419,6 @@
             }
         }
     }
-
 }
 
 .project-about__plan-item-number {
@@ -530,8 +534,8 @@
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 125%;
-    color: #374cf9;
-    background-color: rgba(#374cf9, 0.1);
+    color: #1361DE;
+    background-color: rgba(#1361DE, 0.1);
     border-radius: 0.4rem;
     padding: 0.5rem 1rem;
     flex-shrink: 0;
@@ -542,7 +546,7 @@
         border-radius: 50%;
         flex-shrink: 0;
         margin-right: 0.7rem;
-        background-color: #374cf9;
+        background-color: #1361DE;
         margin-top: 0.2rem;
     }
 }
@@ -582,15 +586,21 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #374cf9;
+    background: var(--primary-color);
     border-radius: 1rem;
     color: white;
     padding: 1.7rem 3.4rem;
     border-radius: 1rem;
     width: 100%;
     font-weight: 700;
+    transition: background-color 0.2s, color 0.2s;
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
     }
 }

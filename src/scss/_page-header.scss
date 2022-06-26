@@ -55,7 +55,7 @@
     left: 0;
     top: 0;
     right: 0;
-    background: rgba(6, 9, 31, 0.51);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 170;
     height: 100%;
     overflow-x: hidden;
@@ -67,13 +67,13 @@
         opacity: 1;
         visibility: inherit;
         transition: opacity 0.4s, visibility 0.4s, transform 0.8s;
-
+        right: var(--sb-width);
         // right: var(--sb-width);
     }
 }
 
 .page-header__menu-inner {
-    background: #a4c2fa;
+    background: var(--primary-color);
     border-radius: 0px 0px 2rem 2rem;
     color: white;
 
@@ -295,10 +295,11 @@
 
 .page-header__menu-social-heading {
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 125%;
-    margin-bottom: 0.8rem;
+   
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 117%;
+    margin-bottom: 2rem;
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
@@ -480,7 +481,7 @@
     font-size: 1.6rem;
     line-height: 2rem;
     transition: color 0.2s;
-
+    white-space: nowrap;
     &:hover {
         color: rgba(white, 0.7);
     }
@@ -492,7 +493,7 @@
     font-size: 1.6rem;
     line-height: 2rem;
     font-feature-settings: 'pnum' on, 'lnum' on;
-
+    white-space: nowrap;
     @include breakpoint(mobile) {
         display: none;
     }

@@ -86,6 +86,13 @@
 .project-news__slider-card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover,
+    .touch &:active {
+        .project-news__slider-card-image {
+            transform: scale(1.02);
+        }
+    }
 }
 
 .project-news__slider-card-image-container {
@@ -114,6 +121,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .5s;
 }
 
 .project-news__tags {

@@ -50,6 +50,21 @@
         }
     }
 
+    &--contour-white {
+        background: transparent;
+
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+    }
+
     &--white {
         border-color: white;
         color: white;
