@@ -1,110 +1,113 @@
 <section class="filters">
     <div class="container">
-        <form class="filters__row" method="GET" id="filters-form">
-            <div class="filters__fields">
-                <div class="filters__field">
-                    <div class="select">
-                        <div class="select__label">
-                            Проект
+        <form action="/" class="filters__form" method="GET">
+            <div class="filters__row">
+                <div class="filters__fields">
+                    <div class="filters__field">
+                        <div class="select">
+                            <div class="select__label">
+                                Проект
+                            </div>
+                            <select name="project" class="js-custom-select">
+                                <option value="ЖК «Семейный»">ЖК «Семейный»</option>
+                                <option value="Другой ЖК»">Другой ЖК</option>
+                            </select>
                         </div>
-                        <select name="project" class="js-custom-select">
-                            <option value="ЖК «Семейный»">ЖК «Семейный»</option>
-                            <option value="Другой ЖК»">Другой ЖК</option>
-                        </select>
+
                     </div>
-
-                </div>
-                <div class="filters__field">
-                    <div class="radios">
-                        <div class="radios__label">
-                            Комнатность
-                        </div>
-                        <div class="radios__items">
-                           
-                            <label class="radios__item">
-                                <input type="radio" name="rooms" value="1" class="radios__item-input" checked="">
-                                <span class="radios__item-text">
-                                    1
-                                </span>
-                            </label>
-                            <label class="radios__item">
-                                <input type="radio" name="rooms" value="2" class="radios__item-input">
-                                <span class="radios__item-text">
-                                    2
-                                </span>
-                            </label>
-                            <label class="radios__item">
-                                <input type="radio" name="rooms" value="3" class="radios__item-input">
-                                <span class="radios__item-text">
-                                    3
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="filters__field">
-                    <div class="range-slider js-range-slider-double" data-min="1200000" data-max="6000000"
-                        data-step="100000">
-                        <div class="range-slider__label">
-                            Стоимость квартиры
-                        </div>
-                        <div class="range-slider__inputs">
-                            <div class="range-slider__input-wrapper">
-                                <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                    <div class="filters__field">
+                        <div class="radios">
+                            <div class="radios__label">
+                                Комнатность
                             </div>
-                            <div class="range-slider__inputs-divider">
+                            <div class="radios__items">
 
+                                <label class="radios__item">
+                                    <input type="radio" name="rooms" value="1" class="radios__item-input" checked="">
+                                    <span class="radios__item-text">
+                                        1
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="radio" name="rooms" value="2" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        2
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="radio" name="rooms" value="3" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        3
+                                    </span>
+                                </label>
                             </div>
-                            <div class="range-slider__input-wrapper">
-                                <input type="tel" class="range-slider__input js-numeric-input" readonly="">
-                            </div>
-                        </div>
-
-                        <div class="range-slider__element">
-
                         </div>
                     </div>
-                </div>
-                <div class="filters__field">
-                    <div class="range-slider js-range-slider-double" data-min="20" data-max="200" data-step="1">
-                        <div class="range-slider__label">
-                            Площадь, м
+                    <div class="filters__field">
+                        <div class="range-slider js-range-slider-double" data-min="1200000" data-max="6000000"
+                            data-step="100000">
+                            <div class="range-slider__label">
+                                Стоимость квартиры
+                            </div>
+                            <div class="range-slider__inputs">
+                                <div class="range-slider__input-wrapper">
+                                    <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                </div>
+                                <div class="range-slider__inputs-divider">
+
+                                </div>
+                                <div class="range-slider__input-wrapper">
+                                    <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                </div>
+                            </div>
+
+                            <div class="range-slider__element">
+
+                            </div>
                         </div>
-                        <div class="range-slider__inputs">
-                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
-                                <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                    </div>
+                    <div class="filters__field">
+                        <div class="range-slider js-range-slider-double" data-min="20" data-max="200" data-step="1">
+                            <div class="range-slider__label">
+                                Площадь, м
                             </div>
-                            <div class="range-slider__inputs-divider">
+                            <div class="range-slider__inputs">
+                                <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                    <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                </div>
+                                <div class="range-slider__inputs-divider">
+
+                                </div>
+                                <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                    <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                </div>
+                            </div>
+
+                            <div class="range-slider__element">
 
                             </div>
-                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
-                                <input type="tel" class="range-slider__input js-numeric-input" readonly="">
-                            </div>
-                        </div>
-
-                        <div class="range-slider__element">
-
                         </div>
                     </div>
                 </div>
+                <button class="btn filters__submit">
+                    Показать 355 квартир
+                </button>
             </div>
-            <button class="btn filters__submit">
-                Показать 355 квартир
-            </button>
+           
+            <div class="filters__bottom-row">
+                <a href="#" class="filter__extended-search">
+                    Расширенный поиск
+                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                        <use xlink:href="#arrow-down"></use>
+                    </svg>
+                </a>
+                <button type="reset" class="filters__reset-btn">
+                    Сбросить поиск
+                    <svg width="14" height="14" aria-hidden="true" class="icon-reset">
+                        <use xlink:href="#reset"></use>
+                    </svg>
+                </button>
+            </div>
         </form>
-        <div class="filters__bottom-row">
-            <a href="#" class="filter__extended-search">
-                Расширенный поиск
-                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
-                    <use xlink:href="#arrow-down"></use>
-                </svg>
-            </a>
-            <button type="reset" class="filters__reset-btn" form="filters-form">
-                Сбросить поиск
-                <svg width="14" height="14" aria-hidden="true" class="icon-reset">
-                    <use xlink:href="#reset"></use>
-                </svg>
-            </button>
-        </div>
     </div>
 </section>

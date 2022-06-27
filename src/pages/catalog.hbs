@@ -1,0 +1,1093 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+
+<section class="catalog">
+
+    <div class="container">
+        {{> header }}
+        <div class="catalog__breadcrumbs">
+            <a href="#">
+                Главная
+            </a>
+            <a href="#" class="active">
+                Выбрать квартиру
+            </a>
+        </div>
+        <h1 class="catalog__main-heading">
+            Выбрать квартиру
+        </h1>
+        <div class="catalog__filters">
+
+
+            <form action="/" class="filters__form" method="GET">
+                <div class="filters__row">
+                    <div class="filters__fields">
+                        <div class="filters__field">
+                            <div class="select">
+                                <div class="select__label">
+                                    Проект
+                                </div>
+                                <select name="project" class="js-custom-select">
+                                    <option value="ЖК «Семейный»">ЖК «Семейный»</option>
+                                    <option value="Другой ЖК»">Другой ЖК</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="filters__field">
+                            <div class="radios">
+                                <div class="radios__label">
+                                    Комнатность
+                                </div>
+                                <div class="radios__items">
+
+                                    <label class="radios__item">
+                                        <input type="radio" name="rooms" value="1" class="radios__item-input"
+                                            checked="">
+                                        <span class="radios__item-text">
+                                            1
+                                        </span>
+                                    </label>
+                                    <label class="radios__item">
+                                        <input type="radio" name="rooms" value="2" class="radios__item-input">
+                                        <span class="radios__item-text">
+                                            2
+                                        </span>
+                                    </label>
+                                    <label class="radios__item">
+                                        <input type="radio" name="rooms" value="3" class="radios__item-input">
+                                        <span class="radios__item-text">
+                                            3
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__field">
+                            <div class="range-slider js-range-slider-double" data-min="1200000" data-max="6000000"
+                                data-step="100000">
+                                <div class="range-slider__label">
+                                    Стоимость квартиры
+                                </div>
+                                <div class="range-slider__inputs">
+                                    <div class="range-slider__input-wrapper">
+                                        <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                    </div>
+                                    <div class="range-slider__inputs-divider">
+
+                                    </div>
+                                    <div class="range-slider__input-wrapper">
+                                        <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="range-slider__element">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__field">
+                            <div class="range-slider js-range-slider-double" data-min="20" data-max="200" data-step="1">
+                                <div class="range-slider__label">
+                                    Площадь, м
+                                </div>
+                                <div class="range-slider__inputs">
+                                    <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                        <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                    </div>
+                                    <div class="range-slider__inputs-divider">
+
+                                    </div>
+                                    <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                        <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="range-slider__element">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn filters__submit">
+                        Показать 355 квартир
+                    </button>
+                </div>
+                <div class="filters__row">
+                    <div class="filters__fields filters__fields--short">
+                        <div class="filters__field">
+                            <div class="range-slider js-range-slider-double" data-min="1" data-max="20" data-step="1">
+                                <div class="range-slider__label">
+                                    Этаж
+                                </div>
+                                <div class="range-slider__inputs">
+                                    <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                        <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                    </div>
+                                    <div class="range-slider__inputs-divider">
+
+                                    </div>
+                                    <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                        <input type="tel" class="range-slider__input js-numeric-input" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="range-slider__element">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__field">
+                            <div class="select">
+                                <div class="select__label">
+                                    Срок сдачи
+                                </div>
+                                <select name="project" class="js-custom-select">
+                                    <option value="1 кв 2023 г»">1 кв 2023 г»</option>
+                                    <option value="2 кв 2023 г">2 кв 2023 г</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="filters__checkboxes">
+                        <label class="filters__checkbox">
+                            <input type="checkbox" class="filters__checkbox-input">
+                            <span class="filters__checkbox-mark">
+
+                            </span>
+                            С отделкой
+                        </label>
+                        <label class="filters__checkbox">
+                            <input type="checkbox" class="filters__checkbox-input">
+                            <span class="filters__checkbox-mark">
+
+                            </span>
+                            Акция
+                        </label>
+                    </div>
+                </div>
+                <div class="filters__bottom-row">
+                    <a href="#" class="filter__extended-search">
+                        Расширенный поиск
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </a>
+                    <button type="reset" class="filters__reset-btn">
+                        Сбросить поиск
+                        <svg width="14" height="14" aria-hidden="true" class="icon-reset">
+                            <use xlink:href="#reset"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="catalog__results">
+        <div class="container">
+            <div class="catalog__results-header">
+
+
+                <div class="catalog__results-found">
+                    Найдено: 50 квартир
+                </div>
+                <div class="catalog__results-top-row">
+                    <div class="select catalog__results-sort-select">
+                        <select class="js-custom-select">
+                            <option value="1">Сначала дешевле</option>
+                            <option value="2">Сначала дороже</option>
+                        </select>
+                    </div>
+                    <a href="#" class="catalog__results-toggle">
+                        <span class="catalog__results-toggle-text">
+                            Карточки
+                        </span>
+                        <span class="catalog__results-toggle-switch">
+
+                        </span>
+                        <span class="catalog__results-toggle-text">
+                            Список
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="catalog__results-blocks">
+                <div class="catalog__results-block">
+                    <div class="catalog__results-block-sidebar">
+                        <div class="catalog__results-house">
+                            <div class="catalog__results-house-photo-container">
+                                <img src="img/houses/1.jpg" alt="" class="catalog__results-house-photo">
+                                <div class="catalog__results-house-tags">
+                                    <div class="catalog__results-house-tag">
+                                        Комфорт
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="catalog__results-house-title">
+                                Жилой Комплекс «Семейный»
+                            </h4>
+                            <div class="catalog__results-house-address">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                г. Йошкар-Ола, с. Семёновка
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__results-block-main">
+                        <ul class="catalog__results-list">
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 43.11 м2
+                                        </h4>
+                                        <div class="catalog__product-card-date">
+                                            Срок сдачи: I кв 2023 г
+                                        </div>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/2.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            Без отделки
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                3 018 087,99 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            2 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/3.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/3.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/3.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/4.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="catalog__results-show-all">
+                            Показать еще 12 из 50 планировок
+                        </a>
+                    </div>
+                </div>
+                <div class="catalog__results-block">
+                    <div class="catalog__results-block-sidebar">
+                        <div class="catalog__results-house">
+                            <div class="catalog__results-house-photo-container">
+                                <img src="img/houses/2.jpg" alt="" class="catalog__results-house-photo">
+                                <div class="catalog__results-house-tags">
+                                    <div class="catalog__results-house-tag">
+                                        Комфорт
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="catalog__results-house-title">
+                                Жилой Комплекс «Дубки»
+                            </h4>
+                            <div class="catalog__results-house-address">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                г. Йошкар-Ола, с. Семёновка
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__results-block-main">
+                        <ul class="catalog__results-list">
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 43.11 м2
+                                        </h4>
+                                        <div class="catalog__product-card-date">
+                                            Срок сдачи: I кв 2023 г
+                                        </div>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/4.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            Без отделки
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                3 018 087,99 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            2 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/3.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/3.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/3.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/1.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="catalog__results-list-item">
+                                <a href="#" class="catalog__product-card">
+                                    <div class="catalog__product-card-title-wrapper">
+
+
+                                        <h4 class="catalog__product-card-title">
+                                            1-к квартира, 22,74 м2
+                                        </h4>
+                                    </div>
+                                    <div class="catalog__product-card-image-container">
+                                        <img src="img/catalog/4.webp" alt="" class="catalog__product-card-image">
+                                    </div>
+                                    <div class="catalog__product-card-tags">
+                                        <div class="catalog__product-card-tag">
+                                            С отделкой
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog__product-card-bottom-row">
+                                        <div class="catalog__product-card-price">
+                                            <div class="catalog__product-card-price-amount">
+                                                1 400 000 ₽
+                                            </div>
+                                            <div class="catalog__product-card-price-remark">
+                                                в ипотеку от 23 400 ₽/мес
+                                            </div>
+                                        </div>
+                                        <div class="catalog__product-card-floor">
+                                            12 этаж
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="catalog__results-show-all">
+                            Показать еще 12 из 50 планировок
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}
