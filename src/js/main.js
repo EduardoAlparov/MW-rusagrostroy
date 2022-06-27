@@ -8,8 +8,7 @@ import accordions from './accordions';
 import modals from './modals';
 import tabs from './tabs';
 import menu from './menu';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import rangeSliders from './rangeSliders';
 import customSelects from './customSelects';
 import rangeSlidersDouble from './rangeSlidersDouble';
@@ -22,6 +21,10 @@ import contactsMap from './contactsMap';
 import featuresSlider from './featuresSlider';
 import projectMap from './projectMap';
 
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import catalogSidebar from './catalogSidebar';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -44,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
     projectNewsSlider();
     contactsMap();
     featuresSlider();
-    projectMap();
+    projectMap(); 
+    catalogSidebar();
 });
 
 document.addEventListener('lazyloaded', () => {
