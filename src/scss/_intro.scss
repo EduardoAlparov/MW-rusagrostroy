@@ -45,7 +45,7 @@
         min-height: min(calc(100vh + 3rem), 120rem);
     }
     @include breakpoint(mobile) {
-        min-height: 100vh;
+        min-height: calc(100vh, 60rem);
     }
 }
 
@@ -266,20 +266,19 @@
 .intro__promo-nav-link {
     display: inline-flex;
     align-items: center;
-  
+
     font-style: normal;
     font-weight: 500;
     font-size: 2rem;
     line-height: 125%;
     // transition: opacity 0.2s;
     // opacity: 0.5;
-    color: rgba(white, .5);
+    color: rgba(white, 0.5);
 
     &:link,
     &:visited {
-        color: rgba(white, .5);
+        color: rgba(white, 0.5);
     }
-   
 
     &.active {
         color: white;
@@ -304,7 +303,7 @@
         background-color: white;
         width: 100%;
         z-index: 10;
-        transition: opacity .2s;
+        transition: opacity 0.2s;
         opacity: 0;
         pointer-events: none;
     }
@@ -327,7 +326,7 @@
     white-space: nowrap;
     padding: 0.5rem 1rem;
     color: #ffffff;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     opacity: 0.5;
 }
 
@@ -557,5 +556,51 @@
 
     @include breakpoint(mobile) {
         font-size: 1.3rem;
+    }
+}
+
+.intro__promo-arrows {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    bottom: 4rem;
+    right: 0;
+}
+
+.intro__promo-arrow {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    transition: background-color .2s, border-color .2s, color .2s, opacity .2s;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+  
+    svg {
+        width: 0.6rem;
+        height: 1rem;
+        fill: white;
+        transition: fill .2s;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.2;
+        cursor: default;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        background-color: white;
+
+        svg {
+            fill: var(--primary-color);
+        }
     }
 }

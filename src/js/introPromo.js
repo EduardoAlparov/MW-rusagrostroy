@@ -45,10 +45,10 @@ export default function introPromo() {
         const instance = new Swiper(container, {
             effect: 'fade',
             speed: 500,
-            // pagination: {
-            //     el: element.querySelector('.intro__promo-slider-progress'),
-            //     type: 'progressbar'
-            // },
+            navigation: {
+                nextEl: element.querySelector('.intro__promo-arrow--next'),
+                prevEl: element.querySelector('.intro__promo-arrow--prev')
+            },
             fadeEffect: {
                 crossFade: true
             },
@@ -71,9 +71,8 @@ export default function introPromo() {
             link.addEventListener('click', event => {
                 event.preventDefault();
                 instance.slideTo(linkIndex);
-            })
-            
-        })
+            });
+        });
         ScrollTrigger.matchMedia({
             '(min-width: 641px)': function() {
                 if (!intro) return;
