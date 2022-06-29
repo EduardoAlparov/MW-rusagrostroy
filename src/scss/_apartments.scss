@@ -236,6 +236,7 @@
     table {
         width: 100%;
         border-collapse: collapse;
+        max-width: 47rem;
         th,
         td {
             font-style: normal;
@@ -285,9 +286,18 @@
         font-size: 1.4rem;
     }
 
-    .all-shown & {
-        display: none;
+    
+    & > span {
+        &:nth-child(1) {
+            display: inline;
+        }
+
+        &:nth-child(2) {
+            display: none;
+        }
     }
+
+   
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -297,6 +307,22 @@
         width: 1rem;
         height: 1rem;
         fill: currentColor;
+        transition: transform .2s;
+    }
+
+    .all-shown & {
+        svg {
+            transform: rotate(180deg);
+        }
+        & > span {
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(2) {
+                display: inline;
+            }
+        }
     }
 }
 

@@ -193,8 +193,26 @@
     line-height: 125%;
     color: var(--primary-color);
 
+    & > span {
+        &:nth-child(1) {
+            display: inline;
+        }
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
     .all-shown & {
-        display: none;
+        & > span {
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(2) {
+                display: inline;
+            }
+        }
     }
 
     @include breakpoint(mobile) {
@@ -381,6 +399,7 @@
     z-index: 5;
     margin-left: -2.6rem;
     margin-top: -2.6rem;
+    cursor: pointer;
 
     @include breakpoint(mobile) {
         margin-top: -1.8rem;
@@ -791,7 +810,6 @@
     @include breakpoint(mobile) {
         padding: 1.8rem 2rem;
         font-size: 1.8rem;
-
     }
 }
 
@@ -901,7 +919,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
-    color: rgba(#2E466E, .6);
+    color: rgba(#2e466e, 0.6);
     line-height: 125%;
     flex-wrap: wrap;
     row-gap: 1.2rem;

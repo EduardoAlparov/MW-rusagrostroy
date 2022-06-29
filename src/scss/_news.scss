@@ -279,12 +279,12 @@
             font-style: normal;
             font-weight: 500;
             font-size: 1.4rem;
-            border: 1px solid #374CF9;
+            border: 1px solid #374cf9;
             border-radius: 0.7rem;
             line-height: 125%;
             white-space: nowrap;
             user-select: none;
-            color: #374CF9;
+            color: #374cf9;
 
             @include breakpoint(mobile) {
                 font-size: 1.2rem;
@@ -360,7 +360,7 @@
 
     .no-touch &:hover,
     .touch &:active {
-        color: var(--primary-color-hover);
+        color: #7f8da5;
     }
 
     @include breakpoint(mobile) {

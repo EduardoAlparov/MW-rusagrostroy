@@ -307,7 +307,7 @@
     &:not(.all-shown) {
         table {
             tr {
-                &:not(:nth-child(-n + 3)) {
+                &:not(:nth-child(-n + 4)) {
                     display: none;
                 }
             }
@@ -330,9 +330,16 @@
         font-size: 1.4rem;
     }
 
-    .all-shown & {
-        display: none;
+    & > span {
+        &:nth-child(1) {
+            display: inline;
+        }
+
+        &:nth-child(2) {
+            display: none;
+        }
     }
+   
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -342,6 +349,22 @@
         width: 1rem;
         height: 1rem;
         fill: currentColor;
+        transition: transform .2s;
+    }
+
+    .all-shown & {
+        svg {
+            transform: rotate(180deg);
+        }
+        & > span {
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(2) {
+                display: inline;
+            }
+        }
     }
 }
 

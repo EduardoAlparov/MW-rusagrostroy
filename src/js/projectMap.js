@@ -8,8 +8,8 @@ export default function projectMap() {
             const pin = {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/pin.svg',
-                iconImageSize: window.matchMedia('(max-width: 640px)').matches ? [60, 60] : [92, 92],
-                iconImageOffset: window.matchMedia('(max-width: 640px)').matches ? [-30, -30] : [-46, -46]
+                iconImageSize: window.matchMedia('(max-width: 640px)').matches ? [60, 60] : [72, 72],
+                iconImageOffset: window.matchMedia('(max-width: 640px)').matches ? [-30, -30] : [-36, -36]
             };
 
             const zoom = element.hasAttribute('data-zoom') ? element.getAttribute('data-zoom') : 14;

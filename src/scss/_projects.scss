@@ -45,6 +45,13 @@
 .projects__card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover,
+    .touch &:active {
+        .projects__card-image {
+            transform: scale(1.02);
+        }
+    }
 }
 
 .projects__card-image-container {
@@ -62,7 +69,7 @@
     &::before {
         content: '';
         display: block;
-        padding-bottom: 42%;
+        padding-bottom: 50%;
         display: block;
     }
 }
@@ -107,6 +114,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .4s;
 }
 
 .projects__card-top-row {

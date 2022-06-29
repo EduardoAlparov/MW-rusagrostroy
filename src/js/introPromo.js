@@ -45,10 +45,10 @@ export default function introPromo() {
         const instance = new Swiper(container, {
             effect: 'fade',
             speed: 500,
-            pagination: {
-                el: element.querySelector('.intro__promo-slider-progress'),
-                type: 'progressbar'
-            },
+            // pagination: {
+            //     el: element.querySelector('.intro__promo-slider-progress'),
+            //     type: 'progressbar'
+            // },
             fadeEffect: {
                 crossFade: true
             },
@@ -104,7 +104,7 @@ export default function introPromo() {
                     .to(
                         '.intro__promo .icon-arrow-down',
                         {
-                            rotation: 180,
+                            rotation: 360,
                             duration: 0.2
                         },
                         0
