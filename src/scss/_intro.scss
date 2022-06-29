@@ -59,7 +59,7 @@
         padding-top: 5rem;
         padding-bottom: 5rem;
         grid-gap: 2rem;
-
+        padding-top: 0;
         grid-template-columns: minmax(0, 1fr);
     }
 }
@@ -188,7 +188,7 @@
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         margin-bottom: 5rem;
     }
 }
@@ -214,8 +214,10 @@
     z-index: 50;
 
     @include breakpoint(mobile) {
-        font-size: 3.5rem;
-        line-height: 1;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 107%;
     }
 }
 
@@ -236,12 +238,22 @@
     // padding-bottom: 0;
 
     @include breakpoint(mobile) {
-        display: none;
+        padding-top: 3rem;
+        top: calc(100% - 11rem);
+        transition: transform .4s;
+
+        &.promo-open {
+            transform: translateY(calc(-100% + 11rem));
+        }
     }
 }
 
 .intro__promo-nav {
     position: relative;
+
+    @include breakpoint(mobile) {
+        position: static;
+    }
 }
 
 .intro__promo-nav-arrow {
@@ -249,6 +261,19 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+
+    @include breakpoint(mobile) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        width: 3rem;
+        height: 3rem;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
     svg {
         width: 1rem;
@@ -261,6 +286,17 @@
 .intro__promo-nav-links {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: center;
+        gap: 2.7rem;
+        overflow-y: hidden;
+        margin: 0 -2rem;
+        padding: 0 2rem;
+
+        @include noScrollbar;
+    }
 }
 
 .intro__promo-nav-link {
@@ -274,6 +310,14 @@
     // transition: opacity 0.2s;
     // opacity: 0.5;
     color: rgba(white, 0.5);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 125%;
+        flex-shrink: 0;
+    }
 
     &:link,
     &:visited {
@@ -294,6 +338,12 @@
     gap: 2rem;
     display: inline-flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+        gap: 1.5rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -306,6 +356,10 @@
         transition: opacity 0.2s;
         opacity: 0;
         pointer-events: none;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 
     .intro__promo-nav-link.active & {
@@ -328,6 +382,15 @@
     color: #ffffff;
     transition: opacity 0.2s;
     opacity: 0.5;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 125%;
+        padding: 0.5rem 1rem;
+        border-radius: 0.7rem;
+    }
 }
 
 .intro__promo-slider {
@@ -336,6 +399,18 @@
     position: relative;
     opacity: 0;
     visibility: hidden;
+
+    @include breakpoint(mobile) {
+       
+        transition: opacity .3s, visibility 0s linear .3s;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+        .promo-open & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .3s, visibility .3s;
+        }
+    }
 
     &::before {
         content: '';
@@ -367,6 +442,11 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
 }
 
 .intro__promo-slider-card-bank {
@@ -379,6 +459,12 @@
     object-fit: contain;
     flex-shrink: 0;
     margin-right: 6.5rem;
+
+    @include breakpoint(mobile) {
+        width: 4.6rem;
+        height: 4.6rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .intro__promo-slider-card-bank-content {
@@ -394,6 +480,13 @@
     font-size: 3rem;
     line-height: 117%;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 117%;
+    }
     a {
         text-decoration: underline;
         transition: all 0.2s;
@@ -408,6 +501,13 @@
     flex-wrap: wrap;
     gap: 6rem;
     padding-top: 1.5rem;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0;
+        grid-gap: 2rem;
+    }
 }
 
 .intro__promo-slider-card-description-item {
@@ -416,6 +516,14 @@
     font-size: 1.8rem;
     line-height: 125%;
     width: 26rem;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 125%;
+    }
 }
 
 .intro__promo-slider-card-bank-link {
@@ -425,6 +533,13 @@
     line-height: 125%;
     color: rgba(white, 0.5);
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 125%;
+    }
     &:link,
     &:visited {
         color: rgba(white, 0.5);
@@ -572,8 +687,8 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    border: 1px solid #FFFFFF;
-    transition: background-color .2s, border-color .2s, color .2s, opacity .2s;
+    border: 1px solid #ffffff;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -582,12 +697,12 @@
     @include breakpoint(mobile) {
         display: none;
     }
-  
+
     svg {
         width: 0.6rem;
         height: 1rem;
         fill: white;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     &.swiper-button-disabled {

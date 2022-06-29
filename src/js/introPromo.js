@@ -73,6 +73,19 @@ export default function introPromo() {
                 instance.slideTo(linkIndex);
             });
         });
+
+        const arrow = document.querySelector('.intro__promo-nav-arrow');
+
+        if (arrow) {
+            arrow.addEventListener('click', event => {
+                event.preventDefault();
+                const promo = arrow.closest('.intro__promo');
+
+                if (promo) {
+                    promo.classList.toggle('promo-open');
+                }
+            })
+        }
         ScrollTrigger.matchMedia({
             '(min-width: 641px)': function() {
                 if (!intro) return;
