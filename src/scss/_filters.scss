@@ -23,6 +23,38 @@
     }
 }
 
+.filters__row--extended {
+    display: none;
+
+    .extended-search-open & {
+        display: flex;
+    }
+}
+
+.filter__extended-search {
+    & > span {
+        &:nth-child(1) {
+            display: inline;
+        }
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+    .extended-search-open & {
+        & > span {
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(2) {
+                display: inline;
+            }
+        }
+    }
+}
+
 .filters__fields {
     width: 50%;
     flex-grow: 1;
@@ -112,10 +144,17 @@
         height: 0.5rem;
         fill: currentColor;
         margin-top: 0.2rem;
+        transition: transform .2s;
     }
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    .extended-search-open & {
+        svg {
+            transform: rotate(180deg);
+        }
     }
 }
 

@@ -21,7 +21,7 @@
         <div class="catalog__filters">
 
 
-            <form action="/" class="filters__form" method="GET">
+            <form action="/" class="filters__form extended-search-open" method="GET">
                 <div class="filters__row">
                     <div class="filters__fields">
                         <div class="filters__field">
@@ -115,7 +115,7 @@
                         Показать 355 квартир
                     </button>
                 </div>
-                <div class="filters__row">
+                <div class="filters__row filters__row--extended">
                     <div class="filters__fields filters__fields--short">
                         <div class="filters__field">
                             <div class="range-slider js-range-slider-double" data-min="1" data-max="20" data-step="1">
@@ -174,7 +174,12 @@
                 </div>
                 <div class="filters__bottom-row">
                     <a href="#" class="filter__extended-search">
-                        Расширенный поиск
+                        <span>
+                            Расширенный поиск
+                        </span>
+                        <span>
+                            Короткий поиск
+                        </span>
                         <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
                             <use xlink:href="#arrow-down"></use>
                         </svg>

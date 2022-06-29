@@ -26,6 +26,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import catalogSidebar from './catalogSidebar';
 import productSlider from './productSlider';
+import extendedSearch from './extendedSearch';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     projectMap(); 
     catalogSidebar();
     productSlider();
+    extendedSearch();
 });
 
 document.addEventListener('lazyloaded', () => {
