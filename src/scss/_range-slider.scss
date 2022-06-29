@@ -9,6 +9,12 @@
     line-height: 125%;
     color: rgba(#2e466e, 0.6);
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 125%;
+        color: rgba(46, 70, 110, 0.6);
+    }
 }
 
 .range-slider__input {
@@ -101,7 +107,9 @@
     margin-bottom: 2rem;
     gap: 2rem;
 
-   
+    @include breakpoint(mobile) {
+        margin-bottom: 1.3rem;
+    }
 
     .range-slider__input-wrapper {
         .range-slider__input {
