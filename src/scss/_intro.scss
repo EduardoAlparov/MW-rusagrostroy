@@ -45,7 +45,7 @@
         min-height: min(calc(100vh + 3rem), 120rem);
     }
     @include breakpoint(mobile) {
-        min-height: calc(100vh, 60rem);
+        min-height: min(100vh, 70rem);
     }
 }
 
