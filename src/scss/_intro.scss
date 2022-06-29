@@ -36,6 +36,7 @@
 .intro__content {
     // padding-top: 12.6rem;
     padding-bottom: 7rem;
+    min-height: 100vh;
     min-height: min(calc(100vh + 3rem), 125rem);
 
     display: flex;
@@ -45,6 +46,7 @@
         min-height: min(calc(100vh + 3rem), 120rem);
     }
     @include breakpoint(mobile) {
+        min-height: 100vh;
         min-height: min(100vh, 70rem);
     }
 }
