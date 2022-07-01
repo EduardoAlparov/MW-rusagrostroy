@@ -43,8 +43,14 @@ export default function rangeSlidersDouble() {
             inputs[1].value = newValue[1];
         });
 
-       
 
+        inputs[0].addEventListener('change', (event) => {
+            rangeSliderElement.noUiSlider.set(event.target.value.replace(/[^\d]+/g, ''));
+        })
+        inputs[1].addEventListener('change', (event) => {
+            rangeSliderElement.noUiSlider.set([null, event.target.value.replace(/[^\d]+/g, '')]);
+        })
+       
         if (form) {
             form.addEventListener('reset', () => {
                 console.log('Parent form has been reset')

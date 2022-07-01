@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { debounce } from 'lodash';
-import { convertRemToPixels } from './utils';
+import { convertRemToPixels, IS_MOBILE } from './utils';
 
 import { Swiper, Navigation, Pagination, EffectFade } from 'swiper';
 gsap.registerPlugin(ScrollTrigger);
@@ -84,44 +84,43 @@ export default function introPromo() {
                 if (promo) {
                     promo.classList.toggle('promo-open');
                 }
-            })
+            });
         }
-        ScrollTrigger.matchMedia({
-            '(min-width: 641px)': function() {
-                if (!intro) return;
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: '.intro',
-                        start: () => `top top`,
-                        end: () => element.offsetHeight,
-                        scrub: true,
-                        pin: checkIntroHeight() ? false : true,
-                        pinSpacing: true,
-                        toggleClass: 'expanded'
-                    }
-                });
 
-                tl.to(element, {
-                    y: () => slider.offsetHeight * -1,
-                    duration: 0.5
-                })
-                    .to(
-                        '.intro__promo-slider',
-                        {
-                            autoAlpha: 1,
-                            duration: 0.5
-                        },
-                        0
-                    )
-                    .to(
-                        '.intro__promo .icon-arrow-down',
-                        {
-                            rotation: 360,
-                            duration: 0.2
-                        },
-                        0
-                    );
-            }
-        });
+        if (!IS_MOBILE) {
+            if (!intro) return;
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.intro',
+                    start: () => `top top`,
+                    end: () => element.offsetHeight,
+                    scrub: true,
+                    pin: checkIntroHeight() ? false : true,
+                    pinSpacing: true,
+                    toggleClass: 'expanded'
+                }
+            });
+
+            tl.to(element, {
+                y: () => slider.offsetHeight * -1,
+                duration: 0.5
+            })
+                .to(
+                    '.intro__promo-slider',
+                    {
+                        autoAlpha: 1,
+                        duration: 0.5
+                    },
+                    0
+                )
+                .to(
+                    '.intro__promo .icon-arrow-down',
+                    {
+                        rotation: 360,
+                        duration: 0.2
+                    },
+                    0
+                );
+        }
     });
 }

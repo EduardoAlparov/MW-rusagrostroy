@@ -39,7 +39,7 @@ export default function rangeSliders() {
         });
 
         input.addEventListener('change', function() {
-            rangeSliderElement.noUiSlider.set(this.value);
+            rangeSliderElement.noUiSlider.set(this.value.replace(/[^\d]+/g, ''));
         });
 
         if (form) {
