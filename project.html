@@ -2122,6 +2122,38 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="modal js-modal" id="mortgage-modal">
+            <div class="modal__inner">
+                <div class="modal__callback">
+                    <button class="modal__close js-close-modal">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-modal-close">
+                            <use xlink:href="#modal-close"></use>
+                        </svg>
+                    </button>
+                    <h3 class="modal__callback-heading">
+                        Заявка на ипотеку
+                    </h3>
+                    <div class="modal__callback-text">
+                       Заполните форму  наши менеджеры перезвонят вам в течении 10 минут
+                    </div>
+                    <form action="/" method="POST" class="modal__callback-form" data-need-validation="">
+                        <div class="modal__callback-form-fields">
+                            <div class="modal__callback-form-field">
+                                <input type="text" class="modal__callback-form-input"
+                                    placeholder="Ваше имя/Название организации" required="">
+                            </div>
+                            <div class="modal__callback-form-field">
+                                <input type="tel" class="modal__callback-form-input js-phone-input"
+                                    placeholder="Ваш номер телефона" required="" data-parsley-phone="">
+                            </div>
+                        </div>
+                        <button class="modal__callback-form-submit" type="submit">
+                            Записаться на встречу
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>        <style>
             .ie-placeholder {
                 z-index: 4000;
