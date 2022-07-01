@@ -5,6 +5,9 @@
     padding-top: 10rem;
     padding-bottom: 10rem;
     margin-bottom: 10rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 
     @include breakpoint(mobile) {
         padding: 3rem 0;

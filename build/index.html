@@ -664,6 +664,14 @@
 </section>
 
 <section class="credit-calculator">
+    <div class="bricks">
+
+        <div class="bricks__cursor">
+            <div class="bricks__pattern bricks__pattern--dark">
+
+            </div>
+        </div>
+    </div>
     <div class="container">
         <h2 class="section-heading credit-calculator__heading">
             Ипотека — это легко
@@ -731,12 +739,12 @@
                     </div>
 
                 </div>
-                <button type="submit" class="btn credit-calculator__form-submit">
+                <a href="#callback-modal" class="btn credit-calculator__form-submit">
                     Оставить заявку
                     <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
-                </button>
+                </a>
                 <div class="credit-calculator__form-remark">
                     Данный расчёт приведён для общей информации и не является публичной офертой
                 </div>
@@ -1284,7 +1292,7 @@
                             </div>
                             <div class="modal__callback-form-field">
                                 <input type="tel" class="modal__callback-form-input js-phone-input"
-                                    placeholder="Ваше имя/Название организации" required="" data-parsley-phone="">
+                                    placeholder="Ваш номер телефона" required="" data-parsley-phone="">
                             </div>
                         </div>
                         <button class="modal__callback-form-submit" type="submit">
