@@ -28,6 +28,7 @@ import catalogSidebar from './catalogSidebar';
 import productSlider from './productSlider';
 import extendedSearch from './extendedSearch';
 import bricks from './bricks';
+import animations from './animations';
 gsap.registerPlugin(ScrollTrigger);
 
 const refresh = () => {
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     productSlider();
     extendedSearch();
     bricks();
+    animations();
 });
 
 document.addEventListener('lazyloaded', () => {

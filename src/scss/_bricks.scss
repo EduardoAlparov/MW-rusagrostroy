@@ -48,8 +48,9 @@
     transform: translate(-50%, -50%);
     background-position: center;
     background-size: 10rem auto;
-
+    will-change: transform;
     transform: translate(-50%, -50%) translateX(calc(var(--x) * -1)) translateY(calc(var(--y) * -1));
+    backface-visibility: hidden;
 
     &--large {
         background-size: 15rem auto;
