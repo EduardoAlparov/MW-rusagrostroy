@@ -30,6 +30,12 @@ import extendedSearch from './extendedSearch';
 import bricks from './bricks';
 gsap.registerPlugin(ScrollTrigger);
 
+const refresh = () => {
+    ScrollTrigger.refresh();
+}
+
+window.refreshTrigger = refresh;
+
 document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
     setScrollbarWidth();
