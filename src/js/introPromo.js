@@ -89,11 +89,12 @@ export default function introPromo() {
 
         if (!IS_MOBILE) {
             if (!intro) return;
+
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: '.intro',
                     start: () => `top top`,
-                    end: () => element.offsetHeight,
+                    end: '40%',
                     scrub: true,
                     pin: checkIntroHeight() ? false : true,
                     pinSpacing: true,
@@ -101,10 +102,14 @@ export default function introPromo() {
                 }
             });
 
-            tl.to(element, {
-                y: () => slider.offsetHeight * -1,
-                duration: 0.5
-            })
+            tl.fromTo(
+                element,
+                { '--progress': 0 },
+                {
+                    '--progress': 1,
+                    duration: 0.5
+                }
+            )
                 .to(
                     '.intro__promo-slider',
                     {

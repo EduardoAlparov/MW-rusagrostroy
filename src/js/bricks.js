@@ -13,7 +13,7 @@ export default function bricks() {
 
         element.parentElement.addEventListener('mousemove', event => {
             if (!tracking) return;
-            console.log(event);
+            // console.log(event);
 
             element.parentElement.style.setProperty('--x', event.clientX - element.getBoundingClientRect().left + 'px');
             element.parentElement.style.setProperty('--y', event.clientY - element.getBoundingClientRect().top + 'px');

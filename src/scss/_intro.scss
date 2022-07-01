@@ -251,6 +251,11 @@
     // padding: 3rem 0;
     // padding-bottom: 0;
 
+    @include breakpointMF(small-tablet) {
+        // top: 100%;
+        transform: translateY(calc(-1 * 100% * var(--progress) + (12rem * var(--progress))));
+    }
+
     @include breakpoint(mobile) {
         padding-top: 3rem;
         top: calc(100% - 11rem);
