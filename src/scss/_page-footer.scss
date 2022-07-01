@@ -7,6 +7,7 @@
     border-top-left-radius: 2rem;
     position: relative;
     z-index: 15;
+    overflow: hidden;
 
     @include breakpoint(mobile) {
         padding-top: 3rem;

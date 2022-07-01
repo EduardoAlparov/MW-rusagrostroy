@@ -80,6 +80,9 @@
     background: var(--primary-color);
     border-radius: 0px 0px 2rem 2rem;
     color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
     @include breakpoint(mobile) {
         border-radius: 0;
