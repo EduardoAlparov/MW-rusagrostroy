@@ -30,13 +30,14 @@ import extendedSearch from './extendedSearch';
 import bricks from './bricks';
 import animations from './animations';
 import revealBlocks from './revealBlocks';
+import listViewToggle from './listViewToggle';
 gsap.registerPlugin(ScrollTrigger);
 
-const refresh = () => {
-    ScrollTrigger.refresh();
-}
+// const refresh = () => {
+//     ScrollTrigger.refresh();
+// }
 
-window.refreshTrigger = refresh;
+// window.refreshTrigger = refresh;
 
 document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     bricks();
     animations();
     revealBlocks();
+    listViewToggle();
 });
 
 document.addEventListener('lazyloaded', () => {

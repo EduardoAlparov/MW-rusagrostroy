@@ -86,46 +86,46 @@ export default function introPromo() {
                 }
             });
         }
+        // if (!intro) return;
+        ScrollTrigger.matchMedia({
+            '(min-width: 641px)': function() {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '.intro',
+                        start: () => `top top`,
+                        end: '40%',
+                        scrub: true,
+                        pin: checkIntroHeight() ? false : true,
+                        pinSpacing: true,
+                        toggleClass: 'expanded'
+                    }
+                });
 
-        if (!IS_MOBILE) {
-            if (!intro) return;
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '.intro',
-                    start: () => `top top`,
-                    end: '40%',
-                    scrub: true,
-                    pin: checkIntroHeight() ? false : true,
-                    pinSpacing: true,
-                    toggleClass: 'expanded'
-                }
-            });
-
-            tl.fromTo(
-                element,
-                { '--progress': 0 },
-                {
-                    '--progress': 1,
-                    duration: 0.5
-                }
-            )
-                .to(
-                    '.intro__promo-slider',
+                tl.fromTo(
+                    element,
+                    { '--progress': 0 },
                     {
-                        autoAlpha: 1,
+                        '--progress': 1,
                         duration: 0.5
-                    },
-                    0
+                    }
                 )
-                .to(
-                    '.intro__promo .icon-arrow-down',
-                    {
-                        rotation: 360,
-                        duration: 0.2
-                    },
-                    0
-                );
-        }
+                    .to(
+                        '.intro__promo-slider',
+                        {
+                            autoAlpha: 1,
+                            duration: 0.5
+                        },
+                        0
+                    )
+                    .to(
+                        '.intro__promo .icon-arrow-down',
+                        {
+                            rotation: 360,
+                            duration: 0.2
+                        },
+                        0
+                    );
+            }
+        });
     });
 }

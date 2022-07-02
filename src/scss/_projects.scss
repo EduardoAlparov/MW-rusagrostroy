@@ -48,7 +48,7 @@
 
     @include breakpointMF(small-tablet) {
         flex-grow: 1;
-        min-height: 57rem;
+        flex-basis: 57rem;
         &:hover {
             .projects__card-image-container {
                 &::before {
