@@ -224,7 +224,7 @@
 
 .contacts__contact-us-form-submit {
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-style: normal;
     font-weight: 700;
     font-size: 1.8rem;
@@ -366,5 +366,25 @@
     &:link,
     &:visited {
         color: #1361de;
+    }
+}
+
+
+.contacts__contact-us-form-policy {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 125%;
+    color: rgba(#f5f6f8, .6);
+    display: block;
+    margin-top: 1rem;
+    &:link,
+    &:visited {
+        color: rgba(#f5f6f8, .6);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #F5F6F8;
     }
 }

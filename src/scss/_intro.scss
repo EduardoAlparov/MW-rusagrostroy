@@ -32,8 +32,8 @@
     max-width: none;
     
 
-    transform-origin: left bottom;
-    transform: scale(0.9);
+    // transform-origin: left bottom;
+    // transform: scale(0.9);
     // opacity: 0;
     // visibility: hidden;
    
@@ -566,12 +566,27 @@
     line-height: 125%;
     color: rgba(white, 0.5);
     margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    svg {
+        display: none;
+        fill: currentColor;
+        width: 0.5rem;
+        height: 1rem;
+        margin-top: 0.2rem;
+    }
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 125%;
+
+        svg {
+            display: block;
+
+        }
     }
     &:link,
     &:visited {
