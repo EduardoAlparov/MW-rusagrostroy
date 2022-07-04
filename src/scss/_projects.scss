@@ -49,7 +49,7 @@
     @include breakpointMF(small-tablet) {
         flex-grow: 1;
         flex-basis: 57rem;
-        &:hover {
+        .no-touch &:hover {
             .projects__card-image-container {
                 &::before {
                     padding-bottom: 22.3%;

@@ -570,11 +570,11 @@
     align-items: center;
     gap: .8rem;
     svg {
-        display: none;
+      
         fill: currentColor;
         width: 0.5rem;
         height: 1rem;
-        margin-top: 0.2rem;
+        margin-top: 0.3rem;
     }
 
     @include breakpoint(mobile) {
@@ -585,6 +585,7 @@
 
         svg {
             display: block;
+            margin-top: 0.2rem;
 
         }
     }
@@ -729,6 +730,7 @@
     gap: 1.1rem;
     bottom: 4rem;
     right: 0;
+    z-index: 30;
 }
 
 .intro__promo-arrow {
