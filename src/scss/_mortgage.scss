@@ -1,0 +1,335 @@
+.mortgage {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.mortgage__breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 125%;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        &::after {
+            content: '';
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background-color: #37393e;
+            flex-shrink: 0;
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+
+        &.active {
+            color: rgba(#37393e, 0.5);
+            cursor: default;
+        }
+    }
+}
+
+.mortgage__top-row {
+   
+
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 6rem;
+    }
+}
+
+.mortgage__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7rem;
+   
+    line-height: 107%;
+
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 7;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.mortgage__banks-list {
+    
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 7 / 10;
+    }
+}
+
+.mortgage__approval {
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #7f8da5;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2.5rem;
+
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 10 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
+    &::before {
+        content: '';
+        flex-shrink: 0;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        margin-right: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    b {
+        color: #37393e;
+    }
+}
+
+.mortgage__banks-list {
+    display: flex;
+    align-items: center;
+}
+
+.mortgage__banks-list-item {
+    margin-left: -2.6rem;
+    position: relative;
+    margin-top: -2rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+        margin-left: -1.3rem;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:nth-child(1) {
+        z-index: 20;
+    }
+
+    &:nth-child(2) {
+        z-index: 19;
+    }
+
+    &:nth-child(3) {
+        z-index: 18;
+    }
+
+    &:nth-child(4) {
+        z-index: 17;
+    }
+
+    &:nth-child(5) {
+        z-index: 16;
+    }
+
+    &:nth-child(4) {
+        z-index: 15;
+    }
+
+    &:nth-child(3) {
+        z-index: 14;
+    }
+
+    &:nth-child(2) {
+        z-index: 13;
+    }
+
+    &:nth-child(1) {
+        z-index: 12;
+    }
+}
+
+.mortgage__banks-image {
+    display: block;
+    height: 7.5rem;
+    width: auto;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        height: 4.5rem;
+    }
+}
+
+.mortgage__text-content {
+   
+    display: flex;
+    flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 7;
+    }
+}
+
+.mortgage__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 124%;
+    color: #8f9093;
+    margin-bottom: 5.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.mortgage__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    padding: 2.8rem;
+    background: var(--primary-color);
+    border-radius: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+    align-self: stretch;
+    color: white;
+    max-width: 48rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        padding: 2rem 2.5rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+    svg {
+        flex-shrink: 0;
+        width: 0.6rem;
+        height: 1.2rem;
+        fill: currentColor;
+    }
+
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+}
+
+.mortgage__features-list {
+   
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        margin-top: 3rem;
+    }
+
+
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 7 / -1;
+    }
+}
+
+.mortgage__features-list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.mortgage__features-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1px solid #d9dde4;
+    border-radius: 2rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    position: relative;
+    z-index: 1;
+    padding: 3rem;
+    padding-top: 5.6rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.mortgage__features-card-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mortgage__features-card-amount {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 95%;
+    letter-spacing: -0.02em;
+
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3.5rem;
+    }
+}
+
+.mortgage__features-card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 115%;
+    color: #7f8da5;
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
