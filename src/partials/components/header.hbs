@@ -21,6 +21,7 @@
                                 <img src="img/logo.svg" alt="" class="page-header__logo-image">
 
                             </a>
+
                             <button class="page-header__menu-close">
                                 <svg width="14" height="14" aria-hidden="true" class="icon-cross">
                                     <use xlink:href="#cross"></use>
@@ -145,6 +146,16 @@
                     <img src="img/logo.svg" alt="" class="page-header__logo-image">
                     {{/if}}
                 </a>
+
+                <a href="#" class="page-header__mzsk-logo">
+                    
+
+                    {{#if darkHeader}}
+                        <img src="img/mzsk-dark.svg" alt="" class="page-header__mzsk-logo-image">
+                    {{else}}
+                        <img src="img/mzsk-white.svg" alt="" class="page-header__mzsk-logo-image">
+                    {{/if}}
+                </a>
                 <a href="#" class="page-header__choose-apartment">
                     Выбрать квартиру
                     <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
@@ -178,6 +189,11 @@
                     </ul>
                 </nav>
                 <a href="tel:+8362362525" class="page-header__phone">(8362) 36-25-25</a>
+                <a href="#" class="page-header__like-btn">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-heart">
+                        <use xlink:href="#heart"></use>
+                    </svg>
+                </a>
                 <a href="#" class="page-header__process">
                     <svg width="14" height="14" aria-hidden="true" class="icon-camera">
                         <use xlink:href="#camera"></use>

@@ -1,0 +1,152 @@
+.about-intro {
+    position: relative;
+    z-index: 1;
+    background: #1360dc;
+    color: white;
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        
+        padding-bottom: 3.5rem;
+    }
+}
+
+.about-intro__breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 125%;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        &::after {
+            content: '';
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background-color: white;
+            flex-shrink: 0;
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+
+        &.active {
+            color: rgba(white, 0.5);
+            cursor: default;
+        }
+    }
+}
+
+.about-intro__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+}
+
+.about-intro__text-content {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.about-intro__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7rem;
+    line-height: 107%;
+    margin-bottom: 4.5rem;
+    max-width: 70rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.about-intro__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 125%;
+    color: rgba(white, 0.8);
+    max-width: 65rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        max-width: none;
+    }
+}
+
+.about-intro__certificates-list {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.about-intro__certificates-list-item {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: -7rem;
+
+        @include breakpoint(mobile) {
+            margin-right: -4.5rem;
+        }
+    }
+
+    &:nth-child(1) {
+        z-index: 10;
+    }
+
+    &:nth-child(2) {
+        z-index: 9;
+    }
+    &:nth-child(3) {
+        z-index: 8;
+    }
+    &:nth-child(4) {
+        z-index: 7;
+    }
+    &:nth-child(5) {
+        z-index: 6;
+    }
+}
+.about-intro__certificates-image {
+    height: 19.4rem;
+    width: auto;
+    display: block;
+    object-fit: contain;
+
+    @include breakpoint(mobile) {
+        height: 11rem;
+    }
+}

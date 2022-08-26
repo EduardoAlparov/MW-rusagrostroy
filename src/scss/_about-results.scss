@@ -1,0 +1,228 @@
+.about-results {
+    background: #f8f8f8;
+    border-radius: 2rem;
+    padding: 10rem 0;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.about-results__top-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 3rem;
+    margin-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.about-results__text-content {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.about-results__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+}
+
+.about-results__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 125%;
+    color: #8f9093;
+    max-width: 75rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
+
+.about-results__arrows {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.about-results__arrow {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1361de;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+    width: 9rem;
+    height: 9rem;
+    flex-shrink: 0;
+    svg {
+        width: 1.4rem;
+        height: 2.6rem;
+        fill: #1361de;
+        transition: fill 0.2s;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        background: #1361de;
+
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.about-results__slider {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+    }
+}
+
+.about-results__slider-sidebar {
+    flex-shrink: 0;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        flex-shrink: 1;
+        width: 100%;
+        
+    }
+}
+
+.about-results__slider-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 117%;
+    color: #37393e;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
+.about-results__slider-wrapper {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .swiper {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: 34rem;
+        padding-right: 6rem;
+        box-sizing: content-box;
+
+        @include breakpoint(mobile) {
+            width: max-content;
+            padding-right: 0;
+            margin-right: 3rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.about-results__slider-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-results__slider-card-amount {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15rem;
+    line-height: 0.9;
+    color: #1361de;
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 7rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.about-results__slider-card-unit {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 125%;
+    color: rgba(#37393e, 0.56);
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.25;
+    }
+}
+
+.about-results__slider-card-year {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 117%;
+    margin-top: 2.4rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 1.4rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-top: .5rem;
+    }
+}

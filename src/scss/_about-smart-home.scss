@@ -1,0 +1,115 @@
+.about-smart-home {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.about-smart-home__card {
+    background: #1361de;
+    border-radius: 2rem;
+    color: white;
+    padding: 5rem 7rem;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3rem;
+    }
+}
+
+.about-smart-home__card-content {
+    width: 50%;
+    flex-grow: 1;
+    padding: 2rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.about-smart-home__card-illustration {
+    width: 47rem;
+    height: auto;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        order: -1;
+    }
+}
+
+.about-smart-home__card-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.about-smart-home__card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 125%;
+    color: rgba(white, 0.5);
+    max-width: 70rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.25;
+    }
+}
+
+.about-smart-home__features-list {
+    margin-top: 12rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.about-smart-home__features-card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 117%;
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.2rem;
+    }
+}
+
+.about-smart-home__features-card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 135%;
+    color: rgba(white, 0.6);
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.35;
+    }
+}

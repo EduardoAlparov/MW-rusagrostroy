@@ -31,6 +31,7 @@ import bricks from './bricks';
 import animations from './animations';
 import revealBlocks from './revealBlocks';
 import listViewToggle from './listViewToggle';
+import aboutResultsSlider from './aboutResultsSlider';
 gsap.registerPlugin(ScrollTrigger);
 
 // const refresh = () => {
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     animations();
     revealBlocks();
     listViewToggle();
+    aboutResultsSlider();
 });
 
 document.addEventListener('lazyloaded', () => {
