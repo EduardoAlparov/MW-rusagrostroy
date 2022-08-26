@@ -1,0 +1,39 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="not-found">
+
+    <div class="container">
+        <div class="not-found__header-wrapper">
+            <div class="container">
+                {{> header }}
+            </div>
+        </div>
+        <div class="not-found__content">
+            <div class="bricks">
+
+                <div class="bricks__cursor">
+                    <div class="bricks__pattern">
+
+                    </div>
+                </div>
+            </div>
+            <div class="not-found__text-content">
+                <h1 class="not-found__heading">
+                    К сожалению, такой страницы не существует
+                </h1>
+                <a href="#" class="not-found__link">
+                    Перейти на главную
+                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+            <img src="img/not-found.svg" alt="" class="not-found__image">
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
