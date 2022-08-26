@@ -1,0 +1,209 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+
+
+<section class="news-single">
+    <div class="container">
+        {{> header }}
+        <div class="news-single__breadcrumbs">
+            <a href="#">
+                Главная
+            </a>
+            <a href="#">
+                Новости
+            </a>
+            <a href="#" class="active">
+                Сбербанк снижает первоначальный
+            </a>
+        </div>
+        <div class="news-single__intro">
+            <h1 class="news-single__main-heading">
+                СберБанк снижает первоначальный взнос по ипотеке с господдержкой до 15%
+            </h1>
+            <div class="news-single__date">
+                01.12.2022
+            </div>
+        </div>
+        <div class="news-single__preview-image-wrapper">
+            <img src="img/news-single.jpg" alt="" class="news-single__preview-image">
+        </div>
+        <div class="news-single__content">
+            <p>
+                Теперь в ипотеку по льготной ставке 6,4% годовых можно приобрести квартиру в <a href="#">новостройке</a>
+                с минимальным первоначальным взносом. При регистрации сделки в электронном виде действует скидка
+                0,3 п.п. до 30 июня 2020 года, и льготная ставка снижается до 6,1% годовых.
+            </p>
+            <p>
+                В рамках программы можно оформить ипотечный кредит на покупку жилья в новостройке до 8 млн рублей
+                в Москве, Московской области, Санкт - Петербурге и Ленинградской области и до 3 млн рублей — в других
+                регионах России. Срок кредитования — до 20 лет.
+            </p>
+
+            <h3>
+                Полные условия
+            </h3>
+            <ul>
+                <li>
+                    Первоначальный взнос — 10%
+                </li>
+                <li>
+                    Сумма рассрочки — до 20 млн руб.
+                </li>
+                <li>
+                    Срок от 6 до 12 месяцев
+                </li>
+                <li>
+                    Платежи — ежемесячно
+                </li>
+                <li>
+                    Крайний срок платежа — за 1 месяц до получения разрешения на ввод в эксплуатацию
+                </li>
+            </ul>
+
+
+            <blockquote>
+                <p>
+                    Секрет японцев в том, что они не делают доклады о работе, а работают. Цитата в новости
+                </p>
+                <span class="author">
+                    — Питер Друкер
+                </span>
+            </blockquote>
+
+            <p>
+                Теперь в ипотеку по льготной ставке 6,4% годовых можно приобрести квартиру в <a href="#">новостройке</a>
+                с минимальным первоначальным взносом. При регистрации сделки в электронном виде действует скидка
+                0,3 п.п. до 30 июня 2020 года, и льготная ставка снижается до 6,1% годовых.
+            </p>
+            <img src="img/news-single-content.jpg" alt="">
+
+
+
+        </div>
+
+        <form action="/" method="POST" class="news-single__form" data-need-validation="">
+            <h3 class="news-single__form-heading">
+                Ответим на любой ваш вопрос
+            </h3>
+            <div class="news-single__form-text">
+                Заполните форму наши менеджеры перезвонят вам в течении 10 минут
+            </div>
+            <div class="news-single__form-fields">
+                <div class="news-single__form-field">
+                    <input type="text" name="name" class="news-single__form-input" placeholder="Ваше имя" required="">
+                </div>
+                <div class="news-single__form-field">
+                    <input type="tel" name="phone" class="news-single__form-input js-phone-input" placeholder="Ваш номер телефона" required="" data-parsley-phone="">
+                </div>
+            </div>
+            <div class="news-single__form-bottom-row">
+                <button class="news-single__form-submit" type="submit">
+                    Отправить заявку
+                </button>
+                <div class="news-single__form-policy">
+                    Нажимая на кнопку, Вы даете согласие на обработку <a href="#">персональных данных</a>.
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="project-news">
+    <div class="container">
+        <div class="project-news__top-row">
+            <h2 class="section-heading project-news__heading">
+                Смотрите также
+            </h2>
+            <a href="#" class="project-news__show-all">
+                Смотреть все
+            </a>
+        </div>
+        <div class="project-news__slider js-project-news">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-image-container">
+                                <img src="img/project-news/1.jpg" alt="" class="project-news__slider-card-image">
+                                <div class="project-news__tags">
+                                    <div class="project-news__tag">
+                                        Новость
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-news__slider-card-date">
+                                01.12.2022
+                            </div>
+                            <h3 class="project-news__slider-card-heading">
+                                Русагрострой "Надежный застройщик России 2020"
+                            </h3>
+
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-image-container">
+                                <img src="img/project-news/2.jpg" alt="" class="project-news__slider-card-image">
+                                <div class="project-news__tags">
+                                    <div class="project-news__tag project-news__tag--light">
+                                        Новость
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-news__slider-card-date">
+                                01.12.2022
+                            </div>
+                            <h3 class="project-news__slider-card-heading">
+                                Русагрострой "Надежный застройщик России 2020"
+                            </h3>
+
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-image-container">
+                                <img src="img/project-news/3.jpg" alt="" class="project-news__slider-card-image">
+                                <div class="project-news__tags">
+                                    <div class="project-news__tag project-news__tag--light">
+                                        Новость
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-news__slider-card-date">
+                                01.12.2022
+                            </div>
+                            <h3 class="project-news__slider-card-heading">
+                                Русагрострой "Надежный застройщик России 2020"
+                            </h3>
+
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-image-container">
+                                <img src="img/project-news/4.jpg" alt="" class="project-news__slider-card-image">
+                                <div class="project-news__tags">
+                                    <div class="project-news__tag">
+                                        Новость
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-news__slider-card-date">
+                                01.12.2022
+                            </div>
+                            <h3 class="project-news__slider-card-heading">
+                                Русагрострой "Надежный застройщик России 2020"
+                            </h3>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
