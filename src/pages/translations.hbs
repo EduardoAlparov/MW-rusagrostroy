@@ -1,0 +1,109 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="translations">
+    <div class="container">
+        {{> header }}
+        <div class="translations__breadcrumbs">
+            <a href="#">
+                Главная
+            </a>
+            <a href="#" class="active">
+                Ход строительства
+            </a>
+        </div>
+        <h1 class="translations__heading">
+            Прямые трансляции
+        </h1>
+
+    </div>
+    <div class="translations__results">
+        <div class="bricks">
+
+            <div class="bricks__cursor">
+                <div class="bricks__pattern bricks__pattern--dark">
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="translations__list">
+                <li class="translations__list-item">
+                    <a href="#translation-modal" class="translations__card">
+                        <div class="translations__card-image-container">
+                            <img src="img/translations/1.jpg" alt="" class="translations__card-image">
+                            <div class="translations__card-label">
+                                Онлайн-видео
+                            </div>
+                        </div>
+                        <h4 class="translations__card-title">
+                            Жилой Комплекс «Семейный»
+                        </h4>
+                    </a>
+
+                </li>
+                <li class="translations__list-item">
+                    <a href="#translation-modal" class="translations__card">
+                        <div class="translations__card-image-container">
+                            <img src="img/translations/2.jpg" alt="" class="translations__card-image">
+                            <div class="translations__card-label">
+                                Онлайн-видео
+                            </div>
+                        </div>
+                        <h4 class="translations__card-title">
+                            Жилой Комплекс «Дубки»
+                        </h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div class="translations__modal js-modal" id="translation-modal">
+    <div class="translations__modal-inner">
+        <button class="translations__modal-close js-close-modal" type="button">
+            <svg width="14" height="14" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <h3 class="translations__modal-heading">
+            Жилой Комплекс «Семейный»
+        </h3>
+        <div class="translations__modal-tabs js-tabs">
+            <div class="translations__modal-tabs-nav">
+                <a href="#" class="translations__modal-tabs-nav-link js-tabs-btn active">
+                    Позиция 1
+                </a>
+                <a href="#" class="translations__modal-tabs-nav-link js-tabs-btn">
+                    Позиция 2
+                </a>
+            </div>
+            <div class="translations__modal-tabs-items">
+                <div class="translations__modal-tabs-item js-tabs-item">
+                    <div class="translations__modal-video-wrapper">
+                        <img src="img/translation-video-preview.jpg" alt="">
+                    </div>
+                    <a href="#" class="translations__modal-project-link">
+                        Перейти к проекту
+                    </a>
+                </div>
+                <div class="translations__modal-tabs-item js-tabs-item">
+                    <div class="translations__modal-video-wrapper">
+                        <img src="img/translation-video-preview.jpg" alt="">
+                    </div>
+                    <a href="#" class="translations__modal-project-link">
+                        Перейти к проекту
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{{/content}}
+{{/extend}}
