@@ -9,11 +9,10 @@
 :root {
     --max-container-width: 156rem;
     --content-padding: 6rem;
-    --primary-color: #1361DE;
-    --primary-color-hover: #0E52BE;
-    --text-color: #37393E;
+    --primary-color: #1361de;
+    --primary-color-hover: #0e52be;
+    --text-color: #37393e;
     --pt-root: 'PT Root UI', sans-serif;
-
 
     @include breakpoint(mobile) {
         --content-padding: 2rem;
@@ -25,7 +24,6 @@ html {
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
     font-size: 9px;
-    
 
     @media screen and (max-width: 1679px) {
         font-size: clamp(4.2px, 0.595vw, 10px);
@@ -197,8 +195,6 @@ th {
     vertical-align: top;
 }
 
-
-
 ::selection {
     color: white;
     background-color: var(--primary-color);
@@ -216,7 +212,6 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     background-color: transparent;
 }
-
 
 [class*='ymaps-2'][class*='-ground-pane'] {
     filter: grayscale(100%);
