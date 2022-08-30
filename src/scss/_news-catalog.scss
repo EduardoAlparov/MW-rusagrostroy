@@ -163,6 +163,12 @@
     background: #ffffff;
     border-radius: 2rem;
 
+    .no-touch &:hover {
+        .news-catalog__results-card-image {
+            transform: scale(1.02);
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 1.5rem;
     }
@@ -235,6 +241,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .5s;
 }
 
 .news-catalog__selected {
@@ -245,6 +252,13 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 6rem;
     margin-bottom: 6rem;
+
+    .no-touch &:hover {
+        .news-catalog__selected-image {
+            transform: scale(1.02);
+        }
+        
+    }
 
     @include breakpoint(mobile) {
         padding: 1.5rem;
@@ -283,6 +297,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .5s;
 }
 
 .news-catalog__selected-content {

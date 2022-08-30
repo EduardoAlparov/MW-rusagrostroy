@@ -376,7 +376,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-
+    transition: background-color .2s;
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         padding: 1.6rem 2rem;
@@ -386,5 +386,9 @@
     &:link,
     &:visited {
         color: white;
+    }
+
+    &:hover {
+        background: var(--primary-color-hover);
     }
 }

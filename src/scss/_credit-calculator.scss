@@ -106,9 +106,35 @@
 }
 
 .credit-calculator__results-list-item {
-    border-bottom: 1px solid rgba(57, 123, 243, 0.2);
-    &:last-child {
-        border: none;
+    border-top: 1px solid rgba(57, 123, 243, 0.2);
+    transition: border-color 0.2s;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 1px solid #1361de;
+        border-radius: 2rem;
+        z-index: -1;
+        transition: opacity .2s;
+        opacity: 0;
+    }
+    &:first-child {
+        border-color: transparent;
+    }
+
+    .no-touch &:hover {
+        border-color: transparent;
+
+        & + .credit-calculator__results-list-item {
+            border-color: transparent;
+        }
+
+        &::before {
+            opacity: 1;
+        }
     }
 }
 
@@ -130,6 +156,10 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    @include breakpointMF(small-tablet) {
+        padding-left: 2rem;
+    }
 
     @include breakpoint(mobile) {
         grid-column: span 2;

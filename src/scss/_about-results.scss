@@ -3,6 +3,8 @@
     border-radius: 2rem;
     padding: 10rem 0;
     margin-bottom: 5rem;
+    position: relative;
+    z-index: 1;
 
     @include breakpoint(mobile) {
         padding: 3rem 0;
@@ -163,6 +165,12 @@
         padding-right: 6rem;
         box-sizing: content-box;
 
+        &.swiper-slide-prev {
+            .about-results__slider-card {
+                opacity: 0;
+            }
+        }
+
         @include breakpoint(mobile) {
             width: max-content;
             padding-right: 0;
@@ -181,6 +189,7 @@
 .about-results__slider-card {
     display: flex;
     flex-direction: column;
+    transition: opacity .4s;
 }
 
 .about-results__slider-card-amount {

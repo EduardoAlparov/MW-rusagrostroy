@@ -126,7 +126,7 @@
 }
 
 .mortgage__banks-list-item {
-    margin-left: -2.6rem;
+    margin-left: -2rem;
     position: relative;
     margin-top: -2rem;
 
@@ -159,21 +159,7 @@
         z-index: 16;
     }
 
-    &:nth-child(4) {
-        z-index: 15;
-    }
-
-    &:nth-child(3) {
-        z-index: 14;
-    }
-
-    &:nth-child(2) {
-        z-index: 13;
-    }
-
-    &:nth-child(1) {
-        z-index: 12;
-    }
+    
 }
 
 .mortgage__banks-image {

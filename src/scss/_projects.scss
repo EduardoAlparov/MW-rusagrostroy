@@ -183,6 +183,10 @@
     text-align: right;
     flex-shrink: 0;
     white-space: nowrap;
+    transition: color .2s;
+    &:hover {
+        color: #7F8DA5;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;

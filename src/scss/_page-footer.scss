@@ -40,7 +40,7 @@
     width: 7.2rem;
     height: auto;
     display: block;
-    mix-blend-mode: lighten;
+  
 
     @include breakpoint(mobile) {
         width: 7rem;
