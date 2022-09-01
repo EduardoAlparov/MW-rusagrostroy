@@ -67,81 +67,55 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.8s;
+    padding: 1.9rem;
+
+    .container {
+        @include breakpoint(mobile) {
+            display: contents;
+        }
+    }
 
     .mobile-menu-open & {
         opacity: 1;
         visibility: inherit;
         transition: opacity 0.4s, visibility 0.4s, transform 0.8s;
-        right: var(--sb-width);
+
         // right: var(--sb-width);
     }
 }
 
 .page-header__menu-inner {
-    background: var(--primary-color);
-    border-radius: 0px 0px 2rem 2rem;
+    background: #1361de;
+    border-radius: 2rem;
     color: white;
+    padding: 7.5rem;
+    padding-top: 3rem;
+    padding-bottom: 12rem;
     position: relative;
     z-index: 1;
-    overflow: hidden;
 
     @include breakpoint(mobile) {
-        border-radius: 0;
-        flex-grow: 1;
-        flex-shrink: 0;
-    }
-}
-
-.page-header__menu-row {
-    padding-top: 2rem;
-    padding-bottom: 3.4rem;
-    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
-    grid-gap: 1.5rem;
-    display: grid;
-    align-items: flex-start;
-    position: relative;
-
-    @include breakpoint(mobile) {
-        padding-top: 1rem;
-    }
-}
-
-.page-header__menu-row-inner {
-    @include breakpoint(mobile) {
-        grid-column: 1 / -1;
+        padding: var(--content-padding);
     }
 }
 
 .page-header__menu-close {
     position: absolute;
-    left: 100%;
-    top: 2rem;
-    margin-left: 2rem;
-    width: 2rem;
-    height: 2rem;
+    right: 4rem;
+    top: 4rem;
+    width: 2.2rem;
+    height: 2.2rem;
 
     @include breakpoint(mobile) {
-        left: auto;
-        top: 0;
-        right: 0;
-        margin-left: 0;
-        position: relative;
-        align-self: center;
-        justify-self: flex-end;
-        width: 2.4rem;
-        height: 2.4rem;
-        margin: 0;
+        top: 2rem;
+        right: 2rem;
     }
-
     svg {
         display: block;
         width: 100%;
         height: 100%;
         fill: rgba(white, 0.5);
         transition: fill 0.2s;
-        @include breakpoint(mobile) {
-            fill: white;
-        }
     }
 
     &:hover {
@@ -151,126 +125,183 @@
     }
 }
 
-.page-header__menu-content {
-    padding: 3.5rem 8rem;
-    border: 1px solid rgba(#ffffff, 0.5);
-    border-radius: 2rem;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 0.8fr) minmax(0, 0.7fr);
-    grid-gap: 4rem;
+.page-header__menu-logo {
+    display: block;
+    margin-bottom: 6.5rem;
 
     @include breakpoint(mobile) {
-        padding: 0;
-        grid-template-columns: minmax(0, 1fr);
-        grid-gap: 3rem;
-        padding: 2rem;
+        margin-bottom: 3rem;
     }
 }
 
-.page-header__menu-col {
+.page-header__menu-logo-image {
+    width: 7.5rem;
+    height: auto;
+    display: block;
+
+    @include breakpoint(mobile) {
+        width: 5.4rem;
+    }
+}
+
+.page-header__menu-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 0.7fr);
+    grid-gap: 5rem;
+    display: grid;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+.page-header__menu-nav {
     display: flex;
     flex-direction: column;
 }
 
-.page-header__menu-link {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 117%;
-    display: block;
-    margin-bottom: 3.8rem;
-
-    @include breakpoint(mobile) {
-        font-size: 2.4rem;
-        line-height: 1.2;
-        margin-bottom: 2rem;
-    }
-
-    .no-touch &:hover,
-    .touch &:active {
-        color: rgba(white, 0.7);
-    }
-    &:last-of-type {
-        margin-bottom: 0;
-    }
-}
-
-.page-header__submenu-list {
+.page-header__menu-nav-block {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 2rem;
-    gap: 1.2rem;
+    gap: 2rem;
+    margin-bottom: 10rem;
 
     @include breakpoint(mobile) {
-        margin-top: 1.5rem;
-    }
-}
-
-.page-header__submenu-link {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 125%;
-    margin-bottom: 1.5rem;
-
-    @include breakpoint(mobile) {
-        font-size: 1.6rem;
-        line-height: 1.2;
-    }
-    .no-touch &:hover,
-    .touch &:active {
-        color: rgba(white, 0.7);
+        gap: 1.5rem;
+        margin-bottom: 4rem;
     }
     &:last-child {
         margin-bottom: 0;
     }
 }
 
-.page-header__menu-offices {
-    margin-top: 2rem;
-    display: flex;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-gap: 5rem;
+.page-header__menu-nav-link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 120%;
+    transition: all 0.2s;
+    text-decoration: underline;
+    text-decoration-color: transparent;
 
     @include breakpoint(mobile) {
-        grid-gap: 3rem;
-        margin-top: 1.5rem;
+        font-size: 2.4rem;
+    }
+
+    .no-touch &:hover {
+        text-decoration-color: white;
     }
 }
 
-.page-header__menu-offices-item-heading {
+.page-header__menu-projects-title-link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 120%;
+    margin-bottom: 3.5rem;
+    display: block;
+    transition: all 0.2s;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .no-touch &:hover {
+        text-decoration-color: white;
+    }
+}
+
+.page-header__menu-projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
+}
+
+.page-header__menu-projects-link {
+    display: block;
     font-style: normal;
     font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 125%;
-    margin-bottom: 1.3rem;
+    font-size: 2.4rem;
+    line-height: 135%;
+    color: rgba(#ffffff, 0.5);
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
-        line-height: 1.2;
-        margin-bottom: 1rem;
+    }
+    &:link,
+    &:visited {
+        color: rgba(#ffffff, 0.5);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
     }
 }
 
-.page-header__menu-offices-item-address {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 125%;
-    margin-bottom: 1.3rem;
-    color: rgba(white, 0.7);
-    @include breakpoint(mobile) {
-        margin-bottom: 1rem;
-    }
+.page-header__menu-contacts {
+    display: flex;
+    flex-direction: column;
 }
 
-.page-header__menu-offices-item-phone {
+.page-header__menu-contacts-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 125%;
+    font-size: 3.2rem;
+    line-height: 120%;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.page-header__menu-contacts-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 5.5rem;
+
+    @include breakpoint(mobile) {
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.page-header__menu-contacts-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.page-header__menu-contacts-block-address {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 135%;
+    color: rgba(white, 0.5);
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+.page-header__menu-contacts-block-phone {
+    margin-bottom: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 135%;
     transition: all 0.2s;
     text-decoration: underline;
     text-decoration-color: transparent;
@@ -279,97 +310,107 @@
         font-size: 1.8rem;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    .no-touch &:hover {
         text-decoration-color: white;
     }
 }
 
-.page-header__menu-bottom-row {
-    margin-top: 1.5rem;
+.page-header__menu-contacts-social-list {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-bottom: 2.3rem;
     @include breakpoint(mobile) {
-        flex-direction: column;
-        align-items: stretch;
+        gap: 1.5rem;
     }
 }
 
-.page-header__menu-social {
+.page-header__menu-contacts-social-list-item {
+    flex-shrink: 0;
 }
 
-.page-header__menu-social-heading {
-    font-style: normal;
+.page-header__menu-contacts-social-link {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #69b7f0;
+    transition: background-color 0.2s;
+    border-radius: 50%;
 
-    font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 117%;
-    margin-bottom: 2rem;
+    &:hover {
+        background: #2796e8;
+    }
+
+    &--green {
+        background: #6bc859;
+        &:hover {
+            background: #3fd523;
+        }
+    }
+
+    &--dark-blue {
+        background: #3372e9;
+        &:hover {
+            background: #235ecf;
+        }
+    }
 
     @include breakpoint(mobile) {
-        font-size: 1.6rem;
+        width: 4rem;
+        height: 4rem;
     }
 }
 
-.page-header__menu-social-list {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.page-header__menu-social-link {
-    width: 3rem;
-    height: 3rem;
+.page-header__menu-contacts-social-link-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    object-fit: contain;
     display: block;
 
     @include breakpoint(mobile) {
         width: 2.4rem;
         height: 2.4rem;
     }
-    svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-        fill: currentColor;
-    }
-    .no-touch &:hover,
-    .touch &:active {
-        color: rgba(white, 0.7);
-    }
 }
 
-.page-header__menu-order-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 5rem;
-    width: 61rem;
+.page-header__menu-contacts-order-link {
     font-style: normal;
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.3rem;
-    color: white;
-    border: 1px solid #ffffff;
+    padding: 2rem 6rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f5f6f8;
     border-radius: 1rem;
+    color: white;
+    align-self: flex-start;
     transition: background-color 0.2s, color 0.2s;
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 1.2;
         padding: 1.8rem 2.4rem;
-        width: 100%;
+        align-self: stretch;
+    }
+    &:link,
+    &:visited {
+        color: white;
     }
 
     .no-touch &:hover,
     .touch &:active {
-        background-color: white;
+        background: white;
         color: var(--primary-color);
     }
 }
+
 .page-header__logo {
     display: flex;
     flex-direction: column;
@@ -388,7 +429,6 @@
         border-radius: 1rem;
     }
 }
-
 
 .page-header__mzsk-logo {
     display: flex;
@@ -413,11 +453,9 @@
     }
 }
 
-
 .page-header__mzsk-logo-image {
     width: 10rem;
     height: auto;
-
 
     @include breakpoint(mobile) {
         width: 5rem;
@@ -529,7 +567,6 @@
 
 .page-header__nav {
     margin-left: auto;
-   
 
     @include breakpoint(mobile) {
         display: none;
@@ -571,7 +608,7 @@
     justify-content: center;
     border: 1px solid white;
     margin-right: -1.5rem;
-    transition: border-color .2s, background-color .2s;
+    transition: border-color 0.2s, background-color 0.2s;
 
     @include breakpoint(mobile) {
         margin: 0;
@@ -582,7 +619,7 @@
         width: 1.4rem;
         height: 1.2rem;
         fill: white;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     &:hover {
@@ -593,24 +630,21 @@
         }
     }
 
-
     .page-header--dark & {
         border: 1px solid rgba(127, 141, 165, 0.3);
 
         svg {
-            fill: #37393E;
+            fill: #37393e;
         }
 
         &:hover {
             border-color: var(--primary-color);
-    
+
             svg {
                 fill: var(--primary-color);
             }
         }
     }
-
-    
 }
 
 .page-header__phone {
