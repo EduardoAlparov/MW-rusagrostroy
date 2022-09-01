@@ -387,8 +387,14 @@
         color: rgba(#f5f6f8, .6);
     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        color: #F5F6F8;
+    a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: all .2s;
+
+        &:hover {
+            text-decoration-color: white;
+        }
     }
 }

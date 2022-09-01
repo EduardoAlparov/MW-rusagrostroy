@@ -30,13 +30,11 @@
     width: 100%;
     height: auto;
     max-width: none;
-    
 
     // transform-origin: left bottom;
     // transform: scale(0.9);
     // opacity: 0;
     // visibility: hidden;
-   
 
     // .loaded & {
     //     transform: scale(1);
@@ -259,7 +257,7 @@
     @include breakpoint(mobile) {
         padding-top: 3rem;
         top: calc(100% - 11rem);
-        transition: transform .4s;
+        transition: transform 0.4s;
 
         &.promo-open {
             transform: translateY(calc(-100% + 11rem));
@@ -281,14 +279,11 @@
     right: 0;
     transform: translateY(-50%);
 
-   
-
     svg {
         width: 1rem;
         height: 0.6rem;
         fill: white;
         transform: rotate(180deg);
-      
     }
 
     @include breakpoint(mobile) {
@@ -304,7 +299,7 @@
         justify-content: center;
 
         svg {
-            transition: transform .2s;
+            transition: transform 0.2s;
         }
 
         .promo-open & {
@@ -433,14 +428,13 @@
     visibility: hidden;
 
     @include breakpoint(mobile) {
-       
-        transition: opacity .3s, visibility 0s linear .3s;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
         padding-top: 1.5rem;
         padding-bottom: 3rem;
         .promo-open & {
             opacity: 1;
             visibility: inherit;
-            transition: opacity .3s, visibility .3s;
+            transition: opacity 0.3s, visibility 0.3s;
         }
     }
 
@@ -477,42 +471,46 @@
 
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
-        grid-gap: 2rem;
+        grid-gap: 1.7rem;
     }
 }
 
-.intro__promo-slider-card-bank {
+.intro__promo-slider-card-left-col {
     display: flex;
-}
-
-.intro__promo-slider-card-bank-logo {
-    width: 12rem;
-    height: 12rem;
-    object-fit: contain;
-    flex-shrink: 0;
-    margin-right: 6.5rem;
+    align-items: flex-start;
+    gap: 7.7rem;
 
     @include breakpoint(mobile) {
-        width: 4.6rem;
-        height: 4.6rem;
-        margin-right: 1.5rem;
+        gap: 2rem;
     }
 }
 
-.intro__promo-slider-card-bank-content {
-    width: 50%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+.intro__promo-slider-card-image-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
     backface-visibility: hidden;
+    transform: translateZ(0);
+    width: 25rem;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+        display: none;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 65%;
+    }
 }
 
-.intro__promo-slider-card-bank-title {
+.intro__promo-slider-card-title {
+    width: 50%;
+    flex-grow: 1;
     font-style: normal;
-    font-weight: 500;
-    font-size: 3rem;
-    line-height: 117%;
-    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 120%;
 
     @include breakpoint(mobile) {
         font-style: normal;
@@ -520,38 +518,40 @@
         font-size: 2rem;
         line-height: 117%;
     }
+
     a {
+        transition: all 0.2s;
         text-decoration: underline;
-        transition: text-decoration-color 0.2s;
         &:hover {
             text-decoration-color: transparent;
         }
     }
 }
 
-.intro__promo-slider-card-description {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6rem;
-    padding-top: 1.5rem;
-
-    @include breakpoint(mobile) {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 0;
-        grid-gap: 2rem;
-    }
+.intro__promo-slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.intro__promo-slider-card-description-item {
+.intro__promo-slider-card-right-col {
+}
+
+.intro__promo-slider-card-text-content {
     font-style: normal;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 125%;
-    width: 26rem;
+    color: rgba(white, 0.7);
+    margin-bottom: 5.8rem;
+    max-width: 48rem;
 
     @include breakpoint(mobile) {
-        width: auto;
+        margin-bottom: 5rem;
+        max-width: none;
         font-style: normal;
         font-weight: 500;
         font-size: 1.2rem;
@@ -559,44 +559,33 @@
     }
 }
 
-.intro__promo-slider-card-bank-link {
+.intro__promo-slider-card-link {
+    display: inline-flex;
+    align-items: center;
     font-style: normal;
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 125%;
-    color: rgba(white, 0.5);
-    margin-top: auto;
-    display: inline-flex;
-    align-items: center;
-    gap: .8rem;
-    svg {
-      
-        fill: currentColor;
-        width: 0.5rem;
-        height: 1rem;
-        margin-top: 0.3rem;
-    }
+    gap: 1.5rem;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 125%;
+        gap: 1rem;
+    }
 
-        svg {
-            display: block;
-            margin-top: 0.2rem;
+    svg {
+        flex-shrink: 0;
+        fill: currentColor;
+        width: 0.5em;
+        height: 1rem;
+        margin-top: 0.2rem;
 
+        @include breakpoint(mobile) {
+          
         }
-    }
-    &:link,
-    &:visited {
-        color: rgba(white, 0.5);
-    }
-
-    .no-touch &:hover,
-    .touch &:active {
-        color: white;
     }
 }
 
@@ -727,15 +716,17 @@
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 1.1rem;
-    bottom: 4rem;
+    gap: 1rem;
+    top: 4rem;
     right: 0;
+    bottom: auto;
     z-index: 30;
+    flex-direction: column;
 }
 
 .intro__promo-arrow {
-    width: 5rem;
-    height: 5rem;
+    width: 5.8rem;
+    height: 5.8rem;
     border-radius: 50%;
     border: 1px solid #ffffff;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;

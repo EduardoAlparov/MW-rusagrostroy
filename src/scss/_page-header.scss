@@ -93,7 +93,9 @@
     padding-bottom: 12rem;
     position: relative;
     z-index: 1;
-
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     @include breakpoint(mobile) {
         padding: var(--content-padding);
     }

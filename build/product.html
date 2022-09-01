@@ -34,7 +34,14 @@
         
         
                             <div class="page-header__menu-inner">
+                                <div class="bricks">
         
+                                    <div class="bricks__cursor">
+                                        <div class="bricks__pattern">
+        
+                                        </div>
+                                    </div>
+                                </div>
                                 <a href="#" class="page-header__menu-logo">
                                     <img src="img/logo.svg" alt="" class="page-header__menu-logo-image">
                                 </a>
@@ -147,7 +154,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                        <a href="#" class="page-header__menu-contacts-order-link">
+                                        <a href="#callback-modal" class="page-header__menu-contacts-order-link">
                                             Заказать звонок
                                         </a>
                                     </div>
@@ -882,7 +889,12 @@
                         <ul class="page-footer__nav-list">
                             <li class="page-footer__nav-list-item">
                                 <a href="#" class="page-footer__nav-link">
-                                    Главная
+                                    Проекты
+                                </a>
+                            </li>
+                            <li class="page-footer__nav-list-item">
+                                <a href="#" class="page-footer__nav-link">
+                                    О компании
                                 </a>
                             </li>
                             <li class="page-footer__nav-list-item">
@@ -892,17 +904,12 @@
                             </li>
                             <li class="page-footer__nav-list-item">
                                 <a href="#" class="page-footer__nav-link">
-                                    Проекты
-                                </a>
-                            </li>
-                            <li class="page-footer__nav-list-item">
-                                <a href="#" class="page-footer__nav-link">
                                     Ипотека
                                 </a>
                             </li>
                             <li class="page-footer__nav-list-item">
                                 <a href="#" class="page-footer__nav-link">
-                                    О компании
+                                    Избранное
                                 </a>
                             </li>
                             <li class="page-footer__nav-list-item">
@@ -920,13 +927,22 @@
                                     Акции
                                 </a>
                             </li>
+                            <li class="page-footer__nav-list-item">
+                                <a href="#" class="page-footer__nav-link">
+                                    Ход строительства
+                                </a>
+                            </li>
                         </ul>
                     </nav>
-                    <div class="page-footer__social">
-                        <h3 class="page-footer__social-heading">
-                            Социальные сети
-                        </h3>
         
+                    <div class="page-footer__contacts">
+                        <a href="tel:+78362655550 " class="page-footer__phone">+7 (8362) 65-55-50 </a>
+                        <div class="page-footer__address">
+                            424004, Республика Марий Эл, г. Йошкар-Ола,<br> ул. Л. Толстого, д. 62
+                        </div>
+                        <a href="#callback-modal" class="page-footer__callback-link">
+                            Заказать звонок
+                        </a>
                         <ul class="page-footer__social-list">
                             <li class="page-footer__social-list-item">
                                 <a href="#" class="page-footer__social-link">
@@ -944,25 +960,6 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="page-footer__contacts">
-                        <div class="page-footer__contacts-links">
-                            <a href="tel:+78362655550" class="page-footer__contacts-link">
-                                +7 (8362) 65-55-50
-                            </a>
-                            <a href="tel:+78362362525" class="page-footer__contacts-link">
-                                +7 (8362) 36-25-25
-                            </a>
-                            <a href="tel:+78362233336" class="page-footer__contacts-link">
-                                +7 (8362) 23-33-36
-                            </a>
-                            <a href="tel:+78362956545 " class="page-footer__contacts-link">
-                                +7 (8362) 95-65-45
-                            </a>
-                        </div>
-                        <a href="#callback-modal" class="page-footer__callback-link">
-                            Заказать звонок
-                        </a>
                     </div>
                 </div>
                 <div class="page-footer__bottom-row">
@@ -1014,9 +1011,9 @@
                         <button class="modal__callback-form-submit" type="submit">
                             Записаться на встречу
                         </button>
-                        <a href="#" class="modal__callback-form-policy">
-                            Вы даете согласие на обработку персональных данных.
-                        </a>
+                        <div class="modal__callback-form-policy">
+                            Вы даете согласие на обработку <a href="#">персональных данных.</a>
+                        </div>
                     </form>
                 </div>
             </div>

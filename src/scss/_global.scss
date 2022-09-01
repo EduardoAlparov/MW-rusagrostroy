@@ -216,3 +216,7 @@ select:-webkit-autofill:focus {
 [class*='ymaps-2'][class*='-ground-pane'] {
     filter: grayscale(100%);
 }
+
+[class*='ymaps-2'][class*='-copyrights-pane'] {
+    display: none;
+}
