@@ -70,7 +70,6 @@
 }
 
 .projects__card-details {
-   
     padding-top: 3rem;
 
     @include breakpointMF(small-tablet) {
@@ -86,7 +85,39 @@
     @include breakpoint(mobile) {
         padding-top: 1rem;
     }
-  
+}
+
+.projects__card-specs-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        gap: .5rem;
+    }
+}
+
+.projects__card-specs-list-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 125%;
+    color: #37393e;
+    padding: 1rem 2rem;
+    border: 1px solid #c0cada;
+    border-radius: 1rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: .5rem;
+    }
+}
+
+.projects__card-specs-price {
+    color: var(--primary-color);
 }
 
 .projects__card-specs {
@@ -116,7 +147,6 @@
             padding-right: 2rem;
 
             @include breakpoint(mobile) {
-
             }
         }
 
@@ -176,16 +206,17 @@
 
 .projects__card-details-more {
     font-style: normal;
-    font-weight: 500;
-    font-size: 2.4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
     line-height: 117%;
     color: var(--primary-color);
     text-align: right;
     flex-shrink: 0;
     white-space: nowrap;
-    transition: color .2s;
+    transition: color 0.2s;
+
     &:hover {
-        color: #7F8DA5;
+        color: #7f8da5;
     }
 
     @include breakpoint(mobile) {
@@ -235,7 +266,7 @@
     white-space: nowrap;
     line-height: 125%;
     padding: 0.5rem 1rem;
-    background: rgba(4, 27, 68, 0.64);
+    background: var(--primary-color);
     border-radius: 0.7rem;
     color: white;
 

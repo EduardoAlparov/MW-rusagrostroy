@@ -70,17 +70,20 @@
     transition: color 0.2s, background-color 0.2s;
     cursor: pointer;
     user-select: none;
-    align-self: stretch;
+    
     margin: 0 1rem;
-    padding: 0.5rem;
-    border-radius: 0.4rem;
+    padding: .7rem 0.5rem;
+    padding-top: 0.6rem;
+    border-radius: 1rem;
+    width: 5rem;
+    
 
-    .radios__item:first-child & {
-        margin-left: 0;
-    }
-    .radios__item:last-child & {
-        margin-right: 0;
-    }
+    // .radios__item:first-child & {
+    //     margin-left: 0;
+    // }
+    // .radios__item:last-child & {
+    //     margin-right: 0;
+    // }
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         padding: 0.5rem 0.5rem;
@@ -89,6 +92,6 @@
 }
 
 .radios__item-input:checked ~ .radios__item-text {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: rgba(#1260DE, .15);
+    color: var(--primary-color);
 }
