@@ -78,8 +78,8 @@
     grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr);
 
     &--short {
-        width: 54.4rem;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 77.4rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         flex-grow: 0;
     }
     @include breakpoint(mobile) {
