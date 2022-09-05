@@ -66,7 +66,7 @@
 
         .no-touch:not(.list-view) &:hover {
             .projects__card-image {
-                height: 18rem;
+                height: calc(100% - 18rem);
             }
 
             .projects__card-details {
@@ -96,6 +96,14 @@
     @include breakpointMF(small-tablet) {
         .list-view & {
             display: contents;
+        }
+    }
+}
+
+.projects__card-date-hidden-text {
+    @include breakpointMF(small-tablet) {
+        .list-view & {
+            display: none;
         }
     }
 }
@@ -401,8 +409,8 @@
     object-fit: cover;
     object-position: center top;
     border-radius: 2rem;
-    transition: height 0.7s;
-
+    
+    transition: height .7s;
 
     @include breakpointMF(small-tablet) {
         .list-view & {
