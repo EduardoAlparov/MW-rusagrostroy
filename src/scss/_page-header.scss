@@ -69,6 +69,8 @@
     transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.8s;
     padding: 1.9rem;
 
+    @include noScrollbar();
+
     .container {
         @include breakpoint(mobile) {
             display: contents;
@@ -96,9 +98,9 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    .mobile-menu-open & {
-        right: calc(var(--sb-width) / 2);
-    }
+    // .mobile-menu-open & {
+    //     right: calc(var(--sb-width) / 2);
+    // }
 
   
     @include breakpoint(mobile) {
