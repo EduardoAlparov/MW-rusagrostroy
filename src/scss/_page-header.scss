@@ -80,7 +80,7 @@
         visibility: inherit;
         transition: opacity 0.4s, visibility 0.4s, transform 0.8s;
 
-        // right: var(--sb-width);
+      
     }
 }
 
@@ -96,6 +96,11 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+    .mobile-menu-open & {
+        right: calc(var(--sb-width) / 2);
+    }
+
+  
     @include breakpoint(mobile) {
         padding: var(--content-padding);
     }

@@ -58,6 +58,8 @@
 
 .catalog__filters {
     margin-bottom: 4.8rem;
+    position: relative;
+    z-index: 30;
 
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
@@ -87,8 +89,16 @@
     background: #f8f8f8;
     border-radius: 2rem;
 
+    &--projects {
+        padding-top: 13rem;
+        padding-bottom: 13rem;
+
+        
+    }
+
     @include breakpoint(mobile) {
         padding-bottom: 7rem;
+        padding-top: 3rem;
     }
 }
 
@@ -130,6 +140,10 @@
         grid-template-columns: minmax(0, 1fr) minmax(0, auto);
         grid-gap: 2rem;
         grid-template-areas: 'found toggle' 'select select';
+
+        &--projects {
+            display: none;
+        }
     }
 }
 
@@ -155,13 +169,13 @@
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 2.3rem;
-
+    margin-left: auto;
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.25;
         gap: 1rem;
         grid-area: toggle;
-
+        margin: 0;
         display: none;
     }
 }
@@ -764,5 +778,82 @@
     display: none;
     body.list-view & {
         display: grid;
+    }
+}
+
+.catalog__results-projects {
+    margin-top: -10rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+}
+
+.catalog__results-projects-block-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.catalog__results-projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 6rem;
+    grid-row-gap: 0;
+    @include breakpointMF(small-tablet) {
+        .list-view & {
+            grid-template-columns: minmax(0, 1fr);
+            grid-gap: 0;
+            padding: 0 3rem;
+            background: #ffffff;
+            border: 1px solid rgba(127, 141, 165, 0.3);
+            border-radius: 2rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+.catalog__results-projects-list-item {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        .list-view & {
+            border-bottom: 1px solid rgba(57, 123, 243, 0.2);
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+.catalog__results-projects-block {
+    margin-bottom: 15rem;
+
+    @include breakpointMF(small-tablet) {
+        .list-view & {
+            margin-bottom: 10rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }
