@@ -64,28 +64,28 @@
 
         }
 
-        .no-touch:not(.list-view) &:hover {
-            .projects__card-image {
-                height: calc(100% - 18rem);
-            }
+        body:not(.list-view) &:hover {
+            // .projects__card-image {
+            //     height: calc(100% - 18rem);
+            // }
 
-            .projects__card-details {
-                opacity: 1;
-                visibility: inherit;
-                transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s, transform 0.7s;
-            }
+            // .projects__card-details {
+            //     opacity: 1;
+            //     visibility: inherit;
+            //     transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s, transform 0.7s;
+            // }
 
-            .projects__card-top-row {
-                transform: translateY(-20rem);
-            }
+            // .projects__card-top-row {
+            //     transform: translateY(-20rem);
+            // }
 
-            .projects__card-address {
-                transform: translateY(-20rem);
-            }
+            // .projects__card-address {
+            //     transform: translateY(-20rem);
+            // }
 
-            .projects__card-details {
-                transform: translateY(-20rem);
-            }
+            // .projects__card-details {
+            //     transform: translateY(-20rem);
+            // }
         }
     }
 }
@@ -119,7 +119,7 @@
             width: 100%;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.7s;
+            // transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.7s;
             pointer-events: none;
         }
 
@@ -410,7 +410,7 @@
     object-position: center top;
     border-radius: 2rem;
     
-    transition: height .7s;
+    // transition: height .7s;
 
     @include breakpointMF(small-tablet) {
         .list-view & {
@@ -426,7 +426,7 @@
     gap: 2rem;
     margin-bottom: 1rem;
 
-    transition: transform 0.7s;
+    // transition: transform 0.7s;
 
     @include breakpointMF(small-tablet) {
         .list-view & {
@@ -492,7 +492,7 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    transition: transform 0.7s;
+    // transition: transform 0.7s;
 
     svg {
         flex-shrink: 0;
