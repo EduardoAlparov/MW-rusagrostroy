@@ -17,7 +17,7 @@
     "not dead"
   ],
   "dependencies": {
-    "@fancyapps/ui": "^4.0.26",
+    "@fancyapps/ui": "^4.0.31",
     "body-scroll-lock": "^3.1.5",
     "bootstrap-datepicker": "^1.9.0",
     "choices.js": "^10.1.0",

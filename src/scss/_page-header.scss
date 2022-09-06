@@ -98,9 +98,12 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    // .mobile-menu-open & {
-    //     right: calc(var(--sb-width) / 2);
-    // }
+    .mobile-menu-open & {
+        right: calc(var(--sb-width) / 2);
+    }
+    .mobile-menu-open .intro & {
+        right: auto;
+    }
 
   
     @include breakpoint(mobile) {

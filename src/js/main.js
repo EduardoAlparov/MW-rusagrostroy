@@ -33,6 +33,7 @@ import revealBlocks from './revealBlocks';
 import listViewToggle from './listViewToggle';
 import aboutResultsSlider from './aboutResultsSlider';
 import projectsCards from './projectsCards';
+import fancybox from './fancybox';
 gsap.registerPlugin(ScrollTrigger);
 
 // const refresh = () => {
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     listViewToggle();
     aboutResultsSlider();
     projectsCards();
+    fancybox();
 });
 
 document.addEventListener('lazyloaded', () => {
