@@ -1,10 +1,11 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { debounce } from 'lodash';
 import { convertRemToPixels, IS_MOBILE } from './utils';
 
 import { Swiper, Navigation, Pagination, EffectFade } from 'swiper';
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 Swiper.use([Navigation, EffectFade, Pagination]);
 
@@ -41,6 +42,23 @@ export default function introPromo() {
         const slider = element.querySelector('.intro__promo-slider');
         const container = element.querySelector('.swiper');
         const navLinks = Array.from(element.querySelectorAll('.intro__promo-nav-link'));
+        const navLinksContainer = intro.querySelector('.intro__promo-nav-links');
+
+        console.log('PADDING LEFT', parseFloat(window.getComputedStyle(navLinksContainer).getPropertyValue('padding-left')));
+
+        const scrollToActiveLink = index => {
+            if (IS_MOBILE) {
+                gsap.to(navLinksContainer, {
+                    duration: 1,
+                    ease: 'power2.out',
+                    scrollTo: {
+                        x: navLinks[index],
+                        autoKill: false,
+                        offsetX: parseFloat(window.getComputedStyle(navLinksContainer).getPropertyValue('padding-left'))
+                    }
+                });
+            }
+        };
 
         const instance = new Swiper(container, {
             effect: 'fade',
@@ -57,10 +75,14 @@ export default function introPromo() {
                 init: swiper => {
                     navLinks.forEach(link => link.classList.remove('active'));
                     navLinks[swiper.activeIndex].classList.add('active');
+
+                    scrollToActiveLink(swiper.activeIndex);
                 },
                 slideChange: swiper => {
                     navLinks.forEach(link => link.classList.remove('active'));
                     navLinks[swiper.activeIndex].classList.add('active');
+
+                    scrollToActiveLink(swiper.activeIndex);
                 }
             }
         });
