@@ -27,4 +27,16 @@
 .similar-products__list-item {
     display: flex;
     flex-direction: column;
+    position: relative;
+    &:hover {
+        .catalog__product-card {
+            border-color: var(--primary-color);
+
+            .catalog__product-card-top-row {
+                opacity: 1;
+                visibility: inherit;
+                transition: opacity 0.2s, visibility 0.2s;
+            }
+        }
+    }
 }

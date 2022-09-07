@@ -64,6 +64,21 @@
 }
 
 .project-news__slider {
+    .swiper-slide {
+        position: relative;
+        &:hover {
+            .catalog__product-card {
+                border-color: var(--primary-color);
+    
+                .catalog__product-card-top-row {
+                    opacity: 1;
+                    visibility: inherit;
+                    transition: opacity 0.2s, visibility 0.2s;
+                }
+            }
+        }
+    }
+
     @include breakpointMF(small-tablet) {
         .swiper-wrapper {
             display: grid;
@@ -81,6 +96,7 @@
         .swiper-slide {
             width: 90%;
             margin-right: 1rem;
+            
             &:last-child {
                 margin-right: 0;
             }
