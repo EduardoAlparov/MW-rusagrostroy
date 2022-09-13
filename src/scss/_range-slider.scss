@@ -72,6 +72,20 @@
         background-color: var(--primary-color);
         box-shadow: none;
 
+        @include breakpoint(tablet) {
+            width: 10px;
+            height: 10px;
+            margin-top: -6px;
+            margin-right: -5px;
+        }
+
+        @include breakpoint(mobile) {
+            width: 16px;
+            height: 16px;
+            margin-top: -9px;
+            margin-right: -8px;
+        }
+
         &::after {
             content: '';
             position: absolute;
