@@ -7,7 +7,6 @@
         padding-bottom: 1.5rem;
     }
 
-
     .choices {
         font-style: normal;
         font-weight: 500;
@@ -63,6 +62,13 @@
         padding: 0;
         padding-right: 2.4rem;
         // padding-left: 3.8rem;
+    }
+
+    .choices__list--single .choices__item {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .choices[data-type*='select-one']:after {
