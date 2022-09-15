@@ -242,6 +242,8 @@
     height: 100%;
     object-fit: cover;
     transition: transform .5s;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .news-catalog__selected {
@@ -298,6 +300,7 @@
     height: 100%;
     object-fit: cover;
     transition: transform .5s;
+    transform: translateZ(0);
 }
 
 .news-catalog__selected-content {
