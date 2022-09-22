@@ -128,16 +128,23 @@
     .range-slider__input-wrapper {
         .range-slider__input {
             margin: 0;
-            width: 8ch;
+            width: 10ch;
         }
 
         &--small {
             .range-slider__input {
                 margin: 0;
-                width: 3ch;
+                width: 4ch;
             }
         }
     }
+}
+
+.range-slider__input-wrapper:first-child .range-slider__input {
+    text-align: left;
+}
+.range-slider__input-wrapper:last-child .range-slider__input {
+    text-align: right;
 }
 
 .range-slider__inputs-divider {
