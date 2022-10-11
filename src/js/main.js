@@ -36,6 +36,7 @@ import projectsCards from './projectsCards';
 import fancybox from './fancybox';
 import printBtn from './print';
 import sharing from './sharing';
+
 gsap.registerPlugin(ScrollTrigger);
 
 // const refresh = () => {
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fancybox();
     printBtn();
     sharing();
+
 });
 
 document.addEventListener('lazyloaded', () => {

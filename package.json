@@ -32,6 +32,7 @@
     "nouislider": "^15.6.0",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.6.8",
+    "streamedian": "github:Streamedian/html5_rtsp_player",
     "swiper": "^8.1.4"
   },
   "devDependencies": {
