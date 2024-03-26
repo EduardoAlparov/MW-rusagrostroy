@@ -21,11 +21,6 @@ export default function introPromo() {
             document.body.classList.remove('intro-not-fullscreen');
         }
 
-        console.log(introNotFullscreen, {
-            introHeight: intro.offsetHeight,
-            limit: document.documentElement.clientHeight
-        });
-
         return introNotFullscreen;
     };
 

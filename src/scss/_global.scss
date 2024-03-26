@@ -9,9 +9,18 @@
 :root {
     --max-container-width: 156rem;
     --content-padding: 6rem;
+    --red-color: #d22026;
+    --red-color-hover: #ba2126;
     --primary-color: #1361de;
     --primary-color-hover: #0e52be;
     --text-color: #37393e;
+    --grey-color: #8f9093;
+    --back-color: #f5f6f8;
+    --grey-color-100: #efefef;
+    --grey-color-200: #f8f8f8;
+    --brown-color-100: rgba(52, 45, 41, 1);
+    --brown-color-200: #2E2825;
+    --black-color: #212121;
     --pt-root: 'PT Root UI', sans-serif;
 
     @include breakpoint(mobile) {
@@ -28,9 +37,11 @@ html {
     @media (max-width: 1679px) {
         font-size: clamp(4.2px, 0.595vw, 10px);
     }
+
     @media (min-width: 2560px) {
         font-size: 12px;
     }
+
     @media (min-width: 4096px) {
         font-size: 20px;
     }
@@ -67,8 +78,10 @@ ol {
 
 ol {
     counter-reset: ordered-list;
-    & > li {
+
+    &>li {
         counter-increment: ordered-list;
+
         &::before {
             content: counter(ordered-list, decimal-leading-zero) '.';
         }
@@ -115,8 +128,10 @@ input[type='number'] {
 }
 
 input[type='search'] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
 }
 
 input[type='search'] {
@@ -126,6 +141,7 @@ input[type='search'] {
 input[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
 input[type='search']::-webkit-search-cancel-button {
     -webkit-appearance: none;
     display: none;
@@ -149,6 +165,7 @@ a {
     background-color: transparent;
     text-decoration: none;
     transition: color 0.2s;
+
     &:link,
     &:visited {
         color: inherit;
@@ -156,6 +173,7 @@ a {
 }
 
 a:where(:not[class]) {
+
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -227,4 +245,75 @@ select:-webkit-autofill:focus {
 
 .filters select {
     opacity: 0;
+}
+
+.ya-main-placemark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 13.6rem;
+    height: 13.6rem;
+    transform: translate(-50%, -50%);
+
+
+    border-radius: 100%;
+    border-style: solid;
+    border-color: rgba($color: #D22026, $alpha: 0.2);
+    border-width: 5.6rem;
+
+    span {
+        position: relative;
+        z-index: 10;
+        display: block;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--red-color, #d22026);
+        background-image: url('../../img/new-index/red-logo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        border-radius: 100%;
+        pointer-events: none;
+
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 100;
+
+            display: block;
+            width: 220%;
+            aspect-ratio: 1;
+
+
+            border-radius: 100%;
+            border-style: solid;
+            border-color: rgba($color: #D22026, $alpha: 0.1);
+            border-width: 0.3rem;
+            transform: translate(-50%, -50%);
+            content: '';
+
+            animation: pulsAnim 1.5s linear 0s infinite forwards;
+        }
+    }
+}
+
+@keyframes pulsAnim {
+    from {
+        width: 0%;
+        border-color: rgba($color: #D22026, $alpha: 0.4);
+    }
+
+    to {
+        width: 220%;
+        border-color: rgba($color: #D22026, $alpha: 0.1);
+    }
 }

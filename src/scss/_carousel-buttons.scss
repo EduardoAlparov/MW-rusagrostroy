@@ -1,0 +1,119 @@
+.carousel-buttons {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    width: max-content;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--brown-color-100, rgba(52, 45, 41, 1));
+
+    &::after,
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        width: 1px;
+        height: 1.85rem;
+        background-color: var(--white-color, white);
+        content: "";
+    }
+
+    &::after {
+        top: unset;
+        bottom: 0;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6rem;
+        aspect-ratio: 1 / 1;
+        background-color: var(--brown-color-100, rgba(52, 45, 41, 1));
+
+        .icon {
+            width: 1.4rem;
+            height: 1.4rem;
+
+            stroke: var(--white-color, white);
+        }
+
+        &--left {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        &--abs {
+
+            &.carousel-buttons__button--left,
+            &.carousel-buttons__button--right {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 100;
+            }
+
+            &.carousel-buttons__button--left {
+                left: 0;
+            }
+
+            &.carousel-buttons__button--right {
+                right: 0;
+            }
+        }
+
+        &--simple {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+        }
+
+        @include hover-active() {
+            background-color: var(--brown-color-200, #2E2825);
+        }
+
+        &.swiper-button-disabled {
+
+            &.peculiarities-swiper-left-button,
+            &.peculiarities-swiper-right-button {
+                display: none;
+            }
+
+            &.stages-swiper-right-button,
+            &.stages-swiper-left-button {
+                display: none;
+            }
+
+            &.gallery-section__swiper-right-button,
+            &.gallery-section__swiper-left-button {
+                opacity: 0;
+            }
+        }
+    }
+
+    &--white {
+        background-color: rgba($color: #D22026, $alpha: 0.2);
+        border: 1px solid rgba($color: #D22026, $alpha: 0.2);
+
+        &::after,
+        &::before {
+            background-color: rgba($color: #D22026, $alpha: 0.2);
+        }
+
+        .carousel-buttons__button {
+            background-color: var(--white-color, #fff);
+
+            .icon {
+                stroke: var(--red-color, #d22026);
+            }
+
+            @include hover-active() {
+                background-color: var(--back-color, #f5f6f8);
+            }
+        }
+    }
+}

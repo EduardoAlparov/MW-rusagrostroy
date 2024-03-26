@@ -1,0 +1,190 @@
+.gallery-section {
+    &__swiper-nav {
+        display: none;
+
+        @include breakpointMF(tablet) {
+            display: block;
+        }
+    }
+
+    &__swiper-left-button {
+        &.carousel-buttons__button--abs {
+            left: 4rem;
+        }
+    }
+
+    &__swiper-right-button {
+        &.carousel-buttons__button--abs {
+            right: 4rem;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        z-index: 100;
+    }
+
+    &__swiper {
+        &.swiper {
+            @include breakpoint(mobile) {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    &__pagination {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 20;
+
+        max-width: 66px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        @include breakpoint(mobile) {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        .swiper-pagination {
+            flex-grow: 1;
+            position: static;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: unset !important;
+        }
+
+        .swiper-pagination-bullets-dynamic {
+            overflow: visible;
+        }
+
+        .swiper-pagination-bullet {
+            display: block;
+            width: 8px;
+            height: 8px;
+            flex-shrink: 0;
+            background-color: rgba($color: #37393e, $alpha: 0.5);
+            transition: all 0.3s ease-out;
+            border-radius: 4px;
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 24px;
+            background-color: rgba($color: #37393e, $alpha: 1);
+        }
+    }
+}
+
+.gallery-tooltip {
+    position: relative;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__tooltip {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: 20;
+
+        display: flex;
+        align-items: center;
+        height: 100%;
+        max-height: 6.1rem;
+        padding-left: 6rem;
+
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        border-radius: 10rem;
+
+        transform: translateY(-50%);
+        transition: opacity 0.3s ease-out;
+        opacity: 0;
+
+        @include breakpoint(mobile) {
+            max-height: 4.6rem;
+            padding-left: 4.5rem;
+        }
+    }
+
+    &__text {
+        display: block;
+        padding: 0 1.6rem;
+
+        color: inherit;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 135%;
+        white-space: nowrap;
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+            line-height: 125%;
+        }
+    }
+
+    &__button {
+        position: relative;
+        z-index: 40;
+        width: 6rem;
+        height: 6rem;
+        flex-shrink: 0;
+
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px);
+        border-radius: 100%;
+        border: 1px solid var(--white-color, #fff);
+        cursor: pointer;
+
+        @include breakpoint(mobile) {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+
+            width: 3.1rem;
+            height: 3.1rem;
+
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 4px 15.1px rgba(0, 0, 0, 0.11);
+            backdrop-filter: blur(15px);
+            border-radius: 100%;
+
+            transform: translate(-50%, -50%);
+            content: "";
+
+            @include breakpoint(mobile) {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+
+        &--active {
+            +.gallery-tooltip__tooltip {
+                opacity: 1;
+            }
+        }
+
+        @include hover-active() {
+            +.gallery-tooltip__tooltip {
+                opacity: 1;
+            }
+        }
+    }
+}

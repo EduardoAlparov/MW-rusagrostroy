@@ -21,7 +21,6 @@ import contactsMap from './contactsMap';
 import featuresSlider from './featuresSlider';
 import projectMap from './projectMap';
 
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import catalogSidebar from './catalogSidebar';
@@ -37,13 +36,17 @@ import fancybox from './fancybox';
 import printBtn from './print';
 import sharing from './sharing';
 
+import solutionsCarouselSwiper from './solutionsCarouselSwiper';
+import peculiarityCardClickHandler from './peculiarityCardClickHandler';
+import tourSectionAnimation from './tourSectionAnimation';
+import locationMapsControl from './locationMapsControl';
+import plansSwiperControl from './plansSwiperControl';
+import stagesSectionSwiper from './stagesSectionSwiper';
+import peculiaritiesNavMobileSwiper from './peculiaritiesNavMobileSwiper';
+import galleriesSwiper from './galleriesSwiper';
+import galleryTooltipControl from './galleryTooltipControl';
+
 gsap.registerPlugin(ScrollTrigger);
-
-// const refresh = () => {
-//     ScrollTrigger.refresh();
-// }
-
-// window.refreshTrigger = refresh;
 
 document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
@@ -79,6 +82,15 @@ document.addEventListener('DOMContentLoaded', function () {
     printBtn();
     sharing();
 
+    solutionsCarouselSwiper();
+    peculiarityCardClickHandler();
+    tourSectionAnimation();
+    locationMapsControl();
+    plansSwiperControl();
+    stagesSectionSwiper();
+    peculiaritiesNavMobileSwiper();
+    galleriesSwiper();
+    galleryTooltipControl();
 });
 
 document.addEventListener('lazyloaded', () => {

@@ -1,0 +1,263 @@
+.solutions-carousel {
+    &__body {
+        &.about-project__row {
+            @include breakpoint(small-tablet) {
+                grid-template-columns: 100%;
+            }
+        }
+    }
+
+    &__title {
+        &.red-accent-color {
+            display: block;
+            max-width: min-content;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 125%;
+            letter-spacing: -0.02em;
+
+            @include breakpoint(mobile) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__decore-card {
+        position: relative;
+        aspect-ratio: 1 / 1.19;
+        background-color: var(--red-color, #d22026);
+        @extend .rounded-border;
+        border-width: 0;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%22345%22%20height%3D%22412%22%20viewBox%3D%220%200%20345%20412%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20opacity%3D%220.4%22%20d%3D%22M102.942%201.15704L136.689%2035.8572L0.737671%20172.248L-33.9738%20138.512L-16.6178%20121.644L-50.8465%2086.9435L-69.6488%20106.221C-92.018%20132.825%20-78.9693%20160.681%20-69.6488%20171.284L-33.9738%20206.466L-70.6121%20243.094C-90.2816%20269.698%20-79.7719%20294.984%20-72.0584%20304.302L-50.8462%20325.989L-17.0996%20291.771L-33.4908%20274.903L0.255844%20241.167L136.689%20377.557L102.942%20412.258L85.5867%20394.426L51.3579%20428.644L66.785%20443.584C94.168%20470.959%20123.833%20457.882%20135.242%20447.922L171.4%20412.258L206.592%20447.44C237.832%20470.188%20263.64%20456.918%20272.64%20447.44L290.959%20428.644L256.73%20394.908L239.375%20411.294L205.628%20377.557L342.061%20240.203L376.772%20274.903L359.417%20292.253L393.645%20326.471L413.893%20305.747C435.106%20276.059%20421.125%20250.324%20411.483%20241.167L377.254%20206.466L413.893%20168.874C435.106%20138.801%20420.161%20112.326%20410.037%20102.848L393.645%2086.9435L359.417%20121.162L376.29%20138.03L342.543%20172.248L205.628%2035.8572L239.857%201.15704L257.212%2018.9891L291.441%20-15.7111L272.64%20-34.0251C245.257%20-56.0019%20219.448%20-44.7886%20209.967%20-36.4348L171.4%201.15704L132.832%20-36.4348C103.906%20-56.8694%2078.6766%20-43.0214%2069.6775%20-33.5431L51.3579%20-16.1931L86.0688%2018.5071L102.942%201.15704Z%22%20stroke%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            content: "";
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 20;
+
+            display: block;
+            width: 92%;
+            object-fit: contain;
+            object-position: top right;
+        }
+    }
+
+    &__col {
+        &.about-project__col--start {
+            align-self: flex-end;
+
+            @include breakpoint(small-tablet) {
+                display: none;
+            }
+        }
+
+        &.about-project__col--biggest {
+            @include breakpoint(small-tablet) {
+                grid-column: 1;
+                width: 100%;
+            }
+        }
+    }
+
+    &__carousel-wrapper {
+        position: relative;
+        aspect-ratio: 1.65 / 1;
+        background-color: #ccc;
+        @extend .rounded-border;
+        border-width: 0;
+
+        @include breakpoint(mobile) {
+            aspect-ratio: 1 / 1.31;
+        }
+    }
+
+    &__main-swiper-navigation {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        z-index: 100;
+
+        @include breakpoint(mobile) {
+            @include visuallyHidden();
+        }
+    }
+
+    &__tabs {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        width: 32.4rem;
+
+        @include breakpoint(mobile) {
+            width: 23rem;
+        }
+    }
+
+    &__tabs-swiper {
+        &.swiper {
+            overflow: visible;
+            padding: 0 2.4rem 2.4rem 2.4rem;
+
+            @include breakpoint(mobile) {
+                padding: 0 1.6rem 1.6rem 1.6rem;
+            }
+        }
+    }
+
+    &__tabs-swiper-wrapper {
+        &.swiper-wrapper {
+            align-items: flex-end;
+        }
+    }
+
+    &__tabs-swiper-slide {
+        width: 100%;
+        transition: width 0.3s;
+
+        &.swiper-slide {}
+    }
+
+    &__main-swiper {
+        &.swiper {
+            height: 100%;
+
+            @include breakpoint(mobile) {}
+        }
+    }
+
+    &__main-swiper-slide {
+        position: relative;
+
+        img {
+            @include centeredAbsolute();
+            z-index: 10;
+
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.carousel-tab {
+    position: relative;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2.4rem 2rem;
+
+        color: var(--white-color, white);
+
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 1.6rem;
+
+        @include breakpoint(mobile) {
+            padding: 1.6rem;
+            border-radius: 1.2rem;
+        }
+    }
+
+    &__title {
+        width: 21rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 135%;
+
+        transition: all 0.5s ease;
+
+        @include breakpoint(mobile) {
+            width: 20.8rem;
+            font-size: 1.6rem;
+            line-height: 125%;
+        }
+    }
+
+    &__desc {
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+        will-change: auto;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition-duration: 0.5s;
+        transition-property: max-height, opacity, transform, padding;
+        transition-timing-function: ease-out;
+
+        p {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 125%;
+
+            @include breakpoint(mobile) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &__progress {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        width: calc(100% - 4rem);
+        height: 3px;
+
+        background-color: rgba($color: #fff, $alpha: 0.2);
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+    }
+}
+
+.swiper-slide-active {
+    .carousel-tab {
+        .carousel-tab__title {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 125%;
+
+            @include breakpoint(mobile) {
+                font-size: 1.8rem;
+            }
+        }
+
+        .carousel-tab__desc {
+            max-height: 500px;
+            transform: scaleY(1);
+            padding: 1.6rem 0 0.6rem;
+            opacity: 1;
+
+            @include breakpoint(mobile) {
+                padding: 2rem 0 0;
+            }
+        }
+
+        .carousel-tab__progress {
+            opacity: 1;
+        }
+    }
+}

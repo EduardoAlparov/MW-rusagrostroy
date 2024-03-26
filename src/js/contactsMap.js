@@ -5,16 +5,21 @@ export default function contactsMap() {
         ymaps.ready(initContactsMap);
 
         function initContactsMap() {
-            console.log('Map running');
-            const pin = {
+            let pin = {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/pin.svg',
                 iconImageSize: window.matchMedia("(max-width: 640px)").matches ? [60, 60] : [92, 92],
                 iconImageOffset: window.matchMedia("(max-width: 640px)").matches ? [-30, -30] : [-46, -46]
             };
 
-
-
+            if(window.redpin) {
+                pin = {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/red-pin.svg',
+                    iconImageSize: window.matchMedia("(max-width: 640px)").matches ? [60, 60] : [92, 92],
+                    iconImageOffset: window.matchMedia("(max-width: 640px)").matches ? [-30, -30] : [-46, -46]
+                };
+            }
 
             const mapData = window.mapData ?? null;
 

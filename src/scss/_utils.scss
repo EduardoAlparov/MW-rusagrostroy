@@ -9,6 +9,7 @@
     height: 100%;
     left: 0;
     top: 0;
+
     body {
         height: auto;
         overflow: hidden;
@@ -24,5 +25,36 @@
 .show-on-mobile {
     @include breakpointMF(small-tablet) {
         display: none !important;
+    }
+}
+
+.red-accent-color {
+    display: inline;
+    color: var(--red-color, #d22026);
+}
+
+.rounded-border {
+    overflow: hidden;
+
+    border-radius: 1.2rem;
+    border-color: rgba($color: #342D29, $alpha: 0.2);
+    border-style: solid;
+    border-width: 1px;
+
+    @include breakpointMF(small-tablet) {
+        border-radius: 2rem;
+    }
+}
+
+.big-text-ext {
+    font-size: 8.5rem;
+    line-height: 95%;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(small-tablet) {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 107%;
+        letter-spacing: -0.02em;
     }
 }

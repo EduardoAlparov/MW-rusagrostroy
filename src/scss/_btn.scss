@@ -21,8 +21,9 @@
         font-size: 1.6rem;
         line-height: 1.2;
         padding: 1.8rem 2.4rem;
-        
+
     }
+
     &:link,
     &:visited {
         color: white;
@@ -33,12 +34,11 @@
     }
 
 
-
-
     &--contour-blue {
         background: transparent;
 
         color: var(--primary-color);
+
         &:link,
         &:visited {
             color: var(--primary-color);
@@ -54,6 +54,7 @@
         background: transparent;
 
         color: white;
+
         &:link,
         &:visited {
             color: white;
@@ -69,6 +70,7 @@
         border-color: white;
         color: white;
         background: transparent;
+
         &:link,
         &:visited {
             color: white;
@@ -80,13 +82,10 @@
         }
     }
 
-
     &--white-filled {
         background-color: #fff;
     }
 
-   
-  
     svg {
         flex-shrink: 0;
         fill: currentColor;
@@ -95,5 +94,12 @@
         margin-top: 0.3rem;
     }
 
-  
+    &--red-accent {
+        background-color: var(--red-color, #d22026);
+        border-color: transparent;
+
+        &:hover {
+            background-color: var(--red-color-hover, #ba2126);
+        }
+    }
 }

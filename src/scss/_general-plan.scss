@@ -1,0 +1,164 @@
+.general-plan {
+    &__heading {
+        margin-bottom: 5rem;
+
+        @include breakpoint(small-tablet) {
+            margin-bottom: 2.8rem;
+        }
+
+        &.about-project__row {
+            @include breakpoint(small-tablet) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.6rem;
+
+                margin-bottom: 3.2rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__body {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 2.1 / 1;
+
+        @extend .rounded-border;
+        border-width: 0;
+        background-color: #ccc;
+
+        @include breakpoint(mobile) {
+            aspect-ratio: 1 / 1.64;
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+
+        img {
+            @include centeredAbsolute();
+            z-index: 10;
+            display: block;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__switcher-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        padding: 3rem;
+    }
+
+    &__switcher-button {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+
+        width: max-content;
+        height: 7.2rem;
+        padding: 1rem 5rem 1rem 1rem;
+
+        background-color: var(--white-color, #fff);
+        border-radius: 10rem;
+        cursor: pointer;
+
+        @include breakpoint(small-tablet) {
+            gap: 1rem;
+            height: 5rem;
+            padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+        }
+
+        @include hover-active() {
+            .general-plan__switcher-icon {
+                fill: var(--red-color-hover, #ba2126);
+            }
+
+            .general-plan__switcher-text {
+                color: var(--red-color-hover, #ba2126);
+            }
+        }
+    }
+
+    &__switcher-icon {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 5.2rem;
+        height: 5.2rem;
+
+        background-color: var(--grey-color-100, #efefef);
+        border-radius: 100%;
+
+        @include breakpoint(small-tablet) {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+
+            width: 1.8rem;
+            height: 1.8rem;
+            transform: translate(-50%, -50%);
+
+            fill: var(--red-color, #d22026);
+            transition: all 0.3s ease-out;
+
+            @include breakpoint(small-tablet) {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+        }
+
+        .icon-close {
+            opacity: 0;
+        }
+    }
+
+    &__switcher-text {
+        color: var(--red-color, #d22026);
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 135%;
+        transition: color 0.3s ease-out;
+
+        @include breakpoint(small-tablet) {
+            font-size: 1.4rem;
+            line-height: 125%;
+        }
+
+    }
+
+    &__switcher {
+        input[type="checkbox"]:checked {
+            &~.general-plan__switcher-button {
+                .icon-open {
+                    opacity: 0;
+                }
+
+                .icon-close {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

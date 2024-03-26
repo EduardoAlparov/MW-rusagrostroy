@@ -171,6 +171,7 @@
 
     p {
         margin-bottom: 1.5rem;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -198,7 +199,7 @@
     line-height: 125%;
     color: var(--primary-color);
 
-    & > span {
+    &>span {
         &:nth-child(1) {
             display: inline;
         }
@@ -209,7 +210,7 @@
     }
 
     .all-shown & {
-        & > span {
+        &>span {
             &:nth-child(1) {
                 display: none;
             }
@@ -224,6 +225,7 @@
         font-size: 1.6rem;
         line-height: 1.2;
     }
+
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -242,6 +244,7 @@
     @include breakpoint(mobile) {
         border-radius: 1.5rem;
     }
+
     &:link,
     &:visited {
         color: white;
@@ -261,6 +264,7 @@
             height: 6rem;
         }
     }
+
     &::before {
         content: '';
         display: block;
@@ -312,6 +316,7 @@
     @include breakpoint(mobile) {
         margin-top: 3rem;
     }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -352,6 +357,7 @@
     font-size: 1.6rem;
     line-height: 135%;
     color: #7f8da5;
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
     }
@@ -360,6 +366,7 @@
 .project-about__plan {
     position: relative;
     margin-top: 10rem;
+
     @include breakpoint(mobile) {
         margin-top: 4rem;
 
@@ -414,10 +421,12 @@
     @include breakpointMF(small-tablet) {
         &:hover {
             z-index: 10;
+
             .project-about__plan-item-number {
                 background-color: var(--primary-color);
                 color: white;
             }
+
             .project-about__plan-item-dropdown {
                 opacity: 1;
                 visibility: inherit;
@@ -429,15 +438,42 @@
     @include breakpoint(mobile) {
         &.active {
             z-index: 10;
+
             .project-about__plan-item-number {
                 background-color: var(--primary-color);
                 color: white;
             }
+
             .project-about__plan-item-dropdown {
                 opacity: 1;
                 visibility: inherit;
                 transition: opacity 0.4s, visibility 0.4s;
             }
+        }
+    }
+
+    &--red {
+        z-index: 20;
+
+        @include breakpointMF(small-tablet) {
+            &:hover {
+                z-index: 10;
+
+                .project-about__plan-item-number {
+                    background-color: var(--red-color, #d22026);
+                    color: white;
+                }
+
+                .project-about__plan-item-dropdown {
+                    opacity: 1;
+                    visibility: inherit;
+                    transition: opacity 0.4s, visibility 0.4s;
+                }
+            }
+        }
+
+        .project-about__plan-item-number {
+            cursor: pointer;
         }
     }
 }
@@ -481,6 +517,15 @@
     &--bottom-right {
         bottom: auto;
         top: 0;
+        padding-bottom: 0;
+        padding-top: 5.2rem;
+    }
+
+    &--center-right {
+        left: 5vw;
+        top: 0;
+        bottom: auto;
+        transform: translateY(-50%);
         padding-bottom: 0;
         padding-top: 5.2rem;
     }
@@ -630,6 +675,7 @@
     border-radius: 0.4rem;
     padding: 0.5rem 1rem;
     flex-shrink: 0;
+
     &::before {
         content: '';
         width: 0.5rem;
@@ -639,6 +685,15 @@
         margin-right: 0.7rem;
         background-color: #1361de;
         margin-top: 0.2rem;
+    }
+
+    &--red {
+        color: var(--red-color, #d22026);
+        background-color: rgba(#d22026, 0.1);
+
+        &::before {
+            background-color: var(--red-color, #d22026);
+        }
     }
 }
 
@@ -685,6 +740,7 @@
     width: 100%;
     font-weight: 700;
     transition: background-color 0.2s, color 0.2s;
+
     &:link,
     &:visited {
         color: white;
@@ -694,6 +750,15 @@
     .touch &:active {
         background-color: var(--primary-color-hover);
     }
+
+    &--red {
+        background-color: var(--red-color, #d22026);
+
+        .no-touch &:hover,
+        .touch &:active {
+            background-color: var(--red-color-hover, #ba2126);
+        }
+    }
 }
 
 .project-about__features-list {
@@ -701,6 +766,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 5.2rem;
     margin-top: 10rem;
+
     @include breakpoint(mobile) {
         grid-gap: 2rem;
         grid-row-gap: 2.5rem;
@@ -708,8 +774,7 @@
     }
 }
 
-.project-about__features-list-item {
-}
+.project-about__features-list-item {}
 
 .project-about__features-card {
     display: flex;
@@ -747,6 +812,7 @@
     @include breakpoint(mobile) {
         margin-top: 1rem;
     }
+
     &::before {
         content: '';
         display: block;
@@ -912,6 +978,7 @@
         font-size: 1.4rem;
         margin-bottom: 0.3rem;
     }
+
     &:last-child {
         margin-bottom: 0;
     }

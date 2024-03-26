@@ -1,0 +1,72 @@
+.tour-section {
+    &__title {
+        &.solutions-carousel__title {
+            &.red-accent-color {
+                max-width: 18ch;
+            }
+        }
+    }
+
+    &__link {
+        min-width: 35rem;
+        margin-top: 5.4rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        gap: 6rem;
+
+        transition: transform 0.3s linear;
+
+        @include breakpoint(small-tablet) {
+            gap: 0.8rem;
+        }
+    }
+
+    &__item {
+        position: relative;
+        z-index: 100;
+        flex-shrink: 0;
+        width: calc(100% / 4 - (6rem * 3 / 4));
+        aspect-ratio: 1;
+        margin-right: 0;
+        transition: margin 1s ease;
+
+        &.round-card {
+            @include breakpoint(small-tablet) {
+                width: 158px;
+                aspect-ratio: 1.01 / 1;
+                min-height: unset;
+            }
+        }
+    }
+
+    &__mobile-link-wrapper {
+        display: none;
+        margin-top: 3.2rem;
+
+        .btn {
+            width: 100%;
+            min-width: unset;
+            margin-top: 0;
+        }
+
+        @include breakpoint(mobile) {
+            display: block;
+        }
+    }
+}
+
+.js-expand-animation-trigger {
+    .tour-section__item {
+        @include breakpointMF(laptop) {
+            margin-right: -30rem;
+        }
+    }
+}

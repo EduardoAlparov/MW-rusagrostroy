@@ -11,3 +11,15 @@
         line-height: 1.2;
     }
 }
+
+.section-subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 107%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 125%;
+    }
+}
