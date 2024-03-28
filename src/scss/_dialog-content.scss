@@ -1,0 +1,113 @@
+#dialog-content {
+
+    &.fancybox__content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+
+        width: 100%;
+        height: 100%;
+        padding: 0;
+
+        background-color: #ccc;
+    }
+
+    .carousel__button {
+        --carousel-button-width: 6rem;
+        --carousel-button-height: 6rem;
+        --carousel-button-svg-width: 1.8rem;
+        --carousel-button-svg-height: 1.8rem;
+
+        top: 6rem;
+        right: 6rem;
+        z-index: 200;
+
+        background-color: var(--white-color, #fff);
+
+        svg {
+            stroke-width: 1.2px;
+            stroke: var(--text-color, #37393e);
+        }
+
+        @include breakpoint(mobile) {
+            --carousel-button-width: 5rem;
+            --carousel-button-height: 5rem;
+            --carousel-button-svg-width: 1.6rem;
+            --carousel-button-svg-height: 1.6rem;
+
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+}
+
+.stages-gallery {
+    width: 100%;
+    height: 100%;
+
+    &__swiper.swiper {
+        height: 100%;
+    }
+
+    &__swiper-slide {
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__panel {
+        position: absolute;
+        left: 6rem;
+        right: 6rem;
+        bottom: 6rem;
+        z-index: 100;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        width: auto;
+
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 120%;
+        color: #FFFFFF;
+
+        span {
+            display: block;
+            width: auto;
+            height: auto;
+            margin: unset;
+            background: transparent;
+            opacity: 1;
+
+            &::before {
+                content: '0';
+            }
+        }
+    }
+}

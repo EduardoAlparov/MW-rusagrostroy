@@ -116,14 +116,14 @@
 
 <section class="about-project about-project--paddings">
     <div class="container">
-        <div class="about-project__row about-project__heading js-animation-trigger-opacity">
+        <div class="about-project__row about-project__heading js-animation-trigger-opacity js-h-animation-wrapper">
             <div class="about-project__col about-project__col--start">
-                <h2 class="about-project__title section-heading">
+                <h2 class="about-project__title section-heading js-h-animation-heading">
                     О проекте
                 </h2>
             </div>
             <div class="about-project__col about-project__col--right-half">
-                <p class="about-project__desc">
+                <p class="about-project__desc js-h-animation-text">
                     <span class="red-accent-color">ЖК «Дубовый парк»</span> 
                     расположен в микрорайоне «Нагорный», всего в нескольких 
                     шагах от парка «Сосновая роща»и в непосредственной 
@@ -205,7 +205,7 @@
 
 <section class="general-plan about-project--paddings">
     <div class="container">
-        <div class="about-project__row general-plan__heading js-animation-trigger-opacity">
+        <div class="about-project__row general-plan__heading">
             <div class="about-project__col about-project__col--start">
                 <h2 class="section-heading">
                     Генплан
@@ -213,7 +213,7 @@
             </div>
         </div>
 
-        <div class="general-plan__body">
+        <div class="general-plan__body general-plan__body--hidden js-gplan-trigger">
             <div class="general-plan__picture">
                 <picture>
                     <source srcset="img/new-index/general-plan-image-mob.webp" media="(max-width: 640px)" type="image/webp">
@@ -240,19 +240,35 @@
                         </span>
                     </label>
                 </div>
+
+                <div class="general-plan__tooltip plan-tooltip _close-itself">
+                    <h6>
+                        Инфраструктура
+                    </h6>
+                    <span>
+                        Узнайте, где ближащая школа, детский сад или супермаркет
+                    </span>
+                    
+                    <button type="button" class="_close-itself-btn">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <div class="project-about__plan-item project-about__plan-item--red" style="left: 39%; top: 50%;">
+            <!-- 3 start -->
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--red hide-on-mobile" style="left: 39%; top: 50%;">
                 <div class="project-about__plan-item-number">
                     <span>
-                        1
+                        3
                     </span>
                 </div>
 
-                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--center-right">
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--center-right">
                     <div class="project-about__plan-item-dropdown-inner">
                         <button class="project-about__plan-item-dropdown-close">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                            <svg aria-hidden="true" class="icon-cross">
                                 <use xlink:href="#cross"></use>
                             </svg>
                         </button>
@@ -297,6 +313,368 @@
                         <a href="#" class="project-about__plan-item-link project-about__plan-item-link--red">
                             Выбрать квартиру
                         </a>
+                    </div>
+                </div>
+            </div>
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--red show-on-mobile" style="left: 65%; top: 45%;">
+                <div class="project-about__plan-item-number">
+                    <span>
+                        3
+                    </span>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--center-right">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading">
+                            ЖК «Дубовый парк» Поз.3
+                        </h5>
+                        <div class="project-about__plan-item-date">
+                            Срок сдачи: I квартал 2024 г.
+                            <span class="project-about__plan-item-date-remaining project-about__plan-item-date-remaining--red">
+                                через 7 мес
+                            </span>
+                        </div>
+                        <div class="project-about__plan-item-apartments">
+                            60 квартир в продаже
+                        </div>
+                        <div class="project-about__plan-item-prices">
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    1-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 2,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    2-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 3,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    3-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 4,4 млн
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="project-about__plan-item-link project-about__plan-item-link--red">
+                            Выбрать квартиру
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 end -->
+
+            <!-- 2 start -->
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--red hide-on-mobile" style="left: 30%; top: 20%;">
+                <div class="project-about__plan-item-number">
+                    <span>
+                        2
+                    </span>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--bottom-right">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading">
+                            ЖК «Дубовый парк» Поз.3
+                        </h5>
+                        <div class="project-about__plan-item-date">
+                            Срок сдачи: I квартал 2024 г.
+                            <span class="project-about__plan-item-date-remaining project-about__plan-item-date-remaining--red">
+                                через 7 мес
+                            </span>
+                        </div>
+                        <div class="project-about__plan-item-apartments">
+                            60 квартир в продаже
+                        </div>
+                        <div class="project-about__plan-item-prices">
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    1-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 2,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    2-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 3,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    3-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 4,4 млн
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="project-about__plan-item-link project-about__plan-item-link--red">
+                            Выбрать квартиру
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--red show-on-mobile" style="left: 50%; top: 30%;">
+                <div class="project-about__plan-item-number">
+                    <span>
+                        2
+                    </span>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--bottom-right">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading">
+                            ЖК «Дубовый парк» Поз.3
+                        </h5>
+                        <div class="project-about__plan-item-date">
+                            Срок сдачи: I квартал 2024 г.
+                            <span class="project-about__plan-item-date-remaining project-about__plan-item-date-remaining--red">
+                                через 7 мес
+                            </span>
+                        </div>
+                        <div class="project-about__plan-item-apartments">
+                            60 квартир в продаже
+                        </div>
+                        <div class="project-about__plan-item-prices">
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    1-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 2,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    2-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 3,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    3-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 4,4 млн
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="project-about__plan-item-link project-about__plan-item-link--red">
+                            Выбрать квартиру
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 end -->
+
+            <!-- 1 start -->
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--red hide-on-mobile" style="left: 20%; top: 70%;">
+                <div class="project-about__plan-item-number">
+                    <span>
+                        1
+                    </span>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--top-right">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading">
+                            ЖК «Дубовый парк» Поз.3
+                        </h5>
+                        <div class="project-about__plan-item-date">
+                            Срок сдачи: I квартал 2024 г.
+                            <span class="project-about__plan-item-date-remaining project-about__plan-item-date-remaining--red">
+                                через 7 мес
+                            </span>
+                        </div>
+                        <div class="project-about__plan-item-apartments">
+                            60 квартир в продаже
+                        </div>
+                        <div class="project-about__plan-item-prices">
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    1-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 2,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    2-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 3,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    3-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 4,4 млн
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="project-about__plan-item-link project-about__plan-item-link--red">
+                            Выбрать квартиру
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--red show-on-mobile" style="left: 26%; top: 50%;">
+                <div class="project-about__plan-item-number">
+                    <span>
+                        1
+                    </span>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--top-right">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading">
+                            ЖК «Дубовый парк» Поз.3
+                        </h5>
+                        <div class="project-about__plan-item-date">
+                            Срок сдачи: I квартал 2024 г.
+                            <span class="project-about__plan-item-date-remaining project-about__plan-item-date-remaining--red">
+                                через 7 мес
+                            </span>
+                        </div>
+                        <div class="project-about__plan-item-apartments">
+                            60 квартир в продаже
+                        </div>
+                        <div class="project-about__plan-item-prices">
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    1-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 2,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    2-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 3,4 млн
+                                </div>
+                            </div>
+                            <div class="project-about__plan-item-price-item">
+                                <div class="project-about__plan-item-price-rooms">
+                                    3-комн. квартиры
+                                </div>
+                                <div class="project-about__plan-item-price-amount">
+                                    от 4,4 млн
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="project-about__plan-item-link project-about__plan-item-link--red">
+                            Выбрать квартиру
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 1 end -->
+
+            <!-- playschool start -->
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--icon project-about__plan-item--red hide-on-mobile" style="left: 45%; top: 20%;">
+                <div class="project-about__plan-item-number">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#playschool"></use>
+                    </svg>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--center-right">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading project-about__plan-item-dropdown-heading--no-margin">
+                            Детский сад
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--icon project-about__plan-item--red show-on-mobile" style="left: 70%; top: 30%;">
+                <div class="project-about__plan-item-number">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#playschool"></use>
+                    </svg>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--center-right">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading project-about__plan-item-dropdown-heading--no-margin">
+                            Детский сад
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <!-- playschool end -->
+
+            <div class="general-plan__plan-item project-about__plan-item project-about__plan-item--icon project-about__plan-item--red hide-on-mobile" style="left: 93%; top: 55%;">
+                <div class="project-about__plan-item-number">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#playschool"></use>
+                    </svg>
+                </div>
+
+                <div class="project-about__plan-item-dropdown project-about__plan-item-dropdown--mobile project-about__plan-item-dropdown--center-left">
+                    <div class="project-about__plan-item-dropdown-inner">
+                        <button class="project-about__plan-item-dropdown-close">
+                            <svg aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h5 class="project-about__plan-item-dropdown-heading project-about__plan-item-dropdown-heading--no-margin">
+                            Детский сад
+                        </h5>
                     </div>
                 </div>
             </div>
@@ -1144,9 +1522,49 @@
 
 <section class="location-section about-project--paddings">
     <script>
-        var locationCenter = [56.624605, 47.928538];
-        var locationZoom = 15;
-        var mainCoords = [56.626841, 47.939555];
+        var locationCenter,
+            locationZoom = 15,
+            mainCoords = [56.626841, 47.939555],
+            isMobileMatch = window.matchMedia('(max-width: 640px)').matches;
+
+        var locationMiddleSchools = [
+            {
+                coords: [56.624375, 47.941798],
+                address: 'Школа № 24',
+                title: `Общеобразовательная школа`
+            },
+        ];
+
+        var locationMeds = [
+            {
+                coords: [56.625402, 47.945115],
+                address: 'Взрослая поликлиника № 3',
+                title: `Поликлиника для взрослых`
+            },
+        ];
+
+        var locationMarkets = [
+            {
+                coords: [56.623450, 47.936531],
+                address: 'Магнит',
+                title: `Магазин продуктов`
+            },
+        ];
+
+        var locationPlayschools = [
+            {
+                coords: [56.624138, 47.944632],
+                address: 'Детский сад № 6',
+                title: `Детские сады, ясли`
+            },
+            {
+                coords: [56.630196, 47.935983],
+                address: 'Детский сад № 16',
+                title: `Детские сады, ясли`
+            },
+        ];
+
+        isMobileMatch ? locationCenter = [56.625521, 47.936768] : locationCenter = [56.624605, 47.928538];
     </script>
     <div class="location-section__map-wrapper">
         <div class="location-section__map js-location-map">
@@ -1155,7 +1573,7 @@
             </h2>
 
             <div class="container location-section__nav-panel">
-                <ul class="location-section__nav">
+                <ul class="location-section__nav location-section__nav--collapsed">
                     <li class="location-section__nav-item">
                         <button type="button" data-location-button="all" class="location-section__nav-link location-section__nav-link--active">
                             <span>Все</span>
@@ -1194,7 +1612,23 @@
                         </button>
                     </li>
                     <li class="location-section__nav-item">
-                        <button type="button" data-location-button="expand" class="location-section__nav-link">
+                        <button type="button" data-location-button="3" class="location-section__nav-link">
+                            <svg aria-hidden="true" class="icon icon-med">
+                                <use xlink:href="#nav-i-3"></use>
+                            </svg>
+                            <span>Медицина</span>
+                        </button>
+                    </li>
+                    <li class="location-section__nav-item">
+                        <button type="button" data-location-button="4" class="location-section__nav-link">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#nav-i-2"></use>
+                            </svg>
+                            <span>Торговля</span>
+                        </button>
+                    </li>
+                    <li class="location-section__nav-item">
+                        <button type="button" data-location-button="expand" class="location-section__nav-link location-section__nav-link--expand">
                             <span>+3</span>
                         </button>
                     </li>
@@ -1591,7 +2025,7 @@
         <div class="stages-section__swiper swiper">
             <ul class="stages-section__swiper-wrapper swiper-wrapper">
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card stages-card--video stages-card--online">
-                    <a href="#" data-src="" class="stages-card__media">
+                    <a href="#" data-fancybox-gallery="" data-src="#dialog-content" class="stages-card__media" data-f-custom="stages">
                         <picture>
                             <source srcset="./img/new-index/stages/pic-1.webp" type="image/webp">
                             <img src="./img/new-index/stages/pic-1.jpg" alt="...">
@@ -1809,6 +2243,44 @@
                 </li>
             </ul>
         </div>
+
+        <div id="dialog-content" style="display:none;">
+            <div class="stages-gallery">
+                <div class="stages-gallery__swiper swiper js-stages-gallery-swiper">
+                    <ul class="stages-gallery__swiper-wrapper swiper-wrapper">
+                        <li class="stages-gallery__swiper-slide swiper-slide">
+                            <picture>
+                                <source srcset="./img/new-index/stages/slide.webp" type="image/webp">
+                                <img src="./img/new-index/stages/slide.jpg" alt="...">
+                            </picture>
+                        </li>
+                        <li class="stages-gallery__swiper-slide swiper-slide">
+                            <picture>
+                                <source srcset="./img/new-index/stages/slide.webp" type="image/webp">
+                                <img src="./img/new-index/stages/slide.jpg" alt="...">
+                            </picture>
+                        </li>
+                    </ul>
+
+                    <div class="stages-gallery__panel">
+                        <div class="stages-gallery__carousel-buttons carousel-buttons carousel-buttons--white">
+                            <button class="carousel-buttons__button carousel-buttons__button--left stages-gallery-swiper-left">
+                                <svg width="14" height="14" aria-hidden="true" class="icon">
+                                    <use xlink:href="#slider-arrow-new"></use>
+                                </svg>
+                            </button>
+                            <button class="carousel-buttons__button carousel-buttons__button--right stages-gallery-swiper-right">
+                                <svg width="14" height="14" aria-hidden="true" class="icon">
+                                    <use xlink:href="#slider-arrow-new"></use>
+                                </svg>
+                            </button>
+                        </div>                    
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 

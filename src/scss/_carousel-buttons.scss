@@ -92,6 +92,12 @@
             &.gallery-section__swiper-left-button {
                 opacity: 0;
             }
+
+            &.stages-gallery-swiper-left,
+            &.stages-gallery-swiper-right {
+                opacity: 0.5;
+                pointer-events: none;
+            }
         }
     }
 

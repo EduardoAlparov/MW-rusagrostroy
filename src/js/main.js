@@ -45,6 +45,11 @@ import stagesSectionSwiper from './stagesSectionSwiper';
 import peculiaritiesNavMobileSwiper from './peculiaritiesNavMobileSwiper';
 import galleriesSwiper from './galleriesSwiper';
 import galleryTooltipControl from './galleryTooltipControl';
+import stagesFancyboxSwiper from './stagesFancyboxSwiper';
+import generalPlanSwitcher from './generalPlanSwitcher';
+import headingsAnimations from './headingsAnimations';
+import closeItself from './closeItself';
+import locationItemsWrap from './locationItemsWrap';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,6 +96,11 @@ document.addEventListener('DOMContentLoaded', function () {
     peculiaritiesNavMobileSwiper();
     galleriesSwiper();
     galleryTooltipControl();
+    stagesFancyboxSwiper();
+    generalPlanSwitcher();
+    headingsAnimations();
+    closeItself();
+    locationItemsWrap();
 });
 
 document.addEventListener('lazyloaded', () => {

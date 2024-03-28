@@ -413,6 +413,13 @@
     margin-top: -2.6rem;
     cursor: pointer;
 
+    .icon {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--red-color, #d22026);
+        transition: fill 0.2s, color 0.2s;
+    }
+
     @include breakpoint(mobile) {
         margin-top: -1.8rem;
         margin-left: -1.8rem;
@@ -431,6 +438,12 @@
                 opacity: 1;
                 visibility: inherit;
                 transition: opacity 0.4s, visibility 0.4s;
+            }
+
+            .project-about__plan-item-number {
+                .icon {
+                    fill: var(--white-color, #fff)
+                }
             }
         }
     }
@@ -457,7 +470,7 @@
 
         @include breakpointMF(small-tablet) {
             &:hover {
-                z-index: 10;
+                z-index: 200;
 
                 .project-about__plan-item-number {
                     background-color: var(--red-color, #d22026);
@@ -474,6 +487,16 @@
 
         .project-about__plan-item-number {
             cursor: pointer;
+        }
+    }
+
+    &--icon {
+        .project-about__plan-item-dropdown-inner {
+            width: max-content;
+
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
         }
     }
 }
@@ -507,6 +530,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 200;
     padding-left: 5.2rem;
     padding-bottom: 5.2rem;
 
@@ -538,26 +562,51 @@
         left: auto;
         padding-left: 0;
         padding-right: 5.2rem;
-        right: 0;
+        right: 5vw;
     }
 
     &--top-left {
         left: auto;
         padding-left: 0;
         padding-right: 5.2rem;
-        right: 0;
+        right: 5vw;
+    }
+
+    &--center-left {
+        top: unset;
+        left: auto;
+        bottom: auto;
+        right: 5vw;
+        transform: translateY(-50%);
+        padding-left: 0;
+        padding-right: 5.2rem;
+        padding-top: 0;
+    }
+
+    &--top-right {
+        left: 5vw;
+        padding-bottom: 0;
+    }
+
+    &--bottom-right {
+        left: 5vw;
+        padding-top: 0;
     }
 
     @include breakpoint(mobile) {
-        padding: var(--content-padding);
         position: fixed;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(black, 0.6);
+        z-index: 100;
+
         display: flex;
         flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+        padding: var(--content-padding);
+
+        background-color: rgba(black, 0.6);
     }
 }
 
@@ -630,7 +679,7 @@
     height: 2rem;
 
     @include breakpointMF(small-tablet) {
-        display: none;
+        display: none !important;
     }
 
     svg {
@@ -647,6 +696,10 @@
     font-size: 2.4rem;
     line-height: 117%;
     margin-bottom: 1.5rem;
+
+    &--no-margin {
+        margin-bottom: 0;
+    }
 }
 
 .project-about__plan-item-date {

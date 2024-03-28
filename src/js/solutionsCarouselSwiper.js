@@ -7,7 +7,6 @@ export default () => {
     if(!tabsSwiperBox | !mainSwiperBox) return;
     
     const tabsSwiper = new Swiper('.js-solutions-tabs-swiper', {
-        // loop: true,
         slidesPerView: "auto",
         spaceBetween: 8,
         freemode: true,
@@ -38,4 +37,5 @@ export default () => {
     })
 
     tabsSwiper.controller.control = mainSwiper;
+    mainSwiper.controller.control = tabsSwiper;
 }

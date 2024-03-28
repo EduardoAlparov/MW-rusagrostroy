@@ -19,6 +19,19 @@
     .popover-row::before {
         background-image: url(../img/red-pin.svg);
     }
+
+    .popover-phone {
+        color: var(--red-color, #d22026);
+
+        &:link,
+        &:visited {
+            color: var(--red-color, #d22026);
+        }
+
+        &:hover {
+            text-decoration-color: currentColor;
+        }
+    }
 }
 
 .contacts__map {

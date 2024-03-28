@@ -44,6 +44,7 @@ export default function contactsMap() {
                     }
                 }
             });
+            
             mapInstance.controls.add(zoomControl);
 
             mapInstance.behaviors.disable('scrollZoom');

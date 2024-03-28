@@ -65,7 +65,7 @@
     }
 
     &__center-text {
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             font-size: 1.2rem;
             letter-spacing: -0.02em;
         }
