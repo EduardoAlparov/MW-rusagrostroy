@@ -44,7 +44,7 @@
                                     7
                                 </span>
                                 <p class="intro-features-item__text">
-                                    минут до «Сосновой рощи»
+                                    минут<br> до&nbsp;«Сосновой рощи»
                                 </p>
                             </div>
                             <div class="intro__home-card-features-item intro-features-item">
@@ -134,7 +134,7 @@
             </div>
         </div>
         <div class="about-project__row about-project__round-card-list js-animation-cards">
-            <div class="about-project__col">
+            <div class="about-project__col js-about-col-animation">
                 <div class="about-project__card round-card round-card--red">
                     <div class="round-card__body">
                         <span class="round-card__title">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-project__col">
+            <div class="about-project__col js-about-col-animation">
                 <div class="about-project__card round-card">
                     <div class="round-card__body">
                         <span class="round-card__title">
@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-project__col about-project__col--right-half">
+            <div class="about-project__col about-project__col--right-half js-about-col-animation">
                 <div class="about-project__card round-card round-card--image">
                     <div class="round-card__body">
                         <span class="round-card__title">
@@ -173,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-project__col about-project__col--left-quarter">
+            <div class="about-project__col about-project__col--left-quarter js-about-col-animation">
                 <div class="about-project__card round-card round-card--logo">
                     <div class="round-card__body">
                         <span class="round-card__title">
@@ -186,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-project__col about-project__col--right-quarter">
+            <div class="about-project__col about-project__col--right-quarter js-about-col-animation">
                 <div class="about-project__card round-card round-card--white">
                     <div class="round-card__body">
                         <span class="round-card__title">
@@ -205,9 +205,9 @@
 
 <section class="general-plan about-project--paddings">
     <div class="container">
-        <div class="about-project__row general-plan__heading">
+        <div class="about-project__row general-plan__heading js-h-animation-wrapper">
             <div class="about-project__col about-project__col--start">
-                <h2 class="section-heading">
+                <h2 class="section-heading js-h-animation-heading">
                     Генплан
                 </h2>
             </div>
@@ -684,14 +684,14 @@
 
 <section class="solutions-carousel about-project--paddings">
     <div class="container">
-        <div class="about-project__row solutions-carousel__heading general-plan__heading js-animation-trigger-opacity">
+        <div class="about-project__row solutions-carousel__heading general-plan__heading js-h-animation-wrapper">
             <div class="about-project__col about-project__col--start">
-                <span class="solutions-carousel__title red-accent-color">
+                <span class="solutions-carousel__title red-accent-color js-h-animation-heading">
                     Единство в разнообразии
                 </span>
             </div>
             <div class="about-project__col about-project__col--biggest">
-                <h3 class="solutions-carousel__subtitle section-subtitle">
+                <h3 class="solutions-carousel__subtitle section-subtitle js-h-animation-text">
                     Уникальные фасады ЖК вдохновлены традицией марийского костюма, 
                     создавая индивидуальность каждого дома и ощущение связи с 
                     комплексом.
@@ -699,14 +699,14 @@
             </div>
         </div>
 
-        <div class="solutions-carousel__body about-project__row">
-            <div class="solutions-carousel__col about-project__col about-project__col--start">
+        <div class="solutions-carousel__body about-project__row js-double-animation">
+            <div class="solutions-carousel__col about-project__col about-project__col--start js-double-animation-first">
                 <div class="solutions-carousel__decore-card">
                     <img src="./img/new-index/ornament-image.png" alt="ornament image">
                 </div>
             </div>
             
-            <div class="solutions-carousel__col about-project__col about-project__col--biggest">
+            <div id="js-solutions-animation-trigger" class="solutions-carousel__col about-project__col about-project__col--biggest js-double-animation-second">
                 <div class="solutions-carousel__carousel-wrapper">
                     <div class="solutions-carousel__main-swiper swiper js-solutions-main-swiper">
                         <ul class="solutions-carousel__main-swiper-wrapper swiper-wrapper">
@@ -861,25 +861,6 @@
                                         <span class="carousel-tab__progress"></span>
                                     </div>
                                 </li>
-                               <li class="solutions-carousel__tabs-swiper-slide swiper-slide">
-                                    <div class="carousel-tab">
-                                        <div class="carousel-tab__body">
-                                            <span class="carousel-tab__title">
-                                                Ландшафт
-                                            </span>
-
-                                            <div class="carousel-tab__desc">
-                                                <p>
-                                                    В 1948 году на западной стороне улицы находился Кирпичный 
-                                                    завод им. «XII лет Октября». В память об этом здании на территории 
-                                                    квартала была сохранена дымовая труба.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <span class="carousel-tab__progress"></span>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -891,14 +872,14 @@
 
 <section class="peculiarities-section about-project--paddings">
     <div class="container">
-        <div class="about-project__row peculiarities-section__heading general-plan__heading js-animation-trigger-opacity">
+        <div class="about-project__row peculiarities-section__heading general-plan__heading js-h-animation-wrapper">
             <div class="about-project__col about-project__col--start">
-                <h2 class="solutions-carousel__title section-heading">
+                <h2 class="solutions-carousel__title section-heading js-h-animation-heading">
                     Особенности
                 </h2>
             </div>
             <div class="peculiarities-section__col peculiarities-section__tabs-swiper about-project__col about-project__col--biggest js-peculiarities-tabs-swiper">
-               <ul class="peculiarities-section__nav peculiarities-nav">
+               <ul class="peculiarities-section__nav peculiarities-nav js-navs-btns-wrapper">
                     <li class="peculiarities-nav__item">
                         <a href="#" class="peculiarities-nav__link peculiarities-nav__link--active">
                             Инфраструктура
@@ -940,8 +921,8 @@
 
         <div class="peculiarities-section__body">
             <div class="peculiarities-section__swiper swiper js-peculiarities-swiper">
-                <ul class="peculiarities-section__swiper-wrapper about-project__row swiper-wrapper">
-                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card">
+                <ul class="peculiarities-section__swiper-wrapper about-project__row swiper-wrapper js-quarter-animation">
+                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card js-quarter-animation-item">
                         <div class="peculiarity-card__body">
                             <div class="peculiarity-card__picture-wrapper">
                                 <div class="peculiarity-card__picture">
@@ -980,7 +961,7 @@
                             </button>
                         </div>
                     </li>
-                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card">
+                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card js-quarter-animation-item">
                         <div class="peculiarity-card__body">
                             <div class="peculiarity-card__picture-wrapper">
                                 <div class="peculiarity-card__picture">
@@ -1019,7 +1000,7 @@
                             </button>
                         </div>
                     </li>
-                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card">
+                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card js-quarter-animation-item">
                         <div class="peculiarity-card__body">
                             <div class="peculiarity-card__picture-wrapper">
                                 <div class="peculiarity-card__picture">
@@ -1058,7 +1039,7 @@
                             </button>
                         </div>
                     </li>
-                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card">
+                    <li id="" data-peculiarity="" class="peculiarities-section__swiper-slide swiper-slide peculiarity-card js-quarter-animation-item">
                         <div class="peculiarity-card__body">
                             <div class="peculiarity-card__picture-wrapper">
                                 <div class="peculiarity-card__picture">
@@ -1276,13 +1257,13 @@
 
 <section class="tour-section about-project--paddings js-tour-wrapper">
     <div class="container">
-        <div class="about-project__row general-plan__heading js-animation-trigger-opacity">
+        <div class="about-project__row general-plan__heading js-h-animation-wrapper">
             <div class="about-project__col about-project__col--start">
-                <span class="tour-section__title solutions-carousel__title red-accent-color">
+                <span class="tour-section__title solutions-carousel__title red-accent-color js-h-animation-heading">
                     Экскурсия по жилому комплексу «Дубовый парк»
                 </span>
             </div>
-            <div class="about-project__col about-project__col--biggest">
+            <div class="about-project__col about-project__col--biggest js-h-animation-text">
                 <h3 class="solutions-carousel__subtitle section-subtitle">
                     Посетите проект, познакомитесь с нашими стандартами строительства 
                     и представьте свою жизнь в новом районе. 
@@ -1371,7 +1352,7 @@
     </div>
 </section>
 
-<section class="gallery-section about-project--paddings js-gallery-swiper-wrapper">
+<section class="gallery-section gallery-section--padding js-gallery-swiper-wrapper">
     <div class="container">
         <div class="about-project__row general-plan__heading js-animation-trigger-opacity">
             <div class="about-project__col about-project__col--start">
@@ -1380,7 +1361,7 @@
                 </h2>
             </div>
             <div class="peculiarities-section__col about-project__col about-project__col--biggest peculiarities-section__tabs-swiper js-mobile-tabs">
-                <ul class="gallery-section__nav peculiarities-nav">
+                <ul class="gallery-section__nav peculiarities-nav js-navs-btns-wrapper">
                      <li class="peculiarities-nav__item">
                         <a href="#" class="peculiarities-nav__link peculiarities-nav__link--active">
                             Лобби
@@ -1520,7 +1501,7 @@
     </div>
 </section>
 
-<section class="location-section about-project--paddings">
+<section class="location-section">
     <script>
         var locationCenter,
             locationZoom = 15,
@@ -1580,7 +1561,7 @@
                         </button>
                     </li>
                     <li class="location-section__nav-item">
-                        <button type="button" data-location-button="1" class="location-section__nav-link">
+                        <button type="button" data-location-button="midschool" class="location-section__nav-link">
                             <svg aria-hidden="true" class="icon">
                                 <use xlink:href="#nav-i-1"></use>
                             </svg>
@@ -1588,7 +1569,7 @@
                         </button>
                     </li>
                     <li class="location-section__nav-item">
-                        <button type="button" data-location-button="2" class="location-section__nav-link">
+                        <button type="button" data-location-button="playschool" class="location-section__nav-link">
                             <svg aria-hidden="true" class="icon">
                                 <use xlink:href="#nav-i-2"></use>
                             </svg>
@@ -1596,7 +1577,7 @@
                         </button>
                     </li>
                     <li class="location-section__nav-item">
-                        <button type="button" data-location-button="3" class="location-section__nav-link">
+                        <button type="button" data-location-button="meds" class="location-section__nav-link">
                             <svg aria-hidden="true" class="icon icon-med">
                                 <use xlink:href="#nav-i-3"></use>
                             </svg>
@@ -1604,7 +1585,7 @@
                         </button>
                     </li>
                     <li class="location-section__nav-item">
-                        <button type="button" data-location-button="4" class="location-section__nav-link">
+                        <button type="button" data-location-button="markets" class="location-section__nav-link">
                             <svg aria-hidden="true" class="icon">
                                 <use xlink:href="#nav-i-2"></use>
                             </svg>
@@ -1612,29 +1593,21 @@
                         </button>
                     </li>
                     <li class="location-section__nav-item">
-                        <button type="button" data-location-button="3" class="location-section__nav-link">
+                        <button type="button" data-location-button="meds" class="location-section__nav-link">
                             <svg aria-hidden="true" class="icon icon-med">
                                 <use xlink:href="#nav-i-3"></use>
                             </svg>
                             <span>Медицина</span>
-                        </button>
-                    </li>
-                    <li class="location-section__nav-item">
-                        <button type="button" data-location-button="4" class="location-section__nav-link">
-                            <svg aria-hidden="true" class="icon">
-                                <use xlink:href="#nav-i-2"></use>
-                            </svg>
-                            <span>Торговля</span>
                         </button>
                     </li>
                     <li class="location-section__nav-item">
                         <button type="button" data-location-button="expand" class="location-section__nav-link location-section__nav-link--expand">
-                            <span>+3</span>
+                            <span></span>
                         </button>
                     </li>
                </ul>
 
-               <a href="#" class="location-section__route-link route-link">
+               <a href="https://yandex.ru/maps/?rtext=~56.626841,47.939555&rtt=mt" target="_blank" class="location-section__route-link route-link">
                     <i></i>
                     <span>
                         Проложить маршрут

@@ -3,7 +3,7 @@ import { IS_MOBILE } from './utils';
 
 export default () => {
     const cards = document.querySelectorAll('.peculiarity-card');
-    const navBtns = document.querySelectorAll('.peculiarities-nav__link');
+    const navBtnsWrappers = document.querySelectorAll('.js-navs-btns-wrapper');
     const peculiaritiesSwiperBox = document.querySelector('.js-peculiarities-swiper');
     const hoverOverlay = document.querySelector('.peculiarities-section__hover-overlay');
     const parBody = document.querySelector('.peculiarities-section__body');
@@ -19,17 +19,23 @@ export default () => {
         })
     }
 
-    if(navBtns.length > 0) {
-        Array.from(navBtns).forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
+    if(navBtnsWrappers.length > 0) {
+        navBtnsWrappers.forEach( navBtnsWrapper => {
+            const navBtns = navBtnsWrapper.querySelectorAll('.peculiarities-nav__link');
 
-                Array.from(navBtns).forEach((b) => {
-                    b.classList.remove('peculiarities-nav__link--active');
+            if(navBtns.length > 0) {
+                Array.from(navBtns).forEach((btn) => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+        
+                        Array.from(navBtns).forEach((b) => {
+                            b.classList.remove('peculiarities-nav__link--active');
+                        })
+        
+                        btn.classList.add('peculiarities-nav__link--active')
+                    })
                 })
-
-                btn.classList.add('peculiarities-nav__link--active')
-            })
+            }
         })
     }
 

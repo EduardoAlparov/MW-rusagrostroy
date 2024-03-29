@@ -1,4 +1,8 @@
 .gallery-section {
+    &--padding {
+        padding: 8rem 0 0;
+    }
+
     &__swiper-nav {
         display: none;
 

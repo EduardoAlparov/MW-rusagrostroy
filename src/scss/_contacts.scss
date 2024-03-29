@@ -315,6 +315,7 @@
         .no-touch &:hover,
         .touch &:active {
             background-color: #FEEBEC;
+            color: var(--red-color, #d22026);
         }
     }
 }

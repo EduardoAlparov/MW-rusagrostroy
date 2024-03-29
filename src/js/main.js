@@ -50,6 +50,8 @@ import generalPlanSwitcher from './generalPlanSwitcher';
 import headingsAnimations from './headingsAnimations';
 import closeItself from './closeItself';
 import locationItemsWrap from './locationItemsWrap';
+import locationSectionNavs from './locationSectionNavs';
+import quarterAnimation from './quarterAnimation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
     headingsAnimations();
     closeItself();
     locationItemsWrap();
+    locationSectionNavs();
+    quarterAnimation();
 });
 
 document.addEventListener('lazyloaded', () => {

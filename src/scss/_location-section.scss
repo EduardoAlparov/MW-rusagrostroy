@@ -1,5 +1,10 @@
 .location-section {
     position: relative;
+    padding: 2rem 0 8rem;
+
+    @include breakpoint(small-tablet) {
+        padding: 2rem 0 4rem;
+    }
 
     &__map-wrapper {
         position: relative;
@@ -16,6 +21,51 @@
         height: 100%;
 
         background-color: #ccc;
+
+        &[data-class="midschool"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="midschool"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="playschool"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="playschool"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="playschool"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="playschool"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="meds"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="meds"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="markets"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="markets"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
     }
 
     &__nav-panel,
@@ -153,13 +203,18 @@
 
     &__route-link {
         &.route-link {
-            max-width: max-content;
+            width: 100%;
+            max-width: 23.6rem;
             height: 6rem;
             padding: 1.8rem 2rem;
 
-            font-weight: 500;
-            font-size: 1.8rem;
-            line-height: 135%;
+            span {
+                @include breakpointMF(small-tablet) {
+                    font-weight: 500;
+                    font-size: 1.8rem;
+                    line-height: 135%;
+                }
+            }
 
             @include breakpoint(mobile) {
                 width: 100%;

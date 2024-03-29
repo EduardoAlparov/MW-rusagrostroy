@@ -10,8 +10,16 @@
         }
     }
 
+    &.about-project--paddings {
+        padding: 6rem 0 4rem;
+
+        @include breakpoint(small-tablet) {
+            padding: 4rem 0 2rem;
+        }
+    }
+
     &__heading {
-        margin-bottom: 8rem;
+        margin-bottom: 7.8rem;
 
         &:last-child {
             margin-bottom: 0;

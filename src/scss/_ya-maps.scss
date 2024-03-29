@@ -23,7 +23,7 @@
     border-radius: 100%;
     border-style: solid;
     border-color: rgba($color: #D22026, $alpha: 0.2);
-    border-width: 28PX;
+    border-width: 24PX;
 
     @include breakpoint(mobile) {
         border-width: 21PX;
@@ -34,8 +34,8 @@
         z-index: 10;
         display: block;
         flex-shrink: 0;
-        width: 80PX;
-        height: 80PX;
+        width: 74PX;
+        height: 74PX;
 
         background-color: var(--red-color, #d22026);
         background-image: url('../img/new-index/red-logo.png');
@@ -149,7 +149,7 @@
     background-color: var(--white-color, #fff);
     border-radius: 100%;
 
-    transition: background 0.3s ease-out;
+    transition: all 0.3s ease-out;
 
     @include breakpoint(mobile) {
         width: 45px;
@@ -220,7 +220,7 @@
     }
 
     to {
-        width: 220%;
+        width: 200%;
         border-color: rgba($color: #D22026, $alpha: 0.1);
     }
 }

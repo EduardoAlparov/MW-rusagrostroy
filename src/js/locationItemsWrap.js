@@ -6,7 +6,7 @@ export default () => {
 
     const itemsArr = Array.from(locItems);
     
-    if(itemsArr.length > 6) {
+    if(itemsArr.length > 5) {
         expandBtn.querySelector('span').textContent = (itemsArr.length - 6);
     } else {
         expandBtn.parentElement.remove();

@@ -91,7 +91,7 @@ export default () => {
                 options: {
                     position: { 
                         top: '50dvh',
-                        right: '2rem',
+                        right: 'var(--content-padding, 4rem)',
                     },
                     layout: ZoomLayout
                 }
@@ -150,7 +150,7 @@ export default () => {
             ].join(''));
 
             var locationMedsLayout = ymaps.templateLayoutFactory.createClass([
-                '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark">',
+                '<div data-placemark="meds" class="ya-mid-school-placemark ya-secondary-placemark">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#meds"></use>',
                     '</svg>',
@@ -158,7 +158,7 @@ export default () => {
             ].join(''));
 
             var locationMedsLayoutHover = ymaps.templateLayoutFactory.createClass([
-                '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
+                '<div data-placemark="meds" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#meds"></use>',
                     '</svg>',
@@ -166,7 +166,7 @@ export default () => {
             ].join(''));
 
             var locationMarketsLayout = ymaps.templateLayoutFactory.createClass([
-                '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark">',
+                '<div data-placemark="markets" class="ya-mid-school-placemark ya-secondary-placemark">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#markets"></use>',
                     '</svg>',
@@ -174,7 +174,7 @@ export default () => {
             ].join(''));
 
             var locationMarketsLayoutHover = ymaps.templateLayoutFactory.createClass([
-                '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
+                '<div data-placemark="markets" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#markets"></use>',
                     '</svg>',
@@ -182,7 +182,7 @@ export default () => {
             ].join(''));
 
             var locationPSLayout = ymaps.templateLayoutFactory.createClass([
-                '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark">',
+                '<div data-placemark="playschool" class="ya-mid-school-placemark ya-secondary-placemark">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#p-school"></use>',
                     '</svg>',
@@ -190,7 +190,7 @@ export default () => {
             ].join(''));
 
             var locationPSLayoutHover = ymaps.templateLayoutFactory.createClass([
-                '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
+                '<div data-placemark="playschool" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#p-school"></use>',
                     '</svg>',
