@@ -16,6 +16,7 @@ export default () => {
         spaceBetween: 8,
         freemode: true,
         speed: 1000,
+        
         modules: [Autoplay],
 
         navigation: {

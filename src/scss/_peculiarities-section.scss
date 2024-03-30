@@ -40,9 +40,12 @@
                 margin-right: -2rem;
                 padding-right: 2rem;
             }
+
+            &.peculiarities-section__swiper--hidden {
+                @include visuallyHidden();
+            }
         }
     }
-
 
     &__swiper-wrapper {
         z-index: 11;

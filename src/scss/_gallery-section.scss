@@ -116,6 +116,13 @@
         transition: opacity 0.3s ease-out;
         opacity: 0;
 
+        &--small {
+            @include breakpoint(mobile) {
+                overflow: hidden;
+                max-width: 30ch;
+            }
+        }
+
         @include breakpoint(mobile) {
             max-height: 4.6rem;
             padding-left: 4.5rem;

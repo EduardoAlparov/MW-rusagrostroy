@@ -30,13 +30,18 @@
             padding: 0;
             background-color: transparent;
         }
+    }
 
-        &--big {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: space-between;
-            gap: 4rem;
+    &__swiper-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 4rem;
+
+        &.plan-layouts__swiper-box--hidden {
+            @include visuallyHidden();
         }
     }
 
@@ -139,6 +144,10 @@
         max-height: 100%;
         overflow: auto;
         margin-right: -1.5rem;
+
+        &.plan-layouts__plans--hidden {
+            @include visuallyHidden();
+        }
 
         &::-webkit-scrollbar {
             width: 4px;

@@ -320,9 +320,7 @@
 }
 
 .intro__carousel-buttons {
-    @include breakpoint(mobile) {
-        @include visuallyHidden();
-    }
+    @include visuallyHidden();
 }
 
 .intro__home-card-heading {
