@@ -9,6 +9,7 @@ export default () => {
         Array.from(tips).forEach((tip) => {
             tip.addEventListener('click', (e) => {
                 e.preventDefault();
+                
                 if(e.target.closest('button')) {
                     e.target.closest('button').classList.toggle('gallery-tooltip__button--active');
                 }

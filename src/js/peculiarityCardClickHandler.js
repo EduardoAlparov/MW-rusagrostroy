@@ -45,6 +45,15 @@ export default () => {
                         slidesPerView: 4,
                         spaceBetween: 60,
                     }
+                },
+
+                on: {
+                    init: function () {
+                        const pers = document.querySelectorAll('.peculiarities-section--hidden-elements');
+                        pers.forEach((per) => {
+                            per.classList.remove('peculiarities-section--hidden-elements');
+                        })
+                    }
                 }
             })
         })

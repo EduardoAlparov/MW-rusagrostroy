@@ -112,6 +112,12 @@
             }
         }
     }
+
+    &--hidden-elements {
+        .peculiarities-section__body {
+            opacity: 0;
+        }
+    }
 }
 
 .peculiarities-nav {

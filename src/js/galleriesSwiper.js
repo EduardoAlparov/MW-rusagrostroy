@@ -24,7 +24,7 @@ export default () => {
 
             on: {
                 init: function () {
-                    const tabs = document.querySelectorAll('.peculiarities-nav__link[data-gallery-tabs]');
+                    const tabs = gallerySwiperWrapper.querySelectorAll('.peculiarities-nav__link[data-gallery-tabs]');
                     tabs.forEach((tab) => {
                         tab.addEventListener('click', (e) => {
                             gallerySwiper.slideTo(tab.dataset.galleryTabs);
@@ -33,14 +33,14 @@ export default () => {
                 },
 
                 slideChange: function () {
-                    const navBtns = document.querySelectorAll('.peculiarities-nav__link[data-gallery-tabs]');
+                    const navBtns = gallerySwiperWrapper.querySelectorAll('.peculiarities-nav__link[data-gallery-tabs]');
         
                     Array.from(navBtns).forEach((b) => {
                         b.classList.remove('peculiarities-nav__link--active');
                     })
     
                     setTimeout(() => {
-                        const activeBtn = document.querySelector(`.peculiarities-nav__link[data-gallery-tabs='${gallerySwiper.activeIndex}']`);
+                        const activeBtn = gallerySwiperWrapper.querySelector(`.peculiarities-nav__link[data-gallery-tabs='${gallerySwiper.activeIndex}']`);
                         activeBtn.classList.add('peculiarities-nav__link--active');
                     }, 200);
                 }
