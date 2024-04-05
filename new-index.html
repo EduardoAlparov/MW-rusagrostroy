@@ -2685,34 +2685,34 @@
             <div class="plan-layouts__col plan-layouts__col--small">
                 <ul class="plan-layouts__nav">
                     <li>
-                        <button type="button" data-plan="flats-plan-s" class="plan-layouts__link location-section__nav-link">
+                        <button type="button" data-plan="flats-plan-s" data-flats-link="https://www.google.com/" data-count-flats="10" class="plan-layouts__link location-section__nav-link">
                             <span>Студия</span>
                         </button>
                     </li>
                     <li>
-                        <button type="button" data-plan="flats-plan-1" class="plan-layouts__link location-section__nav-link location-section__nav-link--active">
+                        <button type="button" data-plan="flats-plan-1" data-flats-link="https://www.google.com/" data-count-flats="25" class="plan-layouts__link location-section__nav-link location-section__nav-link--active">
                             <span>1</span>
                         </button>
                     </li>
                     <li>
-                        <button type="button" data-plan="flats-plan-2" class="plan-layouts__link location-section__nav-link">
+                        <button type="button" data-plan="flats-plan-2" data-flats-link="https://www.google.com/" data-count-flats="4" class="plan-layouts__link location-section__nav-link">
                             <span>2</span>
                         </button>
                     </li>
                     <li>
-                        <button type="button" data-plan="flats-plan-3" class="plan-layouts__link location-section__nav-link">
+                        <button type="button" data-plan="flats-plan-3" data-flats-link="https://www.google.com/" data-count-flats="5" class="plan-layouts__link location-section__nav-link">
                             <span>3</span>
                         </button>
                     </li>
                     <li>
-                        <button type="button" data-plan="flats-plan-4" class="plan-layouts__link location-section__nav-link">
+                        <button type="button" data-plan="flats-plan-4" data-flats-link="https://www.google.com/" data-count-flats="1" class="plan-layouts__link location-section__nav-link">
                             <span>4</span>
                         </button>
                     </li>
                 </ul>
 
                 <div class="plan-layouts__counter">
-                    <span class="plan-layouts__counter-value">
+                    <span class="plan-layouts__counter-value js-flats-count">
                         20 квартир
                     </span>
                 </div>
@@ -2800,7 +2800,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="btn btn--red-accent plan-layouts__btn-link">
+                <a href="#" class="btn btn--red-accent plan-layouts__btn-link js-flats-link">
                     Показать&nbsp;<span class="plan-layouts__flat-counter">9</span>&nbsp;квартир этого типа
                 </a>
             </div>
@@ -3564,7 +3564,7 @@
         <div class="stages-section__swiper swiper">
             <ul class="stages-section__swiper-wrapper swiper-wrapper">
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card stages-card--video stages-card--online">
-                    <a href="#" data-fancybox-gallery="" data-src="#dialog-content" class="stages-card__media" data-f-custom="stages">
+                    <a href="#" data-fancybox-gallery="" data-src="#video-online" data-caption="Прямой эфир" class="stages-card__media" data-f-custom="stages">
                         <picture>
                             <source srcset="./img/new-index/stages/pic-1.webp" type="image/webp">
                             <img src="./img/new-index/stages/pic-1.jpg" alt="...">
@@ -3595,7 +3595,7 @@
                     </div>
                 </li>
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card stages-card--video">
-                    <a href="#" data-src="" class="stages-card__media">
+                    <a href="#" data-fancybox-gallery="" data-src="#video-online" class="stages-card__media">
                         <picture>
                             <source srcset="./img/new-index/stages/pic-1.webp" type="image/webp">
                             <img src="./img/new-index/stages/pic-1.jpg" alt="...">
@@ -3626,7 +3626,7 @@
                     </div>
                 </li>
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card">
-                    <a href="#" data-src="" class="stages-card__media">
+                    <a href="#" data-fancybox-gallery="" data-src="#photo-content" class="stages-card__media">
                         <picture>
                             <source srcset="./img/new-index/r-cards/round-card-pic-1.webp" type="image/webp">
                             <img src="./img/new-index/r-cards/round-card-pic-1.jpg" alt="...">
@@ -3657,7 +3657,7 @@
                     </div>
                 </li>
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card">
-                    <a href="#" data-src="" class="stages-card__media">
+                    <a href="#" data-fancybox-gallery="" data-src="#photo-content" class="stages-card__media">
                         <picture>
                             <source srcset="./img/new-index/r-cards/round-card-pic.webp" type="image/webp">
                             <img src="./img/new-index/r-cards/round-card-pic.jpg" alt="...">
@@ -3688,7 +3688,7 @@
                     </div>
                 </li>
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card stages-card--video">
-                    <a href="#" data-src="" class="stages-card__media">
+                    <a href="#" data-fancybox-gallery="" data-src="#photo-content" class="stages-card__media">
                         <picture>
                             <source srcset="./img/new-index/stages/pic-1.webp" type="image/webp">
                             <img src="./img/new-index/stages/pic-1.jpg" alt="...">
@@ -3719,7 +3719,7 @@
                     </div>
                 </li>
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card">
-                    <a href="#" data-src="" class="stages-card__media">
+                    <a href="#" data-fancybox-gallery="" data-src="#photo-content" class="stages-card__media">
                         <picture>
                             <source srcset="./img/new-index/r-cards/round-card-pic-1.webp" type="image/webp">
                             <img src="./img/new-index/r-cards/round-card-pic-1.jpg" alt="...">
@@ -3750,7 +3750,7 @@
                     </div>
                 </li>
                 <li id="" class="stages-section__swiper-slide swiper-slide stages-card">
-                    <a href="#" data-src="" class="stages-card__media">
+                    <a href="#" data-fancybox-gallery="" data-src="#photo-content" class="stages-card__media">
                         <picture>
                             <source srcset="./img/new-index/r-cards/round-card-pic.webp" type="image/webp">
                             <img src="./img/new-index/r-cards/round-card-pic.jpg" alt="...">
@@ -3783,10 +3783,11 @@
             </ul>
         </div>
 
-        <div id="dialog-content" style="display:none;">
+        <div id="photo-content" style="display:none;">
             <div class="stages-gallery">
                 <div class="stages-gallery__swiper swiper js-stages-gallery-swiper">
                     <ul class="stages-gallery__swiper-wrapper swiper-wrapper">
+
                         <li class="stages-gallery__swiper-slide swiper-slide">
                             <picture>
                                 <source srcset="./img/new-index/stages/slide.webp" type="image/webp">
@@ -3820,6 +3821,37 @@
             </div>
         </div>
 
+        <div id="video-online" style="display:none;">
+            <div class="stages-gallery">
+                <div class="stages-gallery__swiper swiper js-stages-gallery-swiper">
+                    <ul class="stages-gallery__swiper-wrapper swiper-wrapper">
+                        <li class="stages-gallery__swiper-slide swiper-slide">
+                            <div class="stages-gallery__video js-video-box">
+                                <div class="stages-gallery__video-container" data-youtube-id="lJIrF4YjHfQ">
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="stages-gallery__panel">
+                        <div class="stages-gallery__carousel-buttons carousel-buttons carousel-buttons--white">
+                            <button class="carousel-buttons__button carousel-buttons__button--left stages-gallery-swiper-left">
+                                <svg width="14" height="14" aria-hidden="true" class="icon">
+                                    <use xlink:href="#slider-arrow-new"></use>
+                                </svg>
+                            </button>
+                            <button class="carousel-buttons__button carousel-buttons__button--right stages-gallery-swiper-right">
+                                <svg width="14" height="14" aria-hidden="true" class="icon">
+                                    <use xlink:href="#slider-arrow-new"></use>
+                                </svg>
+                            </button>
+                        </div>                    
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
