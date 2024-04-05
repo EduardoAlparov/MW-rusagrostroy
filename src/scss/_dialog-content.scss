@@ -1,5 +1,6 @@
-#dialog-content {
-
+#video-online,
+#video-content,
+#photo-content {
     &.fancybox__content {
         position: fixed;
         top: 0;
@@ -56,6 +57,13 @@
     }
 }
 
+#video-online,
+#video-content {
+    .stages-gallery__panel {
+        @include visuallyHidden()
+    }
+}
+
 .stages-gallery {
     width: 100%;
     height: 100%;
@@ -78,6 +86,14 @@
             object-fit: cover;
             object-position: center;
             transform: translate(-50%, -50%);
+        }
+
+        &:has(.stages-gallery__video) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: var(--text-color, #37393e);
         }
     }
 
@@ -132,6 +148,80 @@
 
         @include breakpoint(mobile) {
             margin-left: auto;
+        }
+    }
+
+    &__video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__video-poster {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__video-picture {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 6;
+            background-color: rgba(0, 0, 0, 0.20);
+            content: "";
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease-out;
+        }
+    }
+
+    &__video-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+    }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        max-width: 102.4rem;
+        display: block;
+        aspect-ratio: 1.886 / 1;
+        overflow: hidden;
+        background-color: var(--back-2);
+
+        &--is-play {
+            .stages-gallery__video-poster {
+                display: none;
+            }
         }
     }
 }

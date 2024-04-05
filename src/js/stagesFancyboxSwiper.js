@@ -9,7 +9,9 @@ export default () => {
                 speed: 1000,
                 direction: 'vertical',
                 effect: 'fade',
-
+                fadeEffect: {
+                  crossFade: true
+                },
                 navigation: {
                     nextEl: item.querySelector('.stages-gallery-swiper-right'),
                     prevEl: item.querySelector('.stages-gallery-swiper-left'),

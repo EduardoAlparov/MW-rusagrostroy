@@ -53,6 +53,9 @@ import locationItemsWrap from './locationItemsWrap';
 import locationSectionNavs from './locationSectionNavs';
 import quarterAnimation from './quarterAnimation';
 
+import flatsLinkRender from './flatsLinkRender';
+import youtubeVideoControl from './youtubeVideoControl';
+
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -105,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
     locationItemsWrap();
     locationSectionNavs();
     quarterAnimation();
+
+    flatsLinkRender();
+    youtubeVideoControl();
 });
 
 document.addEventListener('lazyloaded', () => {

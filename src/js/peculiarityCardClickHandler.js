@@ -50,19 +50,21 @@ export default () => {
         })
     }
 
-    parBody.addEventListener('mouseenter', (e) => {
-        if(e.target.closest('.peculiarities-section__hover-overlay')) {
-            hoverOverlay.style.zIndex = '10';
-            controls.style.opacity = "1";
-            controls.style.pointerEvents = "all";
-        }
-    }, true)
-
-    parBody.addEventListener('mouseleave', (e) => {
-        hoverOverlay.style.zIndex = '20';
-        controls.style.opacity = "0";
-        controls.style.pointerEvents = "none";
-    })
+    if(parBody) {
+        parBody.addEventListener('mouseenter', (e) => {
+            if(e.target.closest('.peculiarities-section__hover-overlay')) {
+                hoverOverlay.style.zIndex = '10';
+                controls.style.opacity = "1";
+                controls.style.pointerEvents = "all";
+            }
+        }, true)
+    
+        parBody.addEventListener('mouseleave', (e) => {
+            hoverOverlay.style.zIndex = '20';
+            controls.style.opacity = "0";
+            controls.style.pointerEvents = "none";
+        })
+    }
 
     if(navBtnsWrappers.length > 0) {
         navBtnsWrappers.forEach( navBtnsWrapper => {
