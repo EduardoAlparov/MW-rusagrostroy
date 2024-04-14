@@ -13,6 +13,7 @@ export default () => {
                 slidesPerView: 1.05,
                 spaceBetween: 20,
                 speed: 1000,
+                allowTouchMove: true,
 
                 navigation: {
                     nextEl: swiperSection.querySelector('.stages-swiper-right-button'),
@@ -20,7 +21,6 @@ export default () => {
                 },
     
                 breakpoints: {
-    
                     520: {
                         slidesPerView: 2.1,
                     },
@@ -36,6 +36,7 @@ export default () => {
                     },
                     
                     1200: {
+                        allowTouchMove: false,
                         slidesPerView: 4,
                         spaceBetween: 60,
                     }

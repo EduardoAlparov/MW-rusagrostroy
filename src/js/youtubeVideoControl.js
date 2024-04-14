@@ -8,32 +8,36 @@ export default async () => {
         let firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        Array.from(playerBoxes).forEach( playerBox => {
-            let videoId,
-                player,
-                btn = playerBox.parentElement.querySelector('button'),
-                videoContainer = playerBox.firstElementChild;
-
-            videoContainer.id = getRandomInt(4000);
-            videoContainer.dataset.youtubeId ? ( videoId = videoContainer.dataset.youtubeId ) : ( videoId = 'lJIrF4YjHfQ');
-
-            window.onYouTubeIframeAPIReady = function() {
-                player = new YT.Player( videoContainer.id, {
-                    width: 1000,
-                    height: 530,
-                    videoId: videoId,
-                    playerVars: { 'autoplay': 0, 'controls': 1 },
-                });
-            }
-
-        }) 
+        window.onYouTubeIframeAPIReady = function() {
+            Array.from(playerBoxes).forEach((playerBox) => {
+                let videoId,
+                    videoContainer = playerBox.firstElementChild;
     
+                videoContainer.id = getRandomInt(1000000);
+                videoId = videoContainer.dataset.youtubeId;
+
+                let curplayer = createPlayer({
+                    id: videoContainer.id,
+                    height:'1000',
+                    width:'530',
+                    videoId: videoId
+                });
+            })  
+        }
+    
+        function createPlayer(playerInfo) {
+            return new YT.Player(playerInfo.id, {
+               height: playerInfo.height,
+               width: playerInfo.width,
+               videoId: playerInfo.videoId
+            });
+        }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
     } else {
         return;
-    }
-
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
     }
 }
 
